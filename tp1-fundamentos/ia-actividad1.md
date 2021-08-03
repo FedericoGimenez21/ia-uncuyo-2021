@@ -1,6 +1,9 @@
 Licenciatura en Ciencias de la Computación
+
 Universidad Nacional de Cuyo
+
 Inteligencia Artificial 2021
+
 Trabajo práctico 1 - Actividad 1
 
 Integrantes: 
