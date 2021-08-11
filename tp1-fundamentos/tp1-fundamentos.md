@@ -77,19 +77,19 @@ Sin embargo, la IA parece que expone problemas nuevos yendo más allá de, por e
 
   - Opinion personal: considero que la IA podría permitir que las personas tengan más tiempo de ocio, esto por ejemplo, debido a que la IA podría realizar tareas diarias. Es decir, la IA puede facilitar nuestra vida, desde preparar un café en la mañana con solo presionar un botón o incluso programarlo, hasta trasladarnos en auto de forma automatizada (autos Tesla, por mencionar una marca
  
-• Las personas podrían perder el sentido de ser únicos. 
+- Las personas podrían perder el sentido de ser únicos. 
 
   - Opinión personal: considero que el sentimiento de ser único no se perderá nunca, desde el punto de vista de que las personas tenemos habilidades que la IA es muy poco probable que adquiera, el simple hecho de ser personas nos hace únicos. 
   
-• Las personas podrían perder algunos de sus derechos privados. 
+- Las personas podrían perder algunos de sus derechos privados. 
 
   - Opinión personal: considero que las personas si podrían perder algunos derechos privados, pero por este motivo es que debemos de tomar consciencia y responsabilidad de los usos tecnológicos. Existen sistemas de vigilancia que tienen un fin justificado hacia la humanidad (entre ellos analizar posibles amenazas), pero también existen otros que crean amenazas y ponen en riesgo nuestros datos privados. En este punto sostengo la misma opinión que Scott McNealy quien ha dicho que «De cualquier forma tenemos privacidad cero. Hay que superarlo».
  
-• La utilización de los sistemas de IA podría llevar a la pérdida de responsabilidad. 
+- La utilización de los sistemas de IA podría llevar a la pérdida de responsabilidad. 
 
   - Opinión personal: considero dos puntos de vista en esta afirmación. Por un lado la pérdida de responsabilidad puede ser una mejora, por ejemplo al manejar vehículos cada piloto tiene responsabilidad con sí mismo y con los demás vehículos pero si dependemos de un vehiculo automatizado entonces perdemos toda responsabilidad, es decir recae en los fabricantes del vehiculo. Por otro lado en el campo de la medicina por ejemplo cuando un médico depende del juicio de un sistema médico experto para hacer diagnóstico, ¿quién es el culpable si el diagnóstico es erróneo?. Si los sistemas expertos se hacen más fiables y precisos que los hombres que hacen los diagnósticos, los médicos podrían tener obligaciones legales si no utilizan las recomendaciones de un sistema experto.
   
-• El éxito de la IA podría significar el fin de la raza humana.
+- El éxito de la IA podría significar el fin de la raza humana.
 
   - Opinión personal: considero que el éxito de la IA significaría mejoras en la vida diaria de las personas, cada año surgen nuevas tecnologías que nos permiten delegar tareas y de esta forma contar con más tiempo de ocio o simplemente para realizar esas tareas de una forma más eficiente. La IA tiene un largo camino de investigación y desarrollo para adaptarlos cuidadosamente a las metas deseadas, de esta forma generaran mayores avances tecnológicos y no supondrán una amenaza a la raza humana.  
   
