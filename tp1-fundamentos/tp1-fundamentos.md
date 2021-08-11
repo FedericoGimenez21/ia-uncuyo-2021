@@ -8,6 +8,8 @@ Trabajo práctico 1 - Fundamentos
 
 Alumno: Gimenez Federico 
 
+Mapa mental: https://www.mindomo.com/mindmap/fd1b6af1762a4cebbd27dac51dac6212 
+
 **IA débil: ¿pueden las máquinas actuar con inteligencia?**
 
 Algunos filósofos han intentado demostrar que la IA es imposible; que las máquinas no tendrán la posibilidad de actuar inteligentemente.
