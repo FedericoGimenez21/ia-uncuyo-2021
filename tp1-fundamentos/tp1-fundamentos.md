@@ -75,7 +75,7 @@ Hasta ahora nos hemos concentrado en si podemos desarrollar la IA, pero debemos 
 Sin embargo, la IA parece que expone problemas nuevos yendo más allá de, por ejemplo, construir puentes que no se desmoronen:
 
 - Las personas podrían perder sus trabajos por la automatización. 
-  - Opinión personal: desde mi punto de vista la automatización ha generado desempleo pero también ha generado nuevos trabajos. Por ejemplo: el desarrollo de maquinaria referida a la agricultura produce muchas mejoras a las fabricas ya que las tareas pueden ser realizadas de forma más rápida y eficiente, 1 maquina podría realizar el trabajo de 50 trabajadores en menos tiempo y con menor costo asociado. Es decir, en este caso, si todos los trabajadores de agricultura del mundo fueran reemplazados por maquinas, ¿Cómo podrían reintegrarse estos trabajadores al nuevo mercado? 
+  - Opinión personal: desde mi punto de vista la automatización ha generado desempleo pero también ha generado nuevos trabajos. Por ejemplo: el desarrollo de maquinaria referida a la agricultura produce muchas mejoras a las fabricas ya que las tareas pueden ser realizadas de forma más rápida y eficiente, 1 máquina podría realizar el trabajo de 50 trabajadores en menos tiempo y con menor costo asociado. Es decir, en este caso, si todos los trabajadores de agricultura del mundo fueran reemplazados por máquinas, ¿Cómo podrían reintegrarse estos trabajadores al nuevo mercado? 
      - ¿Deberían de capacitarse en nuevas tecnologías? Si consideramos esta solución, supondría un gran gasto económico (tanto para las empresas como para los trabajadores) y mental (ya que es posible que no todos estén dispuestos a adquirir estos conocimientos).
     - Pienso que al desarrollarse nuevas tecnologías se debe de analizar cómo afectará a todo el mundo. Si estas tienen más impactos negativos que positivos considero que debe de replantearse la idea para buscar mejores soluciones o incluso descartarse. 
     El ejemplo lo aplique en agricultura pero considero que es posible aplicarlo en todos los entornos de trabajo.
@@ -84,7 +84,7 @@ Sin embargo, la IA parece que expone problemas nuevos yendo más allá de, por e
 
 - Las personas podrían tener demasiado (o muy poco) tiempo de ocio. 
 
-  - Opinion personal: considero que la IA podría permitir que las personas tengan más tiempo de ocio, esto por ejemplo, debido a que la IA podría realizar tareas diarias. Es decir, la IA puede facilitar nuestra vida, desde preparar un café en la mañana con solo presionar un botón o incluso programarlo, hasta trasladarnos en auto de forma automatizada (autos Tesla, por mencionar una marca
+  - Opinion personal: considero que la IA podría permitir que las personas tengan más tiempo de ocio, esto por ejemplo, debido a que la IA podría realizar tareas diarias. Es decir, la IA puede facilitar nuestra vida, desde preparar un café en la mañana con solo presionar un botón o incluso programarlo, hasta trasladarnos en auto de forma automatizada (autos Tesla, por mencionar una marca)
  
 - Las personas podrían perder el sentido de ser únicos. 
 
@@ -96,9 +96,9 @@ Sin embargo, la IA parece que expone problemas nuevos yendo más allá de, por e
  
 - La utilización de los sistemas de IA podría llevar a la pérdida de responsabilidad. 
 
-  - Opinión personal: considero dos puntos de vista en esta afirmación. Por un lado la pérdida de responsabilidad puede ser una mejora, por ejemplo al manejar vehículos cada piloto tiene responsabilidad con sí mismo y con los demás vehículos pero si dependemos de un vehiculo automatizado entonces perdemos toda responsabilidad, es decir recae en los fabricantes del vehiculo. Por otro lado en el campo de la medicina por ejemplo cuando un médico depende del juicio de un sistema médico experto para hacer diagnóstico, ¿quién es el culpable si el diagnóstico es erróneo?. Si los sistemas expertos se hacen más fiables y precisos que los hombres que hacen los diagnósticos, los médicos podrían tener obligaciones legales si no utilizan las recomendaciones de un sistema experto.
+  - Opinión personal: considero dos puntos de vista en esta afirmación. Por un lado la pérdida de responsabilidad puede ser una mejora, por ejemplo al manejar vehículos cada piloto tiene responsabilidad con sí mismo y con los demás vehículos pero si dependemos de un vehiculo automatizado entonces perdemos toda responsabilidad, es decir recae en los fabricantes del vehículo. Por otro lado en el campo de la medicina por ejemplo cuando un médico depende del juicio de un sistema médico experto para hacer diagnóstico, ¿quién es el culpable si el diagnóstico es erróneo?. Si los sistemas expertos se hacen más fiables y precisos que los hombres que hacen los diagnósticos, los médicos podrían tener obligaciones legales si no utilizan las recomendaciones de un sistema experto.
   
 - El éxito de la IA podría significar el fin de la raza humana.
 
-  - Opinión personal: considero que el éxito de la IA significaría mejoras en la vida diaria de las personas, cada año surgen nuevas tecnologías que nos permiten delegar tareas y de esta forma contar con más tiempo de ocio o simplemente para realizar esas tareas de una forma más eficiente. La IA tiene un largo camino de investigación y desarrollo para adaptarlos cuidadosamente a las metas deseadas, de esta forma generaran mayores avances tecnológicos y no supondrán una amenaza a la raza humana.  
+  - Opinión personal: considero que el éxito de la IA significaría mejoras en la vida diaria de las personas, cada año surgen nuevas tecnologías que nos permiten delegar tareas y de esta forma contar con más tiempo de ocio o simplemente para realizar esas tareas de una forma más eficiente. La IA tiene un largo camino de investigación y desarrollo a partir del cual, cuidadosamente se podrán alcanzar las metas deseadas, de esta forma generarán mayores avances tecnológicos y no supondrán una amenaza a la raza humana.  
   
