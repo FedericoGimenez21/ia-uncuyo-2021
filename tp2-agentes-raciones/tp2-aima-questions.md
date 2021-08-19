@@ -14,3 +14,11 @@
       ir izquierda;
     
 10.c) En este caso teniendo conocimiento de todo el entorno, un agente reflexivo simple puede ser racional, en mi opinion los estados no presentan una mejora. Seria posible que el agente tenga conocimiento acerca de que acciones realizar frente a cada posicion/casilla. Luego de que el agente realice acciones, su conocimiento se actualiza y su funcion de percepcion decide que accion realizar.  
+
+11.a) Un agente reflexivo simple no puede ser perfectamente racional para el entorno mencionado, dado que el agente no conoce acerca de la geogafia del entorno y percibe a partir de la ubicacion actual unicamente y no recuerda que acciones realizó, es posible que se encuentre atascado (por los obstaculos) o "dando vueltas en circulos". 
+
+11.b) Agente realizado en agent.py
+
+11.c) Adjunto imagen con el entorno 
+
+11.d) Un agente reflexivo con estados puede superar a un agente reflexivo simple ya que explorará el entorno e irá almacenando un conocimiento acerca del mismo. Es decir, cada accion lo llevara a una nueva percepcion del entorno. 
