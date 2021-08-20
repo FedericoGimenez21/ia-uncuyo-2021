@@ -1,5 +1,4 @@
-A)
--Jugar al CS (o cualquier 3d shooter)
+A) Jugar al CS (o cualquier 3d shooter)
 
     Performance
       -Cantidad de bajas
@@ -15,22 +14,7 @@ A)
       -colocar/desactivar bomba
     Sensors
       -camara
-B) 
-
--Explorar los oceanos
-    Performance
-      - cantidad de Km recorridos
-    Entorno
-      -oceano
-    Actuators
-      - sumergirse/moverse
-    Sensors
-      - gps
-      -sonar
-      -camaras
-
-
-
+B) Explorar los oceanos
 
     Performance
       - cantidad de Km recorridos
@@ -42,7 +26,8 @@ B)
       - gps
       -sonar
       -camaras
--Comprar y vender tokens crypto
+
+C) Comprar y vender tokens crypto
   -Performance
     -cantidad de $ en beneficio acumulado
   -Entorno
@@ -53,8 +38,8 @@ B)
     -no hacer nada
   -Sensors
     -sensores de probabilidad y estadistica 
-    
--Practicar tenis contra una pared
+
+D) Practicar tenis contra una pared
   -Performance
     -cantidad de pelotas que han golpeado dentro de un rango de la pared
   -Entorno
@@ -64,7 +49,7 @@ B)
   -Sensors
     - camara
     -acelerometro
--Realizar salto en altura
+E) Realizar salto en altura
   -Performance
     -altura saltada
   -Entorno
@@ -76,7 +61,7 @@ B)
     -camara
     -acelerometro
     -sensor de balance
- -Pujar un articulo en una subasta
+ F) Pujar un articulo en una subasta
   -Performance
     -comprar el articulo
     -guardar dinero
