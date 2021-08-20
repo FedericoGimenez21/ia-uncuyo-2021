@@ -5,9 +5,8 @@ class Enviroment:
   def __init__(self,fila,columna,dirty):
 
 
-    d=int(dirty*10)
-
-    self.m=numpy.random.choice([0, 1], size=(fila,columna), p=[(10-d)/10,d/10])
+    
+    self.m=numpy.random.choice([0, 1], size=(fila,columna), p=[1-dirty,dirty])
     self.x=random.randint(0,len(self.m)-1)
     self.y=random.randint(0,len(self.m)-1)
     self.performance=0
