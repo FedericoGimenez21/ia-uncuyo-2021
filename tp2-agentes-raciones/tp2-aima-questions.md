@@ -19,6 +19,6 @@
 
 11.b) Agente realizado en agent.py
 
-11.c) Adjunto imagen con el entorno 
+11.c) Adjunto imagen con el entorno. Archivo "11-c-entorno.png"
 
 11.d) Un agente reflexivo con estados puede superar a un agente reflexivo simple ya que explorará el entorno e irá almacenando un conocimiento acerca del mismo. Es decir, cada accion lo llevara a una nueva percepcion del entorno. 
