@@ -15,7 +15,23 @@ A)
       -colocar/desactivar bomba
     Sensors
       -camara
+B) 
+
 -Explorar los oceanos
+    Performance
+      - cantidad de Km recorridos
+    Entorno
+      -oceano
+    Actuators
+      - sumergirse/moverse
+    Sensors
+      - gps
+      -sonar
+      -camaras
+
+
+
+
     Performance
       - cantidad de Km recorridos
     Entorno
