@@ -4,13 +4,14 @@ class Enviroment:
 
   def __init__(self,fila,columna,dirty):
 
-    #self.m=numpy.zeros(shape=(fila,columna))
-    #self.m=numpy.random.choice([0, 1], size=(fila,columna), p=[9./10,1./10])
-    self.m=numpy.random.choice([0, 1], size=(fila,columna), p=[(10-dirty)/10,dirty/10])
+
+    d=int(dirty*10)
+
+    self.m=numpy.random.choice([0, 1], size=(fila,columna), p=[(10-d)/10,d/10])
     self.x=random.randint(0,len(self.m)-1)
     self.y=random.randint(0,len(self.m)-1)
     self.performance=0
-    #print(self.m)
+
 
 
   def prin(self):
@@ -67,4 +68,6 @@ class Enviroment:
 
   def get_performance(self):
     return self.performance;
+
+
 
