@@ -28,6 +28,7 @@ B) Explorar los oceanos
       -camaras
 
 C) Comprar y vender tokens crypto
+
       Performance
         -cantidad de $ en beneficio acumulado
       Entorno
@@ -40,37 +41,40 @@ C) Comprar y vender tokens crypto
         -sensores de probabilidad y estadistica 
 
 D) Practicar tenis contra una pared
-  Performance
-    -cantidad de pelotas que han golpeado dentro de un rango de la pared
-  Entorno
-    -pared
-  Actuators
-    -golpear
-  Sensors
-    - camara
-    -acelerometro
+         
+      Performance
+        -cantidad de pelotas que han golpeado dentro de un rango de la pared
+      Entorno
+        -pared
+      Actuators
+        -golpear
+      Sensors
+        - camara
+        -acelerometro
 E) Realizar salto en altura
-  Performance
-    -altura saltada
-  Entorno
-    -Vara de medicion / valla
-  Actuator
-    -saltar
-    -correr
-  Sensors
-    -camara
-    -acelerometro
-    -sensor de balance
+
+      Performance
+        -altura saltada
+      Entorno
+        -Vara de medicion / valla
+      Actuator
+        -saltar
+        -correr
+      Sensors
+        -camara
+        -acelerometro
+        -sensor de balance
  F) Pujar un articulo en una subasta
-  Performance
-    -comprar el articulo
-    -guardar dinero
-  Entorno
-    -Subasta/mercado
-  actuators
-    -pujar
-    -no hacer nada
-  sensors
-    -sensor de analisis de mercado/precio 
-   
+     
+      Performance
+        -comprar el articulo
+        -guardar dinero
+      Entorno
+        -Subasta/mercado
+      actuators
+        -pujar
+        -no hacer nada
+      sensors
+        -sensor de analisis de mercado/precio 
+
     
