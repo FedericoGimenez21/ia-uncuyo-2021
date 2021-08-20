@@ -28,16 +28,16 @@ B) Explorar los oceanos
       -camaras
 
 C) Comprar y vender tokens crypto
-  Performance
-    -cantidad de $ en beneficio acumulado
-  Entorno
-    -mercado de cryptos
-  Actuators
-    -comprar
-    -vender
-    -no hacer nada
-  Sensors
-    -sensores de probabilidad y estadistica 
+      Performance
+        -cantidad de $ en beneficio acumulado
+      Entorno
+        -mercado de cryptos
+      Actuators
+        -comprar
+        -vender
+        -no hacer nada
+      Sensors
+        -sensores de probabilidad y estadistica 
 
 D) Practicar tenis contra una pared
   Performance
