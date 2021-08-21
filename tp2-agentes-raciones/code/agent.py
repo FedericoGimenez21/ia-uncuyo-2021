@@ -1,9 +1,10 @@
 from entorno import*
 import random;
-
+import copy;
 class AgentRandom:
   def __init__(self,Enviroment):
-    self.e=Enviroment
+    copia=copy.deepcopy(Enviroment)
+    self.e=copia
     
 
   def up(self):
@@ -118,8 +119,8 @@ class AgentRandom:
 
 class AgentReflexSimple:
   def __init__(self,Enviroment):
-    self.e=Enviroment
-    
+    copia=copy.deepcopy(Enviroment)
+    self.e=copia
 
   def up(self):
     flag=self.e.accept_action("arriba",self.e.x,self.e.y)
