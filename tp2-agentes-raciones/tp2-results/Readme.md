@@ -1,1 +1,1 @@
-
+La imagen adjunta resultados presenta dos tablas (1 para agente reflexivo simple y otra para agente con acciones/comportamiento aleatorio) en las cuales se ha evaluado el desempeño de los mismos para diferentes entornos y porcentajes de suciedad en funcion de la medida de desempeño (cuantas casillas ha limpiado el agente al finalizar el proceso). 
