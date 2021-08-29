@@ -1,5 +1,5 @@
 B) 
-  1)Algoritmo de busqueda a lo ancho 
+  1)Algoritmo de búsqueda a lo ancho 
   
     Resultados de los 30 entornos generados aleatoriamente
     
@@ -9,7 +9,7 @@ B)
     
     Desviación =2458.6
     
-  2)Algoritmo de busqueda uniforme
+  2)Algoritmo de búsqueda uniforme
          
     
     Resultados de los 30 entornos generados aleatoriamente
@@ -19,7 +19,7 @@ B)
     Media= 3394.2
     
     Desviación =2458.6  
-  3) Algoritmo de busqueda en prufundidad limitada
+  3) Algoritmo de búsqueda en profundidad limitada
   
     Resultados de los 30 entornos generados aleatoriamente
     
@@ -29,7 +29,7 @@ B)
     
     Desviación =2203.3   
     
-  4) Algoritmo de busqueda A* 
+  4) Algoritmo de búsqueda A* 
   
     Resultados de los 30 entornos generados aleatoriamente
     
