@@ -29,14 +29,6 @@ B)
     
     Desviación =2203.3   
     
-  4) Algoritmo de busqueda A* 
-  
-    Resultados de los 30 entornos generados aleatoriamente
-    
-    ([259, 573, 188, 913, 300, 155, 203, 132, 42, 1520, 434, 467, 53, 301, 34, 267, 689, 1070, 2284, 40, 182, 62, 64, 112, 2244, 381, 683, 264, 3306, 429])
-    
-    Media= 588.3
-    
-    Desviación =780.3  
+ 
     
 C) 
