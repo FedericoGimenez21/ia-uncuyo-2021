@@ -1,5 +1,5 @@
 B) 
-  1)Algoritmo de busqueda a lo ancho 
+  1)Algoritmo de búsqueda a lo ancho 
   
     Resultados de los 30 entornos generados aleatoriamente
     
@@ -9,7 +9,7 @@ B)
     
     Desviación =2458.6
     
-  2)Algoritmo de busqueda uniforme
+  2)Algoritmo de búsqueda uniforme
          
     
     Resultados de los 30 entornos generados aleatoriamente
@@ -19,7 +19,7 @@ B)
     Media= 3394.2
     
     Desviación =2458.6  
-  3) Algoritmo de busqueda en prufundidad limitada
+  3) Algoritmo de búsqueda en profundidad limitada
   
     Resultados de los 30 entornos generados aleatoriamente
     
@@ -31,4 +31,14 @@ B)
     
  
     
-C) 
+C) Cuál de los 3 algoritmos considera más adecuado para resolver el problema planteado en A)?. Justificar la respuesta.
+  
+    Por un lado, teniendo en cuenta la cantidad de estados (casillas en este caso), el algoritmo de búsqueda en profundidad limitada presenta el mejor rendimiento frente a búsqueda a lo ancho y búsqueda de costo uniforme. Esto se debe a como está planteado el algoritmo, es decir, expande en profundidad cada camino hasta llegar a un objetivo sin necesidad de explorar o analizar cada estado o casilla. Podemos observar estos resultados en los ejemplos de ejecución, la media y la desviación (teniendo en cuenta cantidad de estados en cada ejecución de los entornos) más bajas se presentan en general en búsqueda en profundidad limitada. 
+    
+    Por otro lado, dado que en el problema no se plantea costos por movimiento, es decir no existe ninguna prioridad a la hora de elegir el siguiente estado, el algoritmo de búsqueda a lo ancho y búsqueda de costo uniforme presentan los mismos rendimientos. 
+    
+    Teniendo en cuenta ahora la longitud de los caminos que presentan los diferentes algoritmos, es lógico que el algoritmo de búsqueda a lo ancho presente una ventaja en este apartado, ya que examina todos los posibles casos para cada casilla, de esta forma siempre asegura el camino más corto.
+    
+    Finalizando, en resumen, si necesitamos encontrar simplemente un camino desde un punto inicio hasta un punto objetivo en una grilla, entonces la mejor opción será implementar el algoritmo de búsqueda en profundidad. En cambio si necesitamos encontrar el camino más corto desde un punto inicio hasta un punto objetivo entonces deberíamos usar el algoritmo de búsqueda a lo ancho. Y si el problema presentará costos por movimiento la mejor opción sería utilizar el algoritmo de costo uniforme.
+
+  
