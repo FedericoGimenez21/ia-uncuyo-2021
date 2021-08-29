@@ -241,110 +241,6 @@ def findPathDFS(matrix, x, y,zi,zj):
  
 
 
-class PriorityQueueA(object):
-    def __init__(self):
-        self.queue = deque()
-        
-
-    def insert(self, data):
-        self.queue.append(data)
-        
-  
-    # elimina y retorna elemento  con prioridad mas chica
-    def delete(self):
-        try:
-            max = 99999999
-            indice=0
-            for i in range(0,len(self.queue)):
-                #print(self.queue[i].f)
-                if self.queue[i].f < max:
-                    max = self.queue[i].f
-                    indice=i
-            item = self.queue[indice]
-            del self.queue[indice]
-           
-            return item
-        except IndexError:
-            print()
-            exit()
-class NodeAestrella:
-   
-    def __init__(self, x, y, parent,g,h,f):
-        self.x = x
-        self.y = y
-        self.parent = parent
-        self.f=f
-        self.g=g
-        self.h=h
- 
-
-
-def CalculateH(x,y,zi,zj):
-    return (abs(x-zi)+abs(y-zj))
-def findPathA(matrix, x, y,zi,zj):
- 
-    
-    q = PriorityQueueA()
-    src = NodeAestrella(x, y, None,0,0,0)
-    q.insert(src)
-    
-
-    
-    visited = set()
- 
-    key = (src.x, src.y)
-    visited.add(key)
-    countPrioA=0
-    
-    while len(q.queue)!=0:
-        #print(q.queue)
-     
-        countPrioA+=1
-        # desencola con prioridad
-        curr = q.delete()
-        
-        i = curr.x
-        j = curr.y
-        #print("x: ",i)
-        #print("j: ",j)
-        # return si se encuentra el destino
-        if i == zi and j == zj:
- 
-            #print("count priority: ",countPrio)
-            #printPath(curr)
-            return True,countPrioA
- 
- 
- 
-        # chequea los posibles movimientos
-        for k in range(4):
-         
-
-            x = i + row[k] 
-           
-            y = j + col[k] 
-           
-            # chequea si es posible ir a una siguiente posicion
-            if isValid(matrix,x, y):
-                # nodo siguiente
-                gnuevo=curr.g+1
-                hnuevo=CalculateH(x,y,zi,zj)
-                fnuevo=gnuevo+hnuevo
-                next = NodeAestrella(x, y, curr,gnuevo,hnuevo,fnuevo)
-                key = (next.x, next.y)
- 
-                # si no ha sido visitado
-                if key not in visited :
-                    # encola y lo marca como visitado
-                    q.insert(next)
-                    
-                    visited.add(key)
- 
-    # return None si no existe camino
-    #print("count priority: ",countPrio)
-    return False,None
-
-
 # Imprimir el camino
 def printPath(node):
     if node is None:
@@ -359,7 +255,7 @@ if __name__ == '__main__':
     arrayBFS=deque()
     arrayPrio=deque()
     arrayDFS=deque()
-    arrayA=deque()
+    
     soluciones=0
     #itera hasta que se encuentren 30 soluciones para los 4 algoritmos
     while soluciones<30:
@@ -380,12 +276,12 @@ if __name__ == '__main__':
         booleanoBFS,estadosBFS=findPathBFS(matrix, xi, xj,zi,zj)
         booleanoPriority,estadosPriority=findPathPriority(matrix, xi, xj,zi,zj)
         booleanoDFS,estadosDFS=findPathDFS(matrix, xi, xj,zi,zj)
-        booleanoA,estadosA=findPathA(matrix, xi, xj,zi,zj)
-        if booleanoDFS==True and booleanoPriority==True and booleanoBFS==True and booleanoA==True:
+        
+        if booleanoDFS==True and booleanoPriority==True and booleanoBFS==True:
             arrayBFS.append(estadosBFS)
             arrayPrio.append(estadosPriority)
             arrayDFS.append(estadosDFS)
-            arrayA.append(estadosA)
+            
             soluciones+=1
     print("ARRAY BFS: ")
     print(arrayBFS)
@@ -395,19 +291,16 @@ if __name__ == '__main__':
     print("")
     print("ARRAY DFS: ")
     print(arrayDFS)
-    print("")
-    print("ARRAY A*: ")
-    print(arrayA)
     print("")    
     mediaBFS=statistics.mean(arrayBFS)
     mediaPrio=statistics.mean(arrayPrio)
     mediaDFS=statistics.mean(arrayDFS)
-    mediaA=statistics.mean(arrayA)
+
     
     print("MEDIA USANDO BFS: ", mediaBFS)
     print("MEDIA USANDO BUSQUEDA UNIFORME(COLA PRIORIDAD): ", mediaPrio)
     print("MEDIA USANDO DFS LIMITADO: ", mediaDFS)
-    print("MEDIA USANDO A*: ", mediaA)
+
     
     print("")
     print("calculo de desviacion estandar")
@@ -418,4 +311,4 @@ if __name__ == '__main__':
     print("DESVIACION USANDO BFS: ",desviacionBFS)
     print("DESVIACION USANDO BUSQUEDA UNIFORME(COLA PRIORIDAD): ",desviacionPrio)
     print("DESVIACION USANDO DFS LIMITADO: ",desviacionDFS)
-    print("DESVIACION USANDO A*: ",desviacionA)
+   
