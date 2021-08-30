@@ -1,4 +1,4 @@
-A) Jugar al CS (o cualquier 3d shooter)
+A) Jugar al CS
 
     Performance
       -Cantidad de bajas
