@@ -3,13 +3,13 @@ A)  Algoritmo Hill Climbing
 
   -4 Reinas
   
-    	1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 23.33
-    	2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
-      	promedio= 0,00028 
-      	desviacion estandar= 0.00048
-    	3) La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
-      	estados previos promedio= 1.71
-      	desviacion estandar= 2.13
+    1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 23.33
+    2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
+      promedio= 0,00028 
+      desviacion estandar= 0.00048
+    3) La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
+      estados previos promedio= 1.71
+      desviacion estandar= 2.13
   -8 Reinas
  
      1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 20
