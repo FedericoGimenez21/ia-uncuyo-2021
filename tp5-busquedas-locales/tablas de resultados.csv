@@ -1,0 +1,29 @@
+Hill Climb;;;;
+En 30 iteraciones;;;;
+Cantidad de Reinas;4;8;10;12
+Cantidad de soluciones;7;6;1;1
+Porcentaje de veces que llega a una solucion;23,33%;20;3,33;3,33
+Tiempo de ejecucion promedio;0,00028;0,0013;0,002;0,005
+Desviacion estandar de tiempo;0,00048;0,0005;0;0
+Cantidad de estados previos promedio;1,71;12;10;24
+Desviacion estandar de estados previos;2,13;6,69;0;0
+;;;;
+Simulated;;;;
+En 30 iteraciones;;;;
+Cantidad de Reinas;4;8;10;12
+Cantidad de soluciones;30;13;7;3
+Porcentaje de veces que llega a una solucion;100,00%;43,33%;23,33;10
+Tiempo de ejecucion promedio;0,00099;0,0043;0,007;0,04
+Desviacion estandar de tiempo;0,00143;0,0044;0,007;0,015
+Cantidad de estados previos promedio;28,66;56,61;72,85;304
+Desviacion estandar de estados previos;39,79;55,56;64,21;110,85
+;;;;
+Genetico;;;;
+En 30 iteraciones;Poblacion inicial de 9;Poblacion inicial de 50;Poblacion inicial de 200;Poblacion inicial de 300
+Cantidad de Reinas;4;8;10;12
+Cantidad de soluciones;30;18;14;8
+Porcentaje de veces que llega a una solucion;100,00%;60;46,66;26,66
+Tiempo de ejecucion promedio;0,0011;0,008;0,031;0,049
+Desviacion estandar de tiempo;0,0009;0,0048;0,009;0,018
+Cantidad de estados previos promedio;4,96;10,27;17,71;12
+Desviacion estandar de estados previos;7,48;14,84;16,26;10,55
