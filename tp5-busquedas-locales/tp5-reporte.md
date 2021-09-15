@@ -1,5 +1,6 @@
 
 A)  Algoritmo Hill Climbing
+
   -4 Reinas
   
     	1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 23.33
@@ -30,6 +31,7 @@ A)  Algoritmo Hill Climbing
 
 B) Simulated Annealing
 
+
   -4 Reinas
  
     	1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 100
@@ -48,6 +50,7 @@ B) Simulated Annealing
     3) La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
       estados previos promedio= 56.61
       desviacion estandar= 55.56
+      
   -10 Reinas
 	
 		1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 23.33
@@ -77,6 +80,7 @@ C) Algoritmo Genético
     3) La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
       estados previos promedio= 10.27
       desviacion estandar= 14.84
+      
   -10 Reinas
 	
     1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 46.66
