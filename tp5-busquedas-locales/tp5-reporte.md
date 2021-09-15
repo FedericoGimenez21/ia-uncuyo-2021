@@ -1,6 +1,6 @@
 
 A)  Algoritmo Hill Climbing
-  - 4 Reinas
+  -4 Reinas
   
     	1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 23.33
     	2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
@@ -30,7 +30,7 @@ A)  Algoritmo Hill Climbing
 
 B) Simulated Annealing
 
-  - 4 Reinas
+  -4 Reinas
  
     	1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 100
     	2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
@@ -59,7 +59,7 @@ B) Simulated Annealing
       desviacion estandar=64.21
 C) Algoritmo Genético
 
-  - 4 Reinas
+  -4 Reinas
  
 		1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 100
 		2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
