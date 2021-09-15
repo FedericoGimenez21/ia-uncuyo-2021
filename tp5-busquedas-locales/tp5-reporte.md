@@ -1,6 +1,7 @@
 
 A)  Algoritmo Hill Climbing
   - 4 Reinas
+  
     1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 23.33
     2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
       promedio= 0,00028 
