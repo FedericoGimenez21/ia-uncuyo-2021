@@ -182,13 +182,6 @@ class GeneticChess:
 
 
 
-    def reportGASolverTime(self):
-        from time import time
-        start = time()
-        self.solveGA()
-        end = time()
-        with open("GA_report.txt","a") as file:
-            file.write(str(end-start)+"\n")
 
 
 def configurar(tablero,estados):
