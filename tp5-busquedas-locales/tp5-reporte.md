@@ -10,23 +10,26 @@ A)  Algoritmo Hill Climbing
       	estados previos promedio= 1.71
       	desviacion estandar= 2.13
   -8 Reinas
-    1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 20
-    2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
-      promedio= 0,0013
-      desviacion estandar= 0.0005
-    3)La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
-      estados previos promedio= 12
-      desviacion estandar= 6.69
+ 
+      1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 20
+      2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
+        promedio= 0,0013
+        desviacion estandar= 0.0005
+      3)La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
+        estados previos promedio= 12
+        desviacion estandar= 6.69
   -10 Reinas
+  
     1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 3.33
     2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
       promedio= 0,002
       desviacion estandar= 0
-    3La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
+    3)La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
       estados previos promedio= 10
       desviacion estandar= 0
 
 B) Simulated Annealing
+
   - 4 Reinas
     1)El número (porcentaje) de veces que se llega a un estado de solución óptimo: 100
     2)El tiempo de ejecución promedio y la desviación estándar para encontrar dicha solución: 
