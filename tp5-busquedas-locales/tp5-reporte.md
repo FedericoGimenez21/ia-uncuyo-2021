@@ -90,3 +90,8 @@ C) Algoritmo Genético
     3)La cantidad de estados previos promedio y su desviación estándar por los que tuvo que pasar para llegar a una solución: 
       estados previos promedio= 17.71
       desviacion estandar=16.26
+
+
+
+Opinion personal:
+	Analizando los datos obtenidos de los tres algoritmos, puedo observar que el algoritmo genético tiene mejor rendimiento teniendo en cuenta el porcentaje de veces que llega a una solucion optima y la cantidad de estados previos promedio, por otro lado si tenemos en cuenta la complejidad de cómputo considero que el algoritmo genetico es el que mayor consumo tiene, por ello si es necesario un equilibrio entre complejidad y eficiencia considero que la mejor opcion seria utilizar simulated annealing ya que presenta resultados muy favorables para 4 y 8 reinas.  
