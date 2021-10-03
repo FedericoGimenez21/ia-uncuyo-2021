@@ -102,6 +102,6 @@
 
 6.e Realizar un gráfico de cajas para los puntos c y d.
 
-	![image](https://user-images.githubusercontent.com/88351465/135772873-a2c63870-6bb4-4f51-aa3c-508922a7eae9.png)
+![image](https://user-images.githubusercontent.com/88351465/135772873-a2c63870-6bb4-4f51-aa3c-508922a7eae9.png)
 
-	![image](https://user-images.githubusercontent.com/88351465/135772859-1f198481-00d5-4a74-bfad-dc4e61e8145b.png)
+![image](https://user-images.githubusercontent.com/88351465/135772859-1f198481-00d5-4a74-bfad-dc4e61e8145b.png)
