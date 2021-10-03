@@ -85,8 +85,8 @@
 
 3. Cuál es la complejidad en el peor caso cuando se ejecuta AC-3 en un árbol estructurado CSP. (i.e. Cuando el grafo de restricciones forma un árbol: cualquiera dos variables están relacionadas por a lo sumo un camino).
 
-		En un arbol estructurado ningun arco será considerado más de una vez, 
-		por lo tango AC-3 O(ED), donde E es el número de aristasa y 
-		D es el tamalo del dominio más grande.
+		En un arbol estructurado ningún arco será considerado más de una vez, 
+		por lo tanto AC-3 es O(ED), donde E es el número de aristas y 
+		D es el tamaño del dominio más grande.
 
 	
