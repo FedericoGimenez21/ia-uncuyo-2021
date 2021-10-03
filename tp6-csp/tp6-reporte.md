@@ -17,13 +17,17 @@
 2. Utilizar el algoritmo AC-3 para demostrar que la arco consistencia puede detectar la inconsistencia de la asignación parcial {WA=red, V=blue} para el problema del colorar el mapa de Australia (Figura 5.1 AIMA 2da edición ).
 
 
-						
-![image](https://user-images.githubusercontent.com/88351465/135772280-9fc673b3-ae5f-40e4-8c28-dd12b400d984.png)
+
+![image](https://user-images.githubusercontent.com/88351465/135772291-a8e73bf1-8dc8-4ae3-b93a-b33cdc021bc8.png)
+
 
         WA -> SA 	es consistente sii WA=R and SA =(Blue or Green)
         SA->WA	es consistente sii SA=R and WA =?	
 	    Por lo tanto borramos R de SA	
 
+						
+WA	NT	Q	NSW	V	SA	T
+R	R B G	R B G	R B G	B	 B G	R B G
 
 
     
