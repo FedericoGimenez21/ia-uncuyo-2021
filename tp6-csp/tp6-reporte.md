@@ -99,3 +99,9 @@
 
 	Encadenamiento hacia adelante estados recorridos:  [19, 577, 779, 2291, 14217]
 	Backtracking estados recorridos: [8, 113, 102, 261, 1359]
+
+6.e Realizar un gráfico de cajas para los puntos c y d.
+
+	![image](https://user-images.githubusercontent.com/88351465/135772873-a2c63870-6bb4-4f51-aa3c-508922a7eae9.png)
+
+	![image](https://user-images.githubusercontent.com/88351465/135772859-1f198481-00d5-4a74-bfad-dc4e61e8145b.png)
