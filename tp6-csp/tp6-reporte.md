@@ -5,11 +5,11 @@
     
     -Restricciones: 
 
-      Toda lista de columnas debe ser un conjunto.
+        Toda lista de columnas debe ser un conjunto.
       
-      Toda lista de filas debe ser un conjunto.
+        Toda lista de filas debe ser un conjunto.
       
-      Cada sub-cuadrado debe ser único. 
+        Cada sub-cuadrado debe ser único. 
 3. 
 
 
