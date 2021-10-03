@@ -91,7 +91,10 @@
 
 4.  AC-3 coloca de nuevo en la cola todo arco ( Xk, Xi) cuando cualquier valor es removido del dominio de Xi incluso si cada valor de Xk es consistente con los valores restantes de Xi. Si por cada arco ( Xk,Xi) se lleva cuenta del número de valores que quedan de Xi que sean consistentes con Xk . Explicar como actualizar ese número de manera eficiente y demostrar que la arco consistencia puede lograrse en un tiempo total O(n2d2 )
 
-		Pre-procesando las restricciones, de esta forma, para cada valor de Xi hacemos seguimiento de las variables Xk para los cuales un arco de Xk a Xi es satisfecho por ese valor de Xi. Este tipo de estructura de datos puede ser computado en tiempo proporcional al tamaño del problema. Por lo tanto cuando un valor Xi es eliminado, reducimos en 1 el contador de valores permitidos para cada arco (Xk,Xi). 
+		Pre-procesando las restricciones, de esta forma, para cada valor de Xi hacemos seguimiento de las variables Xk 
+		para los cuales un arco de Xk a Xi es satisfecho por ese valor de Xi. 
+		Este tipo de estructura de datos puede ser computado en tiempo proporcional al tamaño del problema. 
+		Por lo tanto cuando un valor Xi es eliminado, reducimos en 1 el contador de valores permitidos para cada arco (Xk,Xi). 
 
 6.c En cada variante, calcular los tiempos de ejecución para los casos de 4, 8, 10, 12 y 15 reinas.
 
