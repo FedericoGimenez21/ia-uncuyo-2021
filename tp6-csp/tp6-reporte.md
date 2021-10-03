@@ -89,4 +89,13 @@
 		por lo tanto AC-3 es O(ED), donde E es el número de aristas y 
 		D es el tamaño del dominio más grande.
 
+
+6.c En cada variante, calcular los tiempos de ejecución para los casos de 4, 8, 10, 12 y 15 reinas.
+
+	Encadenamiento hacia adelante tiempos: [0.0010006427764892578, 0.08001708984375, 0.14403200149536133, 0.5123147964477539, 4.280789136886597]
+	Backtracking tiempos:  [0.001001119613647461, 0.004999876022338867, 0.008001089096069336, 0.02800583839416504, 0.18172335624694824]
 	
+6.d En cada variante, calcular la cantidad de estados recorridos antes de llegar a la solución para los casos de 4, 8, 10, 12 y 15 reinas.
+
+	Encadenamiento hacia adelante estados recorridos:  [19, 577, 779, 2291, 14217]
+	Backtracking estados recorridos: [8, 113, 102, 261, 1359]
