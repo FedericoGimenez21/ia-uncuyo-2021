@@ -1,4 +1,5 @@
 1. Describir en detalle una formulación CSP para el Sudoku
+    
     -Variables: 
     
         81 variables cada una representando el valor de una celda
