@@ -95,6 +95,31 @@
 		para los cuales un arco de Xk a Xi es satisfecho por ese valor de Xi. 
 		Este tipo de estructura de datos puede ser computado en tiempo proporcional al tamaño del problema. 
 		Por lo tanto cuando un valor Xi es eliminado, reducimos en 1 el contador de valores permitidos para cada arco (Xk,Xi). 
+		
+5. Demostrar la correctitud del algoritmo CSP para  árboles estructurados (sección 5.4, p. 172 AIMA 2da edición). Para ello, demostrar: 
+
+	a)Que para un CSP cuyo grafo de restricciones es un árbol, 2-consistencia (consistencia de arco) implica n-consistencia (siendo n número total de variables)
+	
+		Cualquier CSP estructurado por árbol puede resolverse en tiempo lineal en el número de variables. El algoritmo tiene los siguientes pasos:
+		
+		-Elija cualquier variable como la raíz del árbol, y ordene las variables desde la
+		raíz a las hojas de tal modo que el padre de cada nodo en el árbol lo precede
+		en el ordenamiento. Etiquetar las variables X1…, Xn
+		en orden. Ahora, cada variable excepto la raíz tiene exactamente una variable
+		padre.
+		
+		-Para j desde n hasta 2, aplicar la consistencia de arco al arco (Xi, Xj), donde Xi
+		es el padre de Xj, quitando los valores del DOMINIO[Xi] que sea necesario.
+		
+		-Para j desde 1 a n, asigne cualquier valor para Xj consistente con el valor asignado para Xi, donde Xi es el padre de Xj.
+		
+		-Como el grafo de restricciones es un árbol, de esta forma solo quedará resolver 2-consistencia consistencias de arco. 
+		
+	b) Argumentar por qué lo demostrado en a es suficiente.
+	
+		-Aplicando la comprobación de consistencia de arco en orden inverso en el paso 2, 
+		el algoritmo asegura que cualquier valor suprimido no puede poner en peligro 		
+		la consistencia de arcos que ya han sido tratados.
 
 6.c En cada variante, calcular los tiempos de ejecución para los casos de 4, 8, 10, 12 y 15 reinas.
 
