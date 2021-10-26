@@ -154,6 +154,9 @@ FalseNegativo2 <-nrow(data2 %>% filter(inclinacion_peligrosa==1 & prediction_cla
 6)a)
 
 acur<- (TrueNegative2 +TrueNegative2)/(TrueNegative2+TrueNegative2+FalsePositive2+FalseNegativo2)
+
 Pres<- TruePositive2/(TruePositive2+FalsePositive2)
+
 Sens<-TruePositive2/(TruePositive2+FalseNegativo2)
+
 speci<- TrueNegative2/(TrueNegative2+FalsePositive2)
