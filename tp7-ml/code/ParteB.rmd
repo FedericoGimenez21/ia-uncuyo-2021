@@ -53,14 +53,14 @@ test <- test[,!borrado]
 borrado <- names(test) %in% c("area_seccion")
 test <- test[,!borrado]
 
-positivos<- data_train %>% filter(inclinacion_peligrosa == 1)
-negativos<- data_train %>% filter(inclinacion_peligrosa == 0)
+Unos<- data_train %>% filter(inclinacion_peligrosa == 1)
+Ceros<- data_train %>% filter(inclinacion_peligrosa == 0)
 
-#Tomamos 3000 randoms negativos para equilibrar positivos y negativos
-seleccion<- sample(1:nrow(negativos),replace = F, size = 3000)
-negativos<- negativos[ seleccion, ]
-#combinamos negativos y positivos en data_train 
-data_train <- rbind(negativos,positivos)
+#Tomamos 3000 randoms Ceros 
+seleccion<- sample(1:nrow(Ceros),replace = F, size = 3000)
+Ceros<- Ceros[ seleccion, ]
+#combinamos
+data_train <- rbind(Ceros,Unos)
 
 #aplicamos randomForest
 rf <- randomForest(inclinacion_peligrosa ~ altura + especie+ +circ_tronco_cm+ diametro_tronco,data=data_train, importance=TRUE, ntree=700, mtry=2)
