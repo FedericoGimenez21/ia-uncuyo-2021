@@ -8,9 +8,10 @@ library(randomForest)
 data <- read_csv("data/arbolado-mza-dataset.csv") 
 test <- read_csv("data/arbolado-mza-dataset-test.csv") 
 
+#guardamos los id de envio
 ArbolesID <- test$id
 
-
+#creo la particion de data_train
 trainIndex <- createDataPartition(as.factor(data$inclinacion_peligrosa), p=0.80, list=FALSE)
 data_train <- data[ trainIndex,]
 data_test <-  data[-trainIndex,]
