@@ -8,9 +8,9 @@ Integrantes:
 
 ### Descripción
 
-La idea de este proyecto es investigar y aprender técnicas de inteligencia artificial que no hayan sido vistas durante el cursado de la materia y aplicarlas en un caso práctico el cual será: a partir de un conjunto de datos referentes al mercado inmobiliario de King County, USA, crear un modelo y entrenarlo. Y una vez conseguido un buen ajuste, utilizaremos este modelo para predecir el precio de viviendas en ese área.
+La idea de este proyecto es **investigar** y **aprender** técnicas de inteligencia artificial que no hayan sido vistas durante el cursado de la materia y aplicarlas en un caso práctico el cual será: a partir de un conjunto de datos referentes al mercado inmobiliario de King County, USA, crear un modelo y entrenarlo. Y una vez conseguido un buen ajuste, utilizaremos este modelo para predecir el precio de viviendas en ese área.
 
-### Las técnicas que se **investigarán** y **aplicarán** son: 
+### Las técnicas que se investigarán y aplicarán son: 
 
 •	Regresión Lineal
 
