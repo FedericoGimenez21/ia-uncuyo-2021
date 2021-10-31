@@ -29,7 +29,7 @@ o	Metricas: “Root Mean Square Error (RMSE) In R, The root mean square error (R
  ![image](https://user-images.githubusercontent.com/88351465/139598751-9412f067-01b8-42fb-8bc1-96bd1f57dfe2.png)
 
  
-Dado que trabajaremos con técnicas de regresión considero que la métrica de RMSE será útil para analizar los resultados de los diferentes algoritmos aplicados. 
+Dado que trabajaré con técnicas de regresión considero que la métrica de RMSE será útil para analizar los resultados de los diferentes algoritmos aplicados. 
 
 ### **Justificación:** uno de los principales usos de las técnicas de regresión es predicción, por lo tanto considero que aplicar estas técnicas en este ejemplo práctico (predicción de precios) será eficiente y óptimo.
 
