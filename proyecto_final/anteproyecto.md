@@ -54,3 +54,8 @@ Dado que trabajaré con técnicas de regresión considero que la métrica de RMS
 -	Actividad 9: Análisis de resultados obtenidos [1 dia] 
 
 -	Actividad 10: Escritura del informe final (detallando todos los pasos realizados durante el proyecto) [3 días]
+
+### Cronograma estimado de actividades
+
+![Captura de pantalla (1076)](https://user-images.githubusercontent.com/88351465/139599166-f5f98934-32a5-4960-b780-8419adb2b443.png)
+
