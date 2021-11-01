@@ -59,3 +59,19 @@ Dado que trabajaré con técnicas de regresión considero que la métrica de RMS
 
 ![Captura de pantalla (1076)](https://user-images.githubusercontent.com/88351465/139599166-f5f98934-32a5-4960-b780-8419adb2b443.png)
 
+
+### Bibliografía:
+ 
+ Sitios web: 
+ 
+ Idea general: https://medium.com/analytics-vidhya/predicting-house-prices-using-classical-machine-learning-and-deep-learning-techniques-ad4e55945e2d
+ 
+ https://catboost.ai/en/docs/concepts/r-usages-examples  (Catboost)
+ 
+ https://www.datacamp.com/community/tutorials/linear-regression-R (Linear regression)
+ 
+ https://www.rdocumentation.org/packages/glmnet/versions/4.1-2/topics/glmnet  (Glmnet)
+ 
+ https://glmnet.stanford.edu/articles/glmnet.html#:~:text=Glmnet%20is%20a%20package%20that,for%20the%20regularization%20parameter%20lambda.  (Glmnet)
+ 
+ Libros: ISLRv2 https://www.statlearning.com/  (Linear regression y glmnet)
