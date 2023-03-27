@@ -1,6 +1,21 @@
 # MARCO TEÓRICO 
 
-## Linear Regression
+# Terminos importantes 
+
+Bias:
+Biases are the underlying assumptions that are made by data to simplify the target function. Bias does help us generalize the data better and make the model less sensitive to single data points. It also decreases the training time because of the decrease in complexity of target function High bias suggest that there is more assumption taken on target function. This leads to the underfitting of the model sometimes.
+Examples of High bias Algorithms include Linear Regression, Logistic Regression etc.
+
+Variance:
+In machine learning, Variance is a type of error that occurs due to a model’s sensitivity to small fluctuations in the dataset. The high variance would cause an algorithm to model the outliers/noise in the training set. This is most commonly referred to as overfitting. In this situation, the model basically learns every data point and does not offer good prediction when it tested on a novel dataset.
+Examples of High variance Algorithms include Decision Tree, KNN etc.
+
+![image](https://user-images.githubusercontent.com/88351465/228051759-5fa20141-391e-40e2-b644-a6cfe10aad01.png)
+
+![image](https://user-images.githubusercontent.com/88351465/228051810-ceaacd40-0ddf-48b4-af2f-2a2a9695f41e.png)
+
+
+# Linear Regression
 
 Simple linear regression lives up to its name: it is a very straightforward approach for predicting a quantitative response Y on the basis of a single predictor variable X. It assumes that there is approximately a linear
 relationship between X and Y .
@@ -113,4 +128,45 @@ The basic idea is to measure how bad/erroneous the model’s predictions are whe
 In the formula, the difference between the observed and predicted values is called the residual. The mean squared error (MSE) is the average of all the squared residuals. Then the RMSE just takes the square root of that, which puts the metric back in the response variable scale.
 
 R-squared is a better measure than RSME. Because the value of Root Mean Squared Error depends on the units of the variables (i.e. it is not a normalized measure), it can change with the change in the unit of the variables.
+
+
+# GLMNET (Ridge Regression y Lasso Regression)
+
+## Ridge Regression 
+
+Ridge regression is very similar to least squares, except that the coefficients ridge
+regression are estimated by minimizing a slightly different quantity
+In particular, the ridge regression coefficient estimates βˆR are the values that minimize
+![image](https://user-images.githubusercontent.com/88351465/228047089-f5c18fe4-1cc8-405a-a1f9-85a3928f86e2.png)
+
+where λ ≥ 0 is a tuning parameter, to be determined separately. 
+The tuning parameter λ serves to control
+the relative impact of these two terms on the regression coefficient estimates. When λ = 0, the penalty term has no effect, and ridge regression
+will produce the least squares estimates. However, as λ → ∞, the impact of
+the shrinkage penalty grows, and the ridge regression coefficient estimates
+will approach zero.
+Selecting a good value for λ is critical. One optimal option is to try a bunch of values for λ and use cross-validation, to determine which one results in the lowest variance. 
+
+Why Does Ridge Regression Improve Over Least Squares?
+Ridge regression’s advantage over least squares is rooted in the bias-variance
+trade-off. As λ increases, the flexibility of the ridge regression fit decreases,
+leading to decreased variance but increased bias.
+
+
+## Lasso Regression 
+
+The lasso is a relatively recent alternative to ridge regression. Formula: 
+![image](https://user-images.githubusercontent.com/88351465/228049230-f9f6a8e0-804b-4e0e-88ae-94eae70106b1.png)
+
+we see that the lasso and ridge regression have similar formulations.
+The only difference is that the βj^2 term in the ridge
+regression penalty has been replaced by |βj| in the lasso penalty
+As with ridge regression, the lasso shrinks the coefficient estimates towards zero.
+
+Lasso produces simpler and more interpretable models that involve only a
+subset of the predictors.
+
+## Comparative Analysis of Lasso and Ridge Regression
+Ridge and Lasso regression uses two different penalty functions for regularisation. Ridge regression uses L2 on the other hand lasso regression go uses L1 regularisation technique. In ridge regression, the penalty is equal to the sum of the squares of the coefficients and in the Lasso, penalty is considered to be the sum of the absolute values of the coefficients. In lasso regression, it is the shrinkage towards zero using an absolute value (L1 penalty or regularization technique) rather than a sum of squares(L2 penalty or regularization technique).
+
 
