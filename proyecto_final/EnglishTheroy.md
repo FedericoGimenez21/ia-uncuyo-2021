@@ -170,3 +170,22 @@ subset of the predictors.
 Ridge and Lasso regression uses two different penalty functions for regularisation. Ridge regression uses L2 on the other hand lasso regression go uses L1 regularisation technique. In ridge regression, the penalty is equal to the sum of the squares of the coefficients and in the Lasso, penalty is considered to be the sum of the absolute values of the coefficients. In lasso regression, it is the shrinkage towards zero using an absolute value (L1 penalty or regularization technique) rather than a sum of squares(L2 penalty or regularization technique).
 
 
+## Selecting the Tuning Parameter
+
+implementing ridge regression and the lasso requires a method for selecting
+a value for the tuning parameter λ
+Cross-validation provides a simple way to tackle this problem. We choose a grid of λ values, and compute
+the cross-validation error for each value of λ. We
+then select the tuning parameter value for which the cross-validation error
+is smallest. Finally, the model is re-fit using all of the available observations
+and the selected value of the tuning parameter. 
+
+
+![image](https://user-images.githubusercontent.com/88351465/228054986-c136aeca-847d-4815-af62-5af935a41db7.png)
+
+
+> Left: Ten-fold cross-validation MSE for the lasso, applied to
+> the sparse simulated data set. Right: The corresponding lasso
+> coefficient estimates are displayed. The two signal variables are shown in color,
+> and the noise variables are in gray. The vertical dashed lines indicate the lasso
+> fit for which the cross-validation error is smallest
