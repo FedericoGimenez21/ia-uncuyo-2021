@@ -189,3 +189,192 @@ and the selected value of the tuning parameter.
 > coefficient estimates are displayed. The two signal variables are shown in color,
 > and the noise variables are in gray. The vertical dashed lines indicate the lasso
 > fit for which the cross-validation error is smallest
+
+
+# Boosting 
+
+Boosting is the ensemble learning method where we build multiple weak learners (same  algorithms) in a parallel manner.
+
+ All these weak learners take the previous models’ feedback to improve their power in accurately predicting the miss classified classes. At the end, the algorithm uses all these weak learners to build the final model. 
+
+The final model predictions use the majority voting approach for classification problems. Whereas for regression kind of problem. The final value is the average value of all the week learning models.
+
+Can a strong model be accomplished from many models that are relatively poor and simply also called as weak learners?
+In other words, can the multiple weak learners form a strong model to predict the future or test dataset?
+
+By saying "weak models". We're not saying about simple basic models like decision trees.
+
+But models with low-performance accuracy, where low is a bit better than random.
+
+How can we build such models then?
+A positive mathematical response to this question took a few years to create a fully-functional, algorithms based solution. 
+
+In short, this algorithm works in a few steps in a greedy approach. 
+
+At first, they construct a linear combination of simple models (basic algorithms) by re-weighting input data. The model (usually the decision tree) assigns larger weights for the incorrectly predicted items.
+
+Going forward, the algorithm amplifies the incorrectly predicted classes and tries to predict them accurately. The loss function intends to minimize the errors for the incorrect classes than the overall dataset.
+
+
+### What is a Gradient boosting Algorithm?
+Gradient Boosting, Gradient Tree Boosting o Gradient Boosted Regression Trees (GBRT), es una familia de algoritmos usados tanto en clasificación como en regresión basados en la combinación de modelos predictivos débiles (weak learners) -normalmente árboles de decisión- para crear un modelo predictivo fuerte. La generación de los árboles de decisión débiles se realiza de forma secuencial, creándose cada árbol de forma que corrija los errores del árbol anterior. Los aprendices suelen ser árboles "poco profundos" (shallow trees), de apenas uno, dos o tres niveles de profundidad, típicamente.
+
+Uno de los parámetros de este tipo de argumentos es el learning rate o tasa de aprendizaje, que controla el grado de mejora de un árbol respecto del anterior. Una tasa de aprendizaje pequeña supone una mejora más lenta pero adaptándose mejor a los datos, lo que se traduce generalmente en mejoras en el resultado a costa de un mayor consumo de recursos.
+
+
+The main idea behind this algorithm is to build models sequentially and these subsequent models try to reduce the errors of the previous model. But how do we do that? How do we reduce the error? This is done by building a new model on the errors or residuals of the previous model.
+
+When the target column is continuous, we use Gradient Boosting Regressor whereas when it is a classification problem, we use Gradient Boosting Classifier. The only difference between the two is the “Loss function”. The objective here is to minimize this loss function by adding weak learners using gradient descent. Since it is based on loss function hence for regression problems, we’ll have different loss functions like Mean squared error (MSE) and for classification, we will have different for e.g log-likelihood.
+
+## How Gradient Boosting Works
+
+
+Gradient boosting approach can use for both the regression and classification problems. These teaching techniques generate a prediction model in the form of a series of weak prediction models, usually in the way of decision trees. 
+
+Three components are involved in gradient boosting:
+
+ - An optimized loss function.
+ - A lousy indicator learner.
+ - An additive model that reduces failure cases.
+
+
+### Loss Function
+The function of loss depends on the type of problem we are going to resolve.
+
+It has to be differentiable. However, you should describe your own loss functions and help them.
+
+Regression may use a squared error, for instance. In contrast, the classification may require a logarithmic loss.
+
+The benefit of the gradient booster framework is that for each loss function, you may decide to use, the new booster algorithm does not need to extract. 
+
+Instead, the framework is general enough to enable any differentiable loss function.
+
+### Weak Learner
+Decision trees are used in gradient boosting as weak learners.
+
+Regression arborescences split values and add the output to them together to allow for the inclusion of results of the next models and to "right" the residuals in the predictions.
+
+### Additive Model
+Trees are introduced one at a time. The current trees in the model are not updated. A gradient descent technique minimizes losses when adding trees.
+
+Traditionally, gradient descent minimizes the number of parameters, such as the regression equation coefficients or the neural network weights. 
+
+After measuring the error or loss, the values are updated to minimize the error.
+
+Instead of parameters, we have poor learning sub-models or, more precisely, decision trees. After calculating the loss, we have to add a tree to the model that decreases the loss (i.e., follows the gradient) to perform the gradient descent process. 
+
+This is achieved by parameterizing the tree. Changing the tree parameters and heading in the right direction (reducing the residual loss).
+
+This method is commonly referred to as functional gradient descent or gradient descent with functions.
+
+
+## Algoritmo de Gradient Boosting
+
+### Catboost
+
+CatBoost is based on gradient boosted decision trees. During training, a set of decision trees is built consecutively. Each successive tree is built with reduced loss compared to the previous trees.
+
+The number of trees is controlled by the starting parameters. To prevent overfitting, use the overfitting detector. When it is triggered, trees stop being built.
+
+According to the CatBoost documentation, CatBoost supports numerical, categorical, and text features but has a good handling technique for categorical data. 
+
+The CatBoost algorithm has quite a number of parameters to tune the features in the processing stage.
+
+"Boosting" in CatBoost refers to the gradient boosting machine learning. Gradient boosting is a machine learning technique for regression and classification problems. 
+Which produces a prediction model in an ensemble of weak prediction models, typically decision trees. 
+
+
+Here we would look at the various features the CatBoost algorithm offers and why it stands out.
+
+### Robust
+CatBoost can improve the performance of the model while reducing overfitting and the time spent on tuning.  
+
+CatBoost has several parameters to tune. Still, it reduces the need for extensive hyper-parameter tuning because the default parameters produce a great result.
+
+Overfitting is a common problem in gradient boosting, especially when the dataset is small or noisy. CatBoost has several features that help reduce overfitting.
+
+One of them is a novel gradient-based regularization technique called ordered boosting, which penalizes complex models that overfit the data. Another feature is the use of per-iteration learning rate, which allows the model to adapt to the complexity of the problem at each iteration.
+
+### Automatic Handling of Missing Values
+Missing values are a common problem in real-world datasets. Traditional gradient boosting frameworks require imputing missing values before training the model. CatBoost, however, can handle missing values automatically. 
+
+During training, it learns the optimal direction to move along the gradient for each missing value, based on the patterns in the data.
+
+### Accuracy
+The CatBoost algorithm is a high performance and greedy novel gradient boosting implementation. 
+
+Hence, CatBoost (when implemented well) either leads or ties in competitions with standard benchmarks.
+
+### Categorical Features Support
+The key features of CatBoost is one of the significant reasons why it was selected by many boosting algorithms such as LightGBM,  XGBoost algorithm ..etc 
+
+With other machine learning algorithms. After preprocessing and cleaning your data, the data has to be converted into numerical features so that the machine can understand and make predictions.
+
+This is same like, for any text related models we convert the text data into to numerical data it is know as word embedding techniques.
+
+This process of encoding or conversion is time-consuming. CatBoost supports working with non-numeric factors, and this saves some time plus improves your training results.
+
+### Easy Implementation
+CatBoost offers easy-to-use interfaces. The CatBoost algorithm can be used in Python with scikit-learn, R, and command-line interfaces.
+
+Fast and scalable GPU version: the researchers and machine learning engineers designed CatBoost at Yandex to work on data sets as large as tens of thousands of objects without lagging. 
+
+Training your model on GPU gives a better speedup when compared to training the model on CPU. 
+
+To crown this improvement, the larger the dataset is, the more significant the speedup. CatBoost efficiently supports multi-card configuration. So, for large datasets, use a multi-card configuration.
+
+### Faster Training & Predictions
+Before the improvement of servers, the maximum number of GPUs per server is 8 GPUs. Some data sets are more extensive than that, but CatBoost uses distributed GPUs. 
+
+This feature enables CatBoost to learn faster and make predictions 13-16 times faster than other algorithms.
+
+### Interpretability
+CatBoost provides some level of interpretability. It can output feature importance scores, which can help understand which features are most relevant for the prediction. 
+
+It also supports visualization of decision trees, which can help understand the structure of the model.
+
+### Supporting Community of Users
+The non-availability of a team to contact when you encounter issues with a product you consume can be very annoying. This is not the case for CatBoost. 
+
+CatBoost has a growing community where the developers lookout for feedbacks and contributions.
+
+There is a Slack community, a Telegram channel (with English and Russian versions), and Stack Overflow support. If you ever discover a bug, there is a page via GitHub for bug reports.
+
+### Is tuning required in CatBoost?
+The answer is not straightforward because of the type and features of the dataset. The default settings of the parameters in CatBoost would do a good job. 
+
+CatBoost produces good results without extensive hyper-parameter tuning. However, some important parameters can be tuned in CatBoost to get a better result. 
+
+These features are easy to tune and are well-explained in the CatBoost documentation. Here are some of the parameters that can be optimized for a better result;
+
+- cat_ features, 
+- one_hot_max_size, 
+- learning_rate & n_estimators,
+- max_depth, 
+- subsample, 
+- colsample_bylevel, 
+- colsample_bytree, 
+- colsample_bynode, 
+- l2_leaf_reg, 
+- random_strength.
+
+### When To Use CatBoost
+#### Short training time on a robust data
+Unlike some other machine learning algorithms, CatBoost performs well with a small data set. 
+
+However, it is advisable to be mindful of overfitting. A little tweak to the parameters might be needed here.
+
+#### Working on a small data set
+This is one of the significant strengths of the CatBoost algorithm. Suppose your data set has categorical features, and converting it to numerical format seems to be quite a lot of work.
+
+In that case, you can capitalize on the strength of CatBoost to make the process of building your model easy.
+
+#### When you are working on a categorical dataset
+CatBoost is incredibly faster than many other machine learning algorithms. The splitting, tree structure, and training process are optimized to be faster on GPU and CPU. 
+
+Training on GPU is 40 times faster than on CPU, two times faster than LightGBM, and 20 times faster than XGBoost.
+
+### When To Not Use CatBoost
+There are not many disadvantages of using CatBoost for whatever data set. 
+
+So far, the hassle why many do not consider using CatBoost is because of the slight difficulty in tuning the parameters to optimize the model for categorical features.
