@@ -378,3 +378,27 @@ Training on GPU is 40 times faster than on CPU, two times faster than LightGBM, 
 There are not many disadvantages of using CatBoost for whatever data set. 
 
 So far, the hassle why many do not consider using CatBoost is because of the slight difficulty in tuning the parameters to optimize the model for categorical features.
+
+
+
+### Algoritmo de linear regression (lm in R)
+
+A  linear regression can be calculated in R with the command lm
+The lm command takes the variables in the format:
+
+lmData= lm([target] ~ [predictor / features], data = [data source])
+
+With the command summary(lmData) you can see detailed information on the model’s performance and coefficients.
+
+### Glmnet in R (lasso and ridge regression) 
+
+Ridge regression - glmnet parameter alpha=0 for ridge regression
+For numerical prediction choose family - gaussian, for classification family = binomial
+glmnet by defaut chooses 100 lambda values that are data dependent
+
+l_ridge <- glmnet(x, y, family="gaussian", alpha=0)
+
+Lasso regression - glmnet parameter alpha=1 for Lasso regression
+glmnet(x, y, alpha = 1)
+
+
