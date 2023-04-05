@@ -114,3 +114,138 @@ corrplot(cor(housing))
 #Attributes like ‘tax and rad’, ‘nox and tax’, ‘age and indus’ have positive correlation. Larger darker blue dots suggest storng positive relationship.
 #Attributes like ‘dis and nox’, ‘dis and indus’, ‘age and dis’ have negative correlation. Larger darker red dots suggest storng negative relationship.
 
+#Let’s split the loaded dataset into train and test sets. We will use 80% of the data to train our models and 20% will be used to test the models..
+
+set.seed(101)
+split <- sample.split(housing,SplitRatio =0.75)
+train <- subset(housing,split==TRUE)
+test <- subset(housing,split==FALSE)
+
+dim(housing)
+dim(train)
+
+dim(test)
+
+summary(train)
+
+model <- lm(medv ~ lstat , data = train) # fit a simple linear regression model
+summary(model)
+
+
+#Multiple Linear Regression
+#Lets build our model considering that crim,rm,tax,lstat as the major influencers on the target variable.
+model2 <- lm(medv ~ crim + rm + tax + lstat , data = train)
+summary(model2)
+model2
+
+
+
+test$predicted.medv <- predict(model,test)
+
+error <- test$medv-test$predicted.medv
+rmse <- sqrt(mean(error)^2)
+rmse
+
+
+
+
+test$predicted2.medv <- predict(model2,test)
+
+error2 <- test$medv-test$predicted2.medv
+rmse2 <- sqrt(mean(error2)^2)
+rmse2
+
+
+# Remove Highly Correlated Variables and build models
+# Highly correlated variables
+correlated <- cor(housing[,1:13])
+highCorr <- findCorrelation(correlated, cutoff=0.70)
+
+# Identify variables that are highly correlated
+names(train[highCorr])
+# Create new dataset w/o highly correlated variables
+corr_data <- train[,-highCorr]
+
+model3 <- lm(medv ~ . , data = corr_data) # fit a simple linear regression model
+summary(model3)
+test$predicted3.medv <- predict(model3,test)
+
+error3 <- test$medv-test$predicted3.medv
+rmse3 <- sqrt(mean(error3)^2)
+rmse3
+
+
+
+#Creating GLMNET  regression
+
+#converting dataframe into matrix
+library(glmnet)
+x <- data.matrix(train[,1:13])
+y <- train$medv
+
+
+control <- trainControl(method = "cv",
+                        number = 5)
+
+lineer <- train(medv~.,
+                data = train,
+                method = "lm",
+                trControl = control )
+
+# summary(lineer)
+
+
+#Ridge regression - glmnet parameter alpha=0 for ridge regression
+
+
+ridge <- train(medv~.,
+               data = train,
+               method = "glmnet",
+               tuneGrid = expand.grid(alpha = 0,
+                                      lambda = seq(0.0001,1,length=50)),
+               trControl = control )
+
+
+# Lasso Regression
+
+lasso <- train(medv~.,
+               data = train,
+               method = "glmnet",
+               tuneGrid = expand.grid(alpha = 1,
+                                      lambda = seq(0.0001,1,length=50)),
+               trControl = control )
+
+
+
+# Test RMSE
+p <- predict(lineer,test)
+lineer_t <- rmse(test$medv,p)
+
+
+
+# Ridge Regression
+# Train RMSE
+p <- predict(ridge,train)
+ridge_e <- rmse(train$medv,p)
+# Test RMSE
+p <- predict(ridge,test)
+ridge_t<- rmse(test$medv,p)
+
+
+
+# Lasso Regression
+# Train RMSE
+p <- predict(lasso,train)
+lasso_e <- rmse(train$medv,p)
+# Test RMSE
+p <- predict(lasso,test)
+lasso_t<- rmse(test$medv,p)
+
+
+
+model_liste <- list(LM = lineer,
+                    Ridge = ridge, Lasso = lasso)
+                    
+
+resamp <- resamples(model_liste)
+summary(resamp)
