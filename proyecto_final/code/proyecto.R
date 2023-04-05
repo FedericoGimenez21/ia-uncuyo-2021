@@ -173,3 +173,79 @@ test$predicted3.medv <- predict(model3,test)
 error3 <- test$medv-test$predicted3.medv
 rmse3 <- sqrt(mean(error3)^2)
 rmse3
+
+
+
+#Creating GLMNET  regression
+
+#converting dataframe into matrix
+library(glmnet)
+x <- data.matrix(train[,1:13])
+y <- train$medv
+
+
+control <- trainControl(method = "cv",
+                        number = 5)
+
+lineer <- train(medv~.,
+                data = train,
+                method = "lm",
+                trControl = control )
+
+# summary(lineer)
+
+
+#Ridge regression - glmnet parameter alpha=0 for ridge regression
+
+
+ridge <- train(medv~.,
+               data = train,
+               method = "glmnet",
+               tuneGrid = expand.grid(alpha = 0,
+                                      lambda = seq(0.0001,1,length=50)),
+               trControl = control )
+
+
+# Lasso Regression
+
+lasso <- train(medv~.,
+               data = train,
+               method = "glmnet",
+               tuneGrid = expand.grid(alpha = 1,
+                                      lambda = seq(0.0001,1,length=50)),
+               trControl = control )
+
+
+
+# Test RMSE
+p <- predict(lineer,test)
+lineer_t <- rmse(test$medv,p)
+
+
+
+# Ridge Regression
+# Train RMSE
+p <- predict(ridge,train)
+ridge_e <- rmse(train$medv,p)
+# Test RMSE
+p <- predict(ridge,test)
+ridge_t<- rmse(test$medv,p)
+
+
+
+# Lasso Regression
+# Train RMSE
+p <- predict(lasso,train)
+lasso_e <- rmse(train$medv,p)
+# Test RMSE
+p <- predict(lasso,test)
+lasso_t<- rmse(test$medv,p)
+
+
+
+model_liste <- list(LM = lineer,
+                    Ridge = ridge, Lasso = lasso)
+                    
+
+resamp <- resamples(model_liste)
+summary(resamp)
