@@ -8,7 +8,11 @@ install.package('plotly')
 install.packages('caTools')
 install.packages('reshape2')
 install.packages('dplyr')
+install.packages('glmnet')
+install.packages('Metrics')
 
+
+library(Metrics)
 library(readr)
 library(ggplot2)#for visualisation
 library(corrplot)#for visualisation of correlation
@@ -16,6 +20,7 @@ library(mlbench)
 library(Amelia)
 library(plotly)#converting ggplot to plotly
 library(reshape2)
+library(lattice)
 library(caret)
 library(caTools)#for splittind data into testing and training data
 library(dplyr) #manipulating dataframe
@@ -114,6 +119,8 @@ corrplot(cor(housing))
 #Attributes like ‘tax and rad’, ‘nox and tax’, ‘age and indus’ have positive correlation. Larger darker blue dots suggest storng positive relationship.
 #Attributes like ‘dis and nox’, ‘dis and indus’, ‘age and dis’ have negative correlation. Larger darker red dots suggest storng negative relationship.
 
+
+
 #Let’s split the loaded dataset into train and test sets. We will use 80% of the data to train our models and 20% will be used to test the models..
 
 set.seed(101)
@@ -176,6 +183,7 @@ rmse3
 
 
 
+
 #Creating GLMNET  regression
 
 #converting dataframe into matrix
@@ -218,9 +226,9 @@ lasso <- train(medv~.,
 
 
 # Test RMSE
-p <- predict(lineer,test)
+pLineer <- predict(lineer,test)
 lineer_t <- rmse(test$medv,p)
-
+postResample(pLineer,test$medv)
 
 
 # Ridge Regression
@@ -228,8 +236,9 @@ lineer_t <- rmse(test$medv,p)
 p <- predict(ridge,train)
 ridge_e <- rmse(train$medv,p)
 # Test RMSE
-p <- predict(ridge,test)
-ridge_t<- rmse(test$medv,p)
+pRidge <- predict(ridge,test)
+postResample(pRidge,test$medv)
+ridge_t<- rmse(test$medv,pRidge)
 
 
 
@@ -238,8 +247,11 @@ ridge_t<- rmse(test$medv,p)
 p <- predict(lasso,train)
 lasso_e <- rmse(train$medv,p)
 # Test RMSE
-p <- predict(lasso,test)
-lasso_t<- rmse(test$medv,p)
+pLasso <- predict(lasso,test)
+
+postResample(pLasso,test$medv)
+
+lasso_t<- rmse(test$medv,pLasso)
 
 
 
@@ -249,3 +261,55 @@ model_liste <- list(LM = lineer,
 
 resamp <- resamples(model_liste)
 summary(resamp)
+
+
+#install  packages catboost
+
+install.packages('devtools')
+devtools::install_url('https://github.com/catboost/catboost/releases/download/v1.1.1/catboost-R-Windows-1.1.1.tgz', INSTALL_opts = c("--no-multiarch", "--no-test-load"))
+
+library(catboost)
+
+#Separate x and y of train and test dataset, which will very useful when we using this in the catboost package.
+library(dplyr)
+y_train <- unlist(train[c('medv')])
+X_train <- train %>% select(-medv)
+y_valid <- unlist(test[c('medv')])
+X_valid <- test %>% select(-medv)
+
+
+#Convert the train and test dataset to catboost specific format using the load_pool function by mentioning x and y of both train and test.
+train_pool <- catboost.load_pool(data = X_train, label = y_train)
+test_pool <- catboost.load_pool(data = X_valid, label = y_valid)
+
+
+#Create an input params for the CatBoost regression.
+params <- list(iterations=500,
+               learning_rate=0.01,
+               depth=10,
+               loss_function='RMSE',
+               eval_metric='RMSE',
+               random_seed = 55,
+               od_type='Iter',
+               metric_period = 50,
+               od_wait=20,
+               use_best_model=TRUE)
+
+
+
+
+#Iterations- The maximum number of trees that can be built when solving machine learning problems.
+
+modelCatboost <- catboost.train(learn_pool = train_pool,params = params)
+#Build a model using the catboost train function. Pass the train dataset and parameters to the catboost train function.
+
+
+
+#Predict the output using the catboost predict function.
+
+#predict
+y_pred=catboost.predict(modelCatboost,test_pool)
+
+#calculate error metrics
+postResample(y_pred,test$medv)
+
