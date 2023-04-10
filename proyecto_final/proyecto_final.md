@@ -389,24 +389,31 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 
 A continuación se presentan los resultados de predicción de los modelos implementados: 
 -	Linear Regression, utilizando medv como variable dependiente y lstat como variable independiente. 
+
  ![image](https://user-images.githubusercontent.com/88351465/230801532-b50bda9d-b03a-421c-95c3-e1118bfb1372.png)
 
 -	Linear Regression, utilizando medv como variable dependiente y crim + rm + tax + lstat como variables independientes. 
+
  ![image](https://user-images.githubusercontent.com/88351465/230801597-43583cc5-2b82-48f1-abfd-355383eda9a8.png)
 
 -	Linear Regression, utilizando medv como variable dependiente y utilizando todas las variables excepto aquellas variables que son altamente correlacionadas ("indus" "nox"   "tax"   "dis"  ). 
+
  ![image](https://user-images.githubusercontent.com/88351465/230801607-3fef6248-b1c7-4172-bd5b-ef9d40cf8438.png)
 
 -	Linear Regression utilizando medv como variable dependiente y  las demás variables como independientes, con 10-fold cross validation. 
+
  ![image](https://user-images.githubusercontent.com/88351465/230801647-4a136e4e-86fc-4be3-82d9-5a77c8f8f8ac.png)
 
 -	 Ridge Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation.
+
  ![image](https://user-images.githubusercontent.com/88351465/230801672-31d43a75-6115-4249-8fcd-5ce6d3bf5ca6.png)
 
 -	Lasso Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation.
+
  ![image](https://user-images.githubusercontent.com/88351465/230801684-88ae8ca7-95aa-497b-8f3a-4fa9295f26c3.png)
 
 -	Catboost Regression, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
+
  ![image](https://user-images.githubusercontent.com/88351465/230801705-15763d94-3bf5-4d7a-b152-d53fbfd8b12d.png)
 
 Plots de prediccion de los modelos: 
