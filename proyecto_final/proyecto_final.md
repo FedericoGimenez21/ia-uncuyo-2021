@@ -9,7 +9,123 @@ En las siguientes secciones se explicarán todos aquellos conceptos teóricos ut
 
 # Marco teórico
 
+## Terminos importantes
 
+Bias: Los sesgos son las suposiciones subyacentes que hacen los datos para simplificar la función objetivo. Los sesgos nos ayudan a generalizar mejor los datos y hacen que el modelo sea menos sensible a puntos de datos individuales. También reduce el tiempo de entrenamiento debido a la disminución de la complejidad de la función objetivo Un sesgo elevado sugiere que se asumen más suposiciones sobre la función objetivo. Esto conduce a veces a un ajuste insuficiente del modelo. Algunos ejemplos de algoritmos de sesgo alto son la regresión lineal, la regresión logística, etc.
+
+Variance: En el aprendizaje automático, la varianza es un tipo de error que se produce debido a la sensibilidad de un modelo a pequeñas fluctuaciones en el conjunto de datos. Una varianza elevada haría que un algoritmo modelase los valores atípicos/ruido en el conjunto de entrenamiento. Esto se conoce como sobreajuste. En esta situación, el modelo básicamente aprende cada punto de datos y no ofrece una buena predicción cuando se prueba en un nuevo conjunto de datos. Algunos ejemplos de algoritmos de alta varianza son el árbol de decisión, KNN, etc.
+
+![image](https://user-images.githubusercontent.com/88351465/228051759-5fa20141-391e-40e2-b644-a6cfe10aad01.png)
+![image](https://user-images.githubusercontent.com/88351465/228051810-ceaacd40-0ddf-48b4-af2f-2a2a9695f41e.png)
+
+## Linear Regression
+La regresión lineal simple hace honor a su nombre: es un método muy sencillo para predecir una respuesta cuantitativa Y a partir de una única variable de predicción X. Asume que existe aproximadamente una relación lineal entre X e Y .
+El análisis de regresión lineal se utiliza para predecir el valor de una variable a partir del valor de otra variable.
+La variable que se desea predecir se denomina variable dependiente. La variable que se utiliza para predecir el valor de la otra variable se denomina variable independiente.
+
+Esta forma de análisis estima los coeficientes de la ecuación lineal, en la que intervienen una o más variables independientes, que mejor predicen el valor de la variable dependiente.
+La regresión lineal ajusta una línea recta o superficie que minimiza las discrepancias entre los valores de salida predichos y los reales. Existen calculadoras de regresión lineal sencillas que utilizan un método de "mínimos cuadrados" para descubrir la línea que mejor se ajusta a un conjunto de datos emparejados. Luego, se estima el valor de X (variable dependiente) a partir de Y (variable independiente).
+
+Es posible realizar el método de regresión lineal en una variedad de programas y entornos, entre los que se incluyen:
+
+- R regresión lineal
+- Regresión lineal MATLAB
+- Regresión lineal Python
+- Regresión lineal Excel
+
+### ¿Por qué es importante la regresión lineal?
+Los modelos de regresión lineal son relativamente sencillos y proporcionan una fórmula matemática fácil de interpretar que puede generar predicciones. 
+La regresión lineal puede aplicarse a diversas áreas en los negocios y el estudio académico. Se utiliza en todos los campos, desde las ciencias biológicas, del comportamiento, medioambientales y sociales hasta los negocios. 
+Los modelos de regresión lineal se han convertido en una forma probada de predecir el futuro de forma científica y fiable. Dado que la regresión lineal es un procedimiento estadístico establecido desde hace mucho tiempo, las propiedades de los modelos de regresión lineal se comprenden bien y pueden entrenarse muy rápidamente.
+
+Matemáticamente, podemos escribir esta relación lineal como
+![image](https://user-images.githubusercontent.com/88351465/228034735-21d214a8-09cf-4943-83ee-02c1da9d981f.png)
+
+Podemos leer "≈" como "se modela aproximadamente como" 
+
+En conjunto, β0 y β1 se conocen como coeficientes o parámetros del modelo. Una vez que hemos utilizado nuestros
+datos de entrenamiento para obtener las estimaciones βˆ0 y βˆ1 de los coeficientes del modelo, podemos predecir las ventas futuras en función de un valor concreto de la publicidad televisiva
+calculando
+
+![image](https://user-images.githubusercontent.com/88351465/228034991-73ce2857-6dba-4857-8ce9-b52a4192730f.png)
+
+donde ˆy indica una predicción de Y sobre la base de X = x. Aquí utilizamos un símbolo de sombrero, ˆ , para denotar el valor estimado para un parámetro o coeficiente desconocido, o para denotar el valor predicho de la respuesta.
+
+No todos los problemas pueden resolverse con el mismo algoritmo. En este caso, la regresión lineal supone que existe una relación lineal entre la variable de respuesta y las variables explicativas. Esto significa que se puede ajustar una línea entre las dos (o más variables).
+
+![image](https://user-images.githubusercontent.com/88351465/228036888-d6d48b36-231b-4eec-936c-6b7f7aa19b2e.png)
+
+El gráfico anterior presenta la relación lineal entre la variable de salida (y) y las variables predictoras (X).  La línea azul se denomina línea recta de mejor ajuste. A partir de los puntos de datos dados, intentamos trazar una línea que se ajuste lo mejor posible a los puntos.
+
+Para calcular la recta de mejor ajuste, la regresión lineal utiliza una forma tradicional de pendiente-intersección que se indica a continuación,
+
+Yi = β0 + β1Xi 
+
+donde Yi = Variable dependiente, β0 = Intercepción, β1 = Pendiente, Xi = Variable independiente.
+Este algoritmo explica la relación lineal entre la variable dependiente (output) Y y la variable independiente (predictor) X utilizando una línea recta Y= B0 + B1 X.
+
+![image](https://user-images.githubusercontent.com/88351465/228037271-1e463a58-8ad9-4785-872c-aefc25aa6ba9.png)
+
+Pero, ¿cómo averigua la regresión lineal cuál es la recta de mejor ajuste?
+El objetivo del algoritmo de regresión lineal es obtener los mejores valores de B0 y B1 para encontrar la recta de mejor ajuste. La línea de mejor ajuste es una línea que tiene el menor error, lo que significa que el error entre los valores predichos y los valores reales debe ser mínimo.
+
+Residuos
+Una buena forma de comprobar la calidad del ajuste del modelo es observar los residuos o las diferencias entre los valores reales y los valores predichos. La línea recta de la imagen siguiente representa los valores previstos. La línea vertical roja que va de la línea recta al valor de los datos observados es el residuo.
+
+![image](https://user-images.githubusercontent.com/88351465/228037812-0ae63623-167c-4003-80e1-94a6f45f1d70.png)
+
+La idea es que la suma de los residuos sea aproximadamente cero o lo más baja posible. En la vida real, la mayoría de los casos no seguirán una línea perfectamente recta, por lo que es de esperar que haya residuos.
+
+### ¿Qué es la recta de mejor ajuste?
+En términos sencillos, la línea de mejor ajuste es una línea que se ajusta de la mejor manera al diagrama de dispersión dado. Matemáticamente, la línea de mejor ajuste se obtiene minimizando la suma residual de cuadrados (RSS).
+
+La calidad del ajuste de una regresión lineal suele evaluarse mediante dos magnitudes relacionadas: el error estándar residual (RSE) y el estadístico R2. RSE: En términos generales, es la desviación media de la respuesta con respecto a la línea de regresión real. Se calcula mediante la fórmula:
+
+![image](https://user-images.githubusercontent.com/88351465/228039774-549a2d0a-f6af-4179-bbe9-633ee7abb680.png)
+
+Teniendo en cuenta que RSS es: 
+![image](https://user-images.githubusercontent.com/88351465/228039870-d0b43267-aede-4610-8dca-a36912d4ddd4.png)
+
+El RSE se considera una medida de la falta de ajuste del modelo a los datos. Si las predicciones obtenidas con el modelo se aproximan mucho a los verdaderos valores de los resultados -es decir, si ˆyi ≈ yi para i = 1,...,n-, el RSE será pequeño y podremos concluir que el modelo se ajusta muy bien a los datos. Por otro lado, si ˆyi está muy lejos de yi para una o más observaciones, entonces el RSE puede ser bastante grande, lo que indica que el modelo no se ajusta bien a los datos.
+
+## GLMNET (Ridge Regression y Lasso Regression)
+
+### Ridge Regression 
+La Ridge regression es muy similar a la de mínimos cuadrados, salvo que los coeficientes de ridge regression se estiman minimizando una cantidad ligeramente diferente. En particular, las estimaciones de los coeficientes de regresión de cresta βˆR son los valores que minimizan
+
+![image](https://user-images.githubusercontent.com/88351465/228047089-f5c18fe4-1cc8-405a-a1f9-85a3928f86e2.png)
+
+donde λ ≥ 0 es un parámetro de ajuste, que se determinará por separado. 
+El parámetro de ajuste λ sirve para controlar el impacto relativo de estos dos términos en las estimaciones del coeficiente de regresión. Cuando λ = 0, el término de penalización no tiene efecto, y la regresión ridge producirá las estimaciones por mínimos cuadrados. Sin embargo, a medida que λ → ∞, el impacto de la penalización por contracción crece, y las estimaciones del coeficiente de la regresión ridge se aproximarán a cero. 
+
+Seleccionar un buen valor para λ es fundamental. Una opción óptima es probar un montón de valores para λ y utilizar la validación cruzada, para determinar cuál da lugar a la varianza más baja. 
+
+¿Por qué la regresión Ridge es mejor que la de mínimos cuadrados?
+La ventaja de la regresión Ridge sobre los mínimos cuadrados se basa en el equilibrio sesgo-varianza. A medida que aumenta λ, disminuye la flexibilidad del ajuste de ridge regression, lo que conduce a una disminución de la varianza pero a un aumento del sesgo.
+
+### Lasso Regression 
+
+Es una alternativa relativamente reciente a Ridge regression. Formula: 
+![image](https://user-images.githubusercontent.com/88351465/228049230-f9f6a8e0-804b-4e0e-88ae-94eae70106b1.png)
+
+vemos que la regresión lasso y la regresión ridge tienen formulaciones similares.
+
+La única diferencia es que el término βj^2 en la regresión ridge
+ha sido sustituido por |βj| en la penalización del lazo.
+Al igual que en la regresión ridge, lasso reduce las estimaciones de los coeficientes hacia cero.
+
+Lasso produce modelos más sencillos e interpretables en los que sólo interviene un subconjunto de predictores.
+
+### Análisis comparativo de la regresión Lasso y Ridge
+La regresión Ridge y Lasso utilizan dos funciones de penalización diferentes para la regularización. La regresión Ridge utiliza L2, mientras que la regresión Lasso utiliza la técnica de regularización L1. En la regresión ridge, la penalización es igual a la suma de los cuadrados de los coeficientes y en la Lasso, la penalización se considera la suma de los valores absolutos de los coeficientes. En la regresión lasso, es la contracción hacia cero utilizando un valor absoluto (penalización L1 o técnica de regularización) en lugar de una suma de cuadrados (penalización L2 o técnica de regularización).
+
+### Selección del parámetro de ajuste
+
+La implementación de la regresión ridge y el lazo requiere un método para seleccionar un valor para el parámetro de ajuste λ. La validación cruzada proporciona una forma sencilla de abordar este problema. Elegimos una cuadrícula de valores de λ y calculamos el error de validación cruzada para cada valor de λ. A continuación, seleccionamos el valor del parámetro de ajuste para el que el error de validación cruzada es menor. Por último, se vuelve a ajustar el modelo utilizando todas las observaciones disponibles y el valor seleccionado del parámetro de ajuste. 
+
+![image](https://user-images.githubusercontent.com/88351465/228054986-c136aeca-847d-4815-af62-5af935a41db7.png)
+
+> Izquierda: MSE de validación cruzada de diez veces para el lazo, aplicado al conjunto de datos simulados dispersos. Derecha: Se muestran las correspondientes estimaciones del coeficiente del lazo. Las dos variables de señal se muestran en color y las variables de ruido en gris. Las líneas verticales discontinuas indican el ajuste del lazo cuyo error de validación cruzada es menor.
 
 # Diseño experimental 
 
