@@ -110,20 +110,31 @@ A continuación se presentan los resultados de predicción de los modelos implem
 
 Plots de prediccion de los modelos: 
 - Linear regression simple: 
+
 ![image](https://user-images.githubusercontent.com/88351465/230802502-023d5783-69af-4d9b-9c05-6a92555f2a26.png)
 - Linear regression multiple
+
+
 ![image](https://user-images.githubusercontent.com/88351465/230802547-71588e5a-17c2-470e-8ac4-a0ed32e9fc3a.png)
 
 - Linear regression con CV
+
+
 ![image](https://user-images.githubusercontent.com/88351465/230802560-7a4fa001-99ef-4df4-91b8-b845910f8edc.png)
 
 - Ridge regression con CV
+
+
 ![image](https://user-images.githubusercontent.com/88351465/230802606-1a35c80c-9e11-4245-a042-42f7f39d18da.png)
 
 - Lasso regression con CV
+
+
 ![image](https://user-images.githubusercontent.com/88351465/230802576-62f3aca3-d589-4f4a-b28c-747cbe618eaa.png)
 
 - Catboost
+
+
 ![image](https://user-images.githubusercontent.com/88351465/230802620-93c17efa-1e5e-4c22-b763-eb2aea9cb5e6.png)
 
 
