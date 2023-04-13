@@ -121,7 +121,7 @@ corrplot(cor(housing))
 
 
 
-#Let’s split the loaded dataset into train and test sets. We will use 75% of the data to train our models and 20% will be used to test the models..
+#Let’s split the loaded dataset into train and test sets. We will use 75% of the data to train our models and 15% will be used to test the models..
 
 set.seed(101)
 split <- sample.split(housing,SplitRatio =0.75)
