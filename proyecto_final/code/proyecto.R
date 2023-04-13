@@ -92,7 +92,7 @@ par(mfrow = c(1, 4))
 boxplot(housing$crim, main='crim',col='Sky Blue')
 boxplot(housing$zn, main='zn',col='Sky Blue')
 boxplot(housing$rm, main='rm',col='Sky Blue')
-boxplot(housing$black, main='b',col='Sky Blue')
+boxplot(housing$b, main='b',col='Sky Blue')
 
 #As suggested earlier variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ do have a lot of outliers.
 
@@ -121,7 +121,7 @@ corrplot(cor(housing))
 
 
 
-#Let’s split the loaded dataset into train and test sets. We will use 80% of the data to train our models and 20% will be used to test the models..
+#Let’s split the loaded dataset into train and test sets. We will use 75% of the data to train our models and 20% will be used to test the models..
 
 set.seed(101)
 split <- sample.split(housing,SplitRatio =0.75)
@@ -139,13 +139,19 @@ model <- lm(medv ~ lstat , data = train) # fit a simple linear regression model
 summary(model)
 
 
+pSimpleLineer <- predict(model,test)
+lineer_t1 <- rmse(test$medv,pSimpleLineer)
+postResample(pSimpleLineer,test$medv)
+
 #Multiple Linear Regression
 #Lets build our model considering that crim,rm,tax,lstat as the major influencers on the target variable.
 model2 <- lm(medv ~ crim + rm + tax + lstat , data = train)
 summary(model2)
 model2
 
-
+pSimpleLineer2 <- predict(model2,test)
+lineer_t2 <- rmse(test$medv,pSimpleLineer2)
+postResample(pSimpleLineer2,test$medv)
 
 test$predicted.medv <- predict(model,test)
 
@@ -177,6 +183,11 @@ model3 <- lm(medv ~ . , data = corr_data) # fit a simple linear regression model
 summary(model3)
 test$predicted3.medv <- predict(model3,test)
 
+pSimpleLineer3 <- predict(model3,test)
+lineer_t3 <- rmse(test$medv,pSimpleLineer3)
+postResample(pSimpleLineer3,test$medv)
+
+
 error3 <- test$medv-test$predicted3.medv
 rmse3 <- sqrt(mean(error3)^2)
 rmse3
@@ -193,9 +204,9 @@ y <- train$medv
 
 
 control <- trainControl(method = "cv",
-                        number = 5)
+                        number = 10)
 
-lineer <- train(medv~.,
+lineerCV <- train(medv~.,
                 data = train,
                 method = "lm",
                 trControl = control )
@@ -213,6 +224,14 @@ ridge <- train(medv~.,
                                       lambda = seq(0.0001,1,length=50)),
                trControl = control )
 
+ridge2 <- train(medv~.,
+               data = corr_data,
+               method = "glmnet",
+               tuneGrid = expand.grid(alpha = 0,
+                                      lambda = seq(0.0001,1,length=50)),
+               trControl = control )
+
+
 
 # Lasso Regression
 
@@ -226,9 +245,9 @@ lasso <- train(medv~.,
 
 
 # Test RMSE
-pLineer <- predict(lineer,test)
-lineer_t <- rmse(test$medv,p)
-postResample(pLineer,test$medv)
+pLineerCV <- predict(lineerCV,test)
+lineer_tCV <- rmse(test$medv,pLineerCV)
+postResample(pLineerCV,test$medv)
 
 
 # Ridge Regression
@@ -240,7 +259,9 @@ pRidge <- predict(ridge,test)
 postResample(pRidge,test$medv)
 ridge_t<- rmse(test$medv,pRidge)
 
-
+pRidge2 <- predict(ridge2,test)
+postResample(pRidge2,test$medv)
+ridge_t2<- rmse(test$medv,pRidge2)
 
 # Lasso Regression
 # Train RMSE
@@ -282,6 +303,11 @@ X_valid <- test %>% select(-medv)
 train_pool <- catboost.load_pool(data = X_train, label = y_train)
 test_pool <- catboost.load_pool(data = X_valid, label = y_valid)
 
+corr_dataTEST <- test[,-highCorr]
+corr_data
+train_pool2 <- catboost.load_pool(data = corr_data, label = y_train)
+test_pool2 <- catboost.load_pool(data = corr_dataTEST, label = y_valid)
+
 
 #Create an input params for the CatBoost regression.
 params <- list(iterations=500,
@@ -303,13 +329,100 @@ params <- list(iterations=500,
 modelCatboost <- catboost.train(learn_pool = train_pool,params = params)
 #Build a model using the catboost train function. Pass the train dataset and parameters to the catboost train function.
 
-
+modelCatboost2 <- catboost.train(learn_pool = train_pool2,params = params)
 
 #Predict the output using the catboost predict function.
 
 #predict
 y_pred=catboost.predict(modelCatboost,test_pool)
-
+y_pred2=catboost.predict(modelCatboost2,test_pool2)
 #calculate error metrics
-postResample(y_pred,test$medv)
+catboostMetrics <- postResample(y_pred,test$medv)
+catboostMetrics2 <- postResample(y_pred2,test$medv)
 
+
+#LinearRegression simple
+
+plLinearSimple <-test %>% 
+  ggplot(aes(medv,pSimpleLineer)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of medv') +
+  ylab('Predicted value of medv')+
+  theme_bw()
+
+ggplotly(plLinearSimple)
+
+
+#LinearRegression multiple
+
+
+plLinearMultiple <-test %>% 
+  ggplot(aes(medv,pSimpleLineer2)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of medv') +
+  ylab('Predicted value of medv')+
+  theme_bw()
+
+ggplotly(plLinearMultiple)
+
+#LinearRegression CON CV
+plLinearCV <-test %>% 
+  ggplot(aes(medv,pLineerCV)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of medv') +
+  ylab('Predicted value of medv')+
+  theme_bw()
+
+ggplotly(plLinearCV)
+
+
+#Ridge 
+
+plRidge <-test %>% 
+  ggplot(aes(medv,pRidge)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of medv') +
+  ylab('Predicted value of medv')+
+  theme_bw()
+
+ggplotly(plRidge)
+
+#Lasoo 
+
+plLasso <-test %>% 
+  ggplot(aes(medv,pLasso)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of medv') +
+  ylab('Predicted value of medv')+
+  theme_bw()
+
+ggplotly(plLasso)
+
+#Catboost
+plCatboost <-test %>% 
+  ggplot(aes(medv,y_pred)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of medv') +
+  ylab('Predicted value of medv')+
+  theme_bw()
+
+ggplotly(plCatboost)
+
+
+# Catboost better
+
+plCatboost2 <-test %>% 
+  ggplot(aes(medv,y_pred2)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of medv') +
+  ylab('Predicted value of medv')+
+  theme_bw()
+
+ggplotly(plCatboost2)
