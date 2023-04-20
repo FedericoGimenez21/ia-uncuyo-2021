@@ -344,6 +344,8 @@ El motivo por el cual se decidio trabajar con estas herramientas es que cuentan 
 
 ## Detalle y justificacion
 
+### BostonHousing dataset
+
 En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
 Luego se procedio a cargar el dataset "BostonHousing", que incluye datos de vivienda de 506 secciones censales de Boston del censo de 1970.
 Los datos originales son 506 observaciones sobre 14 variables, siendo medv la variable objetivo: 
@@ -446,7 +448,62 @@ Plots de prediccion de los modelos:
 ![image](https://user-images.githubusercontent.com/88351465/230802620-93c17efa-1e5e-4c22-b763-eb2aea9cb5e6.png)
 
 
-# Análisis y discusión de resultados
+### AmsterdamHousing dataset
+
+En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
+Luego se procedio a cargar el dataset AmsterdamHousing
+
+El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. Se encontraron 4 NA y se eliminaron esos registros. Elimine las columnas de id, Zip y address ya que no fueron consideradas relevantes para el proyecto. 
+
+A continuacion analice el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables. Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "Area". 
+
+Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
+
+
+A continuación se presentan los resultados de predicción de los modelos implementados: 
+-	Linear Regression, utilizando Price como variable dependiente y demas variables como independientes. 
+
+
+
+![image](https://user-images.githubusercontent.com/88351465/233479459-282bd19d-0382-4183-9edc-d53aec4ca590.png)
+
+Plot: 
+
+![image](https://user-images.githubusercontent.com/88351465/233480190-d0a8ae23-8da4-4e1f-b5f1-2b468fd613a3.png)
+
+- Cross validation utilizando Price como variable dependiente y demas variables como independientes. 
+
+![image](https://user-images.githubusercontent.com/88351465/233479728-d888873b-5edf-46d3-b3be-d6e418d899e9.png)
+Plot: 
+
+- Ridge regression utilizando Price como variable dependiente y demas variables como independientes.
+
+![image](https://user-images.githubusercontent.com/88351465/233479852-a7bf61fb-6632-42cf-9560-f304e9f07a8e.png)
+Plot: 
+
+![image](https://user-images.githubusercontent.com/88351465/233480300-1fe046cc-894d-4413-9442-d91d50fa62eb.png)
+
+
+
+- Lasso regression utilizando Price como variable dependiente y demas variables como independientes.
+
+![image](https://user-images.githubusercontent.com/88351465/233479949-f55afa48-f732-4519-a8f9-7cf894eb79dc.png)
+Plot: 
+
+![image](https://user-images.githubusercontent.com/88351465/233480369-2828cab7-8f56-463e-8c6e-c416107598f8.png)
+
+
+- Catboost regression utilizando Price como variable dependiente y demas variables como independientes.
+
+![image](https://user-images.githubusercontent.com/88351465/233480016-6b6466f7-0bfa-4850-a6ba-18ac06b20f77.png)
+
+Plot: 
+![image](https://user-images.githubusercontent.com/88351465/233480401-3cd773ff-2866-4b02-ab9d-0155c753f11d.png)
+
+
+### KingCounty Housing
+
+## Análisis y discusión de resultados
 Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, podemos observar lo siguiente: 
 El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Linear Regression. Aunque podemos ver que al aplicar cross validation obtenemos resultados muy similares a Lasso y Ridge regression (con cv). 
 Por otro lado, el vencedor de los modelos es Catboost Regression con una notable mejora con un RMSE menor y un Rsquared mucho mayor (0.8808 aprox) frente al primer Rsquared obtenido por Linear regression (0.5945 aprox). Analizando los plots claramente el vencedor tambien es catboost. La prediccion refleja una curva que representa gran cantidad de los datos. 
