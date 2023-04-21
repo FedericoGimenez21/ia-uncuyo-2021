@@ -568,7 +568,7 @@ Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a 
 El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Linear Regression. Aunque podemos ver que al aplicar cross validation obtenemos resultados muy similares a Lasso y Ridge regression (con cv). 
 Por otro lado, el vencedor de los modelos es Catboost Regression con una notable mejora con un RMSE menor y un Rsquared mucho mayor (0.8808 aprox) frente al primer Rsquared obtenido por Linear regression (0.5945 aprox). Analizando los plots claramente el vencedor tambien es catboost. La prediccion refleja una curva que representa gran cantidad de los datos. 
 
-Aplicando Catboost al dataset, sin tener en cuenta la variable 
+Aun podemos mejorar mas la performance de catboost. Aplicando el modelo a medv como variable dependiente y demas variables como independientes (excepto "tax") claramente observamos una mejora muy alta. RMSE menor (2.0271471) y Rsquared de 0.9711059. 
 
 ### AmsterdamHousing
 El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Lineer Regression. Vemos una mejora al aplicar ridge y lasso regression. Y observando los resultados de catboost claramente obtenemos mejor performance, RMSE (323909) y Rsquared (0.7841589). 
