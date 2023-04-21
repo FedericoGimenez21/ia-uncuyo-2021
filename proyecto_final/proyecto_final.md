@@ -503,10 +503,69 @@ Plot:
 
 ### KingCounty Housing
 
+En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
+Luego se procedio a cargar el dataset KingCounty
+
+El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. En este caso no se encontraron valores faltantes. Elimine las columnas de id y date ya que no fueron consideradas relevantes para el proyecto. Transforme las variables "waterfront", "view", "condition" que tenian formato de num a factor. Y generar una variable age (antiguedad). 
+
+A continuacion analice el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables. Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "sqft_living". 
+
+Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
+
+-	Linear Regression, utilizando Price como variable dependiente y demas variables como independientes. 
+
+![image](https://user-images.githubusercontent.com/88351465/233667344-a585ee88-7488-4bd1-8988-e77605860a07.png)
+
+Plot: 
+![image](https://user-images.githubusercontent.com/88351465/233667448-daad70d0-b051-4041-99f2-bfbc2e45d35d.png)
+
+- Cross validation utilizando Price como variable dependiente y demas variables como independientes. 
+
+![image](https://user-images.githubusercontent.com/88351465/233667583-f8656290-9170-4e84-b7ec-25bfbde7e797.png)
+
+Plot: 
+
+![image](https://user-images.githubusercontent.com/88351465/233667628-69da359d-a71d-4490-b214-82ec0042f702.png)
+
+- Ridge regression utilizando Price como variable dependiente y demas variables como independientes.
+
+![image](https://user-images.githubusercontent.com/88351465/233667703-a817d050-c963-4688-9a3f-1a83e318a937.png)
+
+Plot:
+
+![image](https://user-images.githubusercontent.com/88351465/233667736-9f5f363a-74d3-43e1-97d3-25da4572c8c9.png)
+
+
+- Lasso regression utilizando Price como variable dependiente y demas variables como independientes.
+
+![image](https://user-images.githubusercontent.com/88351465/233667823-e8cbc3cd-f979-4556-8072-2894a2b78f9b.png)
+
+Plot:
+![image](https://user-images.githubusercontent.com/88351465/233667879-5429d85b-5cab-4737-84d6-b6df018145f7.png)
+
+- Catboost regression utilizando Price como variable dependiente y demas variables como independientes.
+
+![image](https://user-images.githubusercontent.com/88351465/233667974-59e6bfca-feb9-48b9-94b2-7332bb541fa7.png)
+
+
+Plot:
+![image](https://user-images.githubusercontent.com/88351465/233668001-b4a9b330-89bf-411b-ada9-e9635c4efb7e.png)
+
+
 ## Análisis y discusión de resultados
+
+### BostonHousing
 Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, podemos observar lo siguiente: 
 El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Linear Regression. Aunque podemos ver que al aplicar cross validation obtenemos resultados muy similares a Lasso y Ridge regression (con cv). 
 Por otro lado, el vencedor de los modelos es Catboost Regression con una notable mejora con un RMSE menor y un Rsquared mucho mayor (0.8808 aprox) frente al primer Rsquared obtenido por Linear regression (0.5945 aprox). Analizando los plots claramente el vencedor tambien es catboost. La prediccion refleja una curva que representa gran cantidad de los datos. 
 A continuación modificaré el modelo de Catboost, con el objetivo de obtener mejores resultados. 
+
+### AmsterdamHousing
+El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Lineer Regression. Vemos una mejora al aplicar ridge y lasso regression. Y observando los resultados de catboost claramente obtenemos mejor performance, RMSE (323909) y Rsquared (0.7841589). 
+
+### KingCountyHousing
+
+El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Lineer Regression. Vemos una mejora al aplicar ridge y lasso regression. Y observando los resultados de catboost claramente obtenemos mejor performance, RMSE (146067.4) y Rsquared (0.8526002). 
+
 
 # Conclusiones finales
