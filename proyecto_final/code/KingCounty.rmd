@@ -1,0 +1,305 @@
+---
+title: "KingCounty"
+output: html_document
+date: "2023-04-19"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+```{r }
+library(Metrics)
+library(readr)
+library(ggplot2)#for visualisation
+library(corrplot)#for visualisation of correlation
+library(mlbench) 
+library(Amelia)
+library(plotly)#converting ggplot to plotly
+library(reshape2)
+library(lattice)
+library(caret)
+library(caTools)#for splittind data into testing and training data
+library(dplyr) #manipulating dataframe
+library(mlbench)
+library(tidyverse)
+```
+
+
+```{r dataset}
+data <- read_csv("C:/Users/FD_gi/Documents/Regression lineal/data/kc-house-data.csv")
+str(data)
+dim(data)
+```
+
+
+
+```{r checking}
+
+missmap(data,col=c('yellow','black'),y.at=1,y.labels='',legend=TRUE)
+#Checking for NA and missing values and removing them.
+numberOfNA <- length(which(is.na(data)==T))
+numberOfNA
+# Remove NA values
+data <- data %>%
+        drop_na()
+
+
+str(data) 
+
+dim(data)
+data <- data %>% dplyr::select(-c(date))
+
+#Drop  id
+data$id <- NULL
+
+library(corrplot)
+
+
+str(data)
+corrplot(cor(data))
+
+corrplot(cor(data),method='number')
+
+# Highly correlated variables
+correlated <- cor(data)
+##The caret findCorrelation evaluates pair-wise correlations across all variables, flagging variables that are highly correlated. Of the identified pairs, the function recommends the removal of the variable with the highest average absolute correlation across the dataset.
+highCorr <- findCorrelation(correlated, cutoff=0.80)
+highCorr
+
+names(data[highCorr])
+
+summary(data)
+
+
+# Remove all auxiliary information and data transformation (num -> factor)
+factorfun <- function(x){
+      x <- as.factor(x)
+}
+newdata <- data %>% mutate_at(c("waterfront", "view", "condition"), factorfun)
+
+# Replace variables of yr_built and yr_renovated with age 
+for (i in 1:nrow(newdata)){
+  if(newdata$yr_renovated[i]!=0)
+    newdata$yr_built[i] <- newdata$yr_renovated[i]
+}
+newdata$age <- 2020 - newdata$yr_built
+
+newdata <- newdata %>% dplyr::select(price, bedrooms, bathrooms, sqft_living, sqft_lot, floors, waterfront, 
+                              view, condition, age, lat, long)
+
+
+str(newdata)
+dim(newdata)
+## Remove any missings.
+newdata <- newdata[rowSums(is.na(newdata))==0,]
+dim(newdata)
+```
+
+
+
+```{r analisis}
+library(corrplot)
+
+
+str(data)
+corrplot(cor(data))
+
+corrplot(cor(data),method='number')
+
+# Highly correlated variables
+correlated <- cor(data)
+##The caret findCorrelation evaluates pair-wise correlations across all variables, flagging variables that are highly correlated. Of the identified pairs, the function recommends the removal of the variable with the highest average absolute correlation across the dataset.
+highCorr <- findCorrelation(correlated, cutoff=0.80)
+highCorr
+
+names(data[highCorr])
+
+summary(data)
+
+```
+
+
+
+
+```{r split}
+#Let’s split the loaded dataset into train and test sets. We will use 80% of the data to train our models and 20% will be used to test the models..
+
+set.seed(123)
+ind <- sample(2, nrow(newdata), prob = c(0.8, 0.2), replace = T)
+train <- newdata[ind == 1, ]
+test <- newdata[ind == 2,]
+
+dim(newdata)
+dim(train)
+dim(test)
+data
+```
+
+
+```{r linear model}
+str(train)
+lm_model <- lm(price ~ .,
+              data = train)
+lm_model
+summary(lm_model)
+
+#Predict
+pLm <- predict(lm_model,test)
+postResample(pLm,test$price)
+
+plLinearSimple <-test %>% 
+  ggplot(aes(price,pLm)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of price') +
+  ylab('Predicted value of price')+
+  theme_bw()
+
+ggplotly(plLinearSimple)
+
+
+#Cross validation
+x <- data.matrix(train)
+y <- train$price
+
+
+control <- trainControl(method = "cv",
+                        number = 10)
+
+lineerCV <- train(price~.,
+                data = train,
+                method = "lm",
+                trControl = control )
+lineerCV
+
+summary(lineerCV)
+
+
+#Predict
+pLmCV <- predict(lineerCV,test)
+postResample(pLmCV,test$price)
+
+
+
+plLinearCV<-test %>% 
+  ggplot(aes(price,pLmCV)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of price') +
+  ylab('Predicted value of price')+
+  theme_bw()
+
+ggplotly(plLinearCV)
+
+
+```
+
+
+```{r ridge}
+ridge <- train(price~.,
+               data = train,
+               method = "glmnet",
+               tuneGrid = expand.grid(alpha = 0,
+                                      lambda = seq(0.0001,1,length=50)),
+               trControl = control )
+
+
+pRidge <- predict(ridge,test)
+postResample(pRidge,test$price)
+
+
+
+plRidge <-test %>% 
+  ggplot(aes(price,pRidge)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of price') +
+  ylab('Predicted value of price')+
+  theme_bw()
+
+ggplotly(plRidge)
+
+```
+
+
+```{r lasso}
+lasso <- train(price~.,
+               data = train,
+               method = "glmnet",
+               tuneGrid = expand.grid(alpha = 1,
+                                      lambda = seq(0.0001,1,length=50)),
+               trControl = control )
+
+
+pLasso <- predict(lasso,test)
+postResample(pLasso,test$price)
+
+
+
+plLasoo <-test %>% 
+  ggplot(aes(price,pLasso)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of price') +
+  ylab('Predicted value of price')+
+  theme_bw()
+
+ggplotly(plLasoo)
+```
+
+
+
+
+```{r catboost}
+library(catboost)
+#Separate x and y of train and test dataset, which will very useful when we using this in the catboost package.
+library(dplyr)
+y_train <- unlist(train[c('price')])
+X_train <- train %>% select(-price)
+y_valid <- unlist(test[c('price')])
+X_valid <- test %>% select(-price)
+
+#Convert the train and test dataset to catboost specific format using the load_pool function by mentioning x and y of both train and test.
+train_pool <- catboost.load_pool(data = X_train, label = y_train)
+test_pool <- catboost.load_pool(data = X_valid, label = y_valid)
+
+
+#Create an input params for the CatBoost regression.
+params <- list(iterations=500,
+               learning_rate=0.01,
+               depth=10,
+               loss_function='RMSE',
+               eval_metric='RMSE',
+               random_seed = 55,
+               od_type='Iter',
+               metric_period = 50,
+               od_wait=20,
+               use_best_model=TRUE)
+
+modelCatboost <- catboost.train(learn_pool = train_pool,params = params)
+
+y_pred=catboost.predict(modelCatboost,test_pool)
+
+catboostMetrics <- postResample(y_pred,test$price)
+catboostMetrics
+
+
+
+plCatboost <-test %>% 
+  ggplot(aes(price,y_pred)) +
+  geom_point(alpha=0.5) + 
+  stat_smooth(aes(colour='black')) +
+  xlab('Actual value of price') +
+  ylab('Predicted value of price')+
+  theme_bw()
+
+ggplotly(plCatboost)
+```
