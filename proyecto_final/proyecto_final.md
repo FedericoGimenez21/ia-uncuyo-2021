@@ -441,6 +441,7 @@ Segunda ejecucion:
  ![image](https://user-images.githubusercontent.com/88351465/230801672-31d43a75-6115-4249-8fcd-5ce6d3bf5ca6.png)
 
 Plot: 
+
 ![image](https://user-images.githubusercontent.com/88351465/230802606-1a35c80c-9e11-4245-a042-42f7f39d18da.png)
 
 Segunda ejecucion: 
@@ -452,6 +453,7 @@ Segunda ejecucion:
  ![image](https://user-images.githubusercontent.com/88351465/230801684-88ae8ca7-95aa-497b-8f3a-4fa9295f26c3.png)
 
 Plot:
+
 ![image](https://user-images.githubusercontent.com/88351465/230802576-62f3aca3-d589-4f4a-b28c-747cbe618eaa.png)
 
 Segunda ejecucion: 
@@ -489,6 +491,7 @@ Tercera ejecucion:
  ![image](https://user-images.githubusercontent.com/88351465/233696539-78e0de63-20b0-405d-ad27-fdc5c8f1f699.png)
 
 Plot: 
+
 ![image](https://user-images.githubusercontent.com/88351465/233696596-49299717-a0ab-408e-a956-b8eeb120507e.png)
 
 Segunda ejecucion: 
