@@ -398,6 +398,11 @@ Plot:
 
 ![image](https://user-images.githubusercontent.com/88351465/230802502-023d5783-69af-4d9b-9c05-6a92555f2a26.png)
 
+Segunda ejecucion:
+
+![image](https://user-images.githubusercontent.com/88351465/233804163-3dcddc9a-e255-4a26-801c-422e66bb834c.png)
+
+
 -	Linear Regression, utilizando medv como variable dependiente y crim + rm + tax + lstat como variables independientes. 
 
  ![image](https://user-images.githubusercontent.com/88351465/230801597-43583cc5-2b82-48f1-abfd-355383eda9a8.png)
@@ -406,11 +411,17 @@ Plot:
 
 ![image](https://user-images.githubusercontent.com/88351465/230802547-71588e5a-17c2-470e-8ac4-a0ed32e9fc3a.png)
 
+Segunda ejecucion:
+
+![image](https://user-images.githubusercontent.com/88351465/233804174-d7098fe5-d17b-41af-b966-4b8607569323.png)
+
+
 -	Linear Regression, utilizando medv como variable dependiente y utilizando todas las variables excepto aquellas variables que son altamente correlacionadas ("indus" "nox"   "tax"   "dis"  ). 
 
  ![image](https://user-images.githubusercontent.com/88351465/230801607-3fef6248-b1c7-4172-bd5b-ef9d40cf8438.png)
 
-Plot: 
+Segunda ejecucion:
+![image](https://user-images.githubusercontent.com/88351465/233804204-520d65a0-1587-4101-910a-5c04a5fd3b8e.png)
 
 
 -	Linear Regression utilizando medv como variable dependiente y  las demás variables como independientes, con 10-fold cross validation. 
@@ -421,27 +432,53 @@ Plot:
 
 ![image](https://user-images.githubusercontent.com/88351465/230802560-7a4fa001-99ef-4df4-91b8-b845910f8edc.png)
 
--	 Ridge Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation.
+Segunda ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233804227-ecc453d5-55d0-4d2a-8965-02bb93b3f71a.png)
+
+-	 Ridge Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
  ![image](https://user-images.githubusercontent.com/88351465/230801672-31d43a75-6115-4249-8fcd-5ce6d3bf5ca6.png)
 
 Plot: 
 ![image](https://user-images.githubusercontent.com/88351465/230802606-1a35c80c-9e11-4245-a042-42f7f39d18da.png)
 
--	Lasso Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation.
+Segunda ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233804253-b446beb7-e1f6-41df-b593-91bcbccd0385.png)
+
+-	Lasso Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
  ![image](https://user-images.githubusercontent.com/88351465/230801684-88ae8ca7-95aa-497b-8f3a-4fa9295f26c3.png)
 
 Plot:
 ![image](https://user-images.githubusercontent.com/88351465/230802576-62f3aca3-d589-4f4a-b28c-747cbe618eaa.png)
 
--	Catboost Regression, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
+Segunda ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233804260-1e22a3de-1e03-4025-984b-73c9167d4870.png)
+
+
+-	Catboost Regression SIN CROSS VALIDATION, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
 
  ![image](https://user-images.githubusercontent.com/88351465/230801705-15763d94-3bf5-4d7a-b152-d53fbfd8b12d.png)
  
  Plot:
  
  ![image](https://user-images.githubusercontent.com/88351465/230802620-93c17efa-1e5e-4c22-b763-eb2aea9cb5e6.png)
+ 
+Segunda ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233804290-95385c6c-233f-4f18-8319-543545bfb09a.png)
+
+- Catboost Regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
+
+![image](https://user-images.githubusercontent.com/88351465/233804374-47fd137d-e960-4b4b-837e-1caa51376048.png)
+
+Segunda ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233805855-1611f881-dc09-4fba-9a34-dea20cbd0d48.png)
+
 
  - Catboost regression, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
  
@@ -449,6 +486,17 @@ Plot:
 
 Plot: 
 ![image](https://user-images.githubusercontent.com/88351465/233696596-49299717-a0ab-408e-a956-b8eeb120507e.png)
+
+Segunda ejecucion: 
+![image](https://user-images.githubusercontent.com/88351465/233804300-8b885d44-2c2c-4d90-a0ef-3f3584d684f1.png)
+
+ - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
+
+![image](https://user-images.githubusercontent.com/88351465/233805840-e6724222-f49d-4f7f-b219-1007f3f45cfc.png)
+
+Segunda ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233805984-ff138c21-3cef-4587-b81a-f0163f9d0d41.png)
 
 
 ### AmsterdamHousing dataset
@@ -569,6 +617,7 @@ El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsqua
 Por otro lado, el vencedor de los modelos es Catboost Regression con una notable mejora con un RMSE menor y un Rsquared mucho mayor (0.8808 aprox) frente al primer Rsquared obtenido por Linear regression (0.5945 aprox). Analizando los plots claramente el vencedor tambien es catboost. La prediccion refleja una curva que representa gran cantidad de los datos. 
 
 Aun podemos mejorar mas la performance de catboost. Aplicando el modelo a medv como variable dependiente y demas variables como independientes (excepto "tax") claramente observamos una mejora muy alta. RMSE menor (2.0271471) y Rsquared de 0.9711059. 
+
 
 ### AmsterdamHousing
 El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Lineer Regression. Vemos una mejora al aplicar ridge y lasso regression. Y observando los resultados de catboost claramente obtenemos mejor performance, RMSE (323909) y Rsquared (0.7841589). 
