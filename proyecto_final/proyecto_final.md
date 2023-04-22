@@ -479,6 +479,10 @@ Segunda ejecucion:
 
 ![image](https://user-images.githubusercontent.com/88351465/233805855-1611f881-dc09-4fba-9a34-dea20cbd0d48.png)
 
+Tercera ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233806306-ae0da62b-70b5-4d43-b0a4-21ab5a464816.png)
+
 
  - Catboost regression, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
  
@@ -497,6 +501,10 @@ Segunda ejecucion:
 Segunda ejecucion: 
 
 ![image](https://user-images.githubusercontent.com/88351465/233805984-ff138c21-3cef-4587-b81a-f0163f9d0d41.png)
+
+Tercera ejecucion: 
+
+![image](https://user-images.githubusercontent.com/88351465/233806278-44a86b81-5ac5-40c2-a4dc-ed6cfd4c8456.png)
 
 
 ### AmsterdamHousing dataset
@@ -618,6 +626,7 @@ Por otro lado, el vencedor de los modelos es Catboost Regression con una notable
 
 Aun podemos mejorar mas la performance de catboost. Aplicando el modelo a medv como variable dependiente y demas variables como independientes (excepto "tax") claramente observamos una mejora muy alta. RMSE menor (2.0271471) y Rsquared de 0.9711059. 
 
+Analizando todos los resultados observamos que el modelo de mejor performance es Catboost. Realizando 3 ejecuciones con cross validation, podemos ver que obtenemos mejores resultados con el modelo de Catboost con cross validation y sin la variable "tax" 
 
 ### AmsterdamHousing
 El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Lineer Regression. Vemos una mejora al aplicar ridge y lasso regression. Y observando los resultados de catboost claramente obtenemos mejor performance, RMSE (323909) y Rsquared (0.7841589). 
