@@ -704,11 +704,13 @@ El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsqua
 
 El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Linear Regression. Vemos una mejora al aplicar ridge y lasso regression. Nuevamente, observando los resultados de catboost obtenemos mejor performance, RMSE (146067.4) y Rsquared (0.8526002). Al aplicar cross validation a catboost observamos que los valores obtenidos por ejemplo de Rsquared varian entre 79% y 87% aproximadamente. Es decir, catboost realiza modelos mas precisos que lasso, ridge y linear regression.
 
-### Analisis general 
+
+# Conclusiones finales
+
+## Analisis general 
 Comparando los resultados obtenidos, observamos que linear regression es el modelo de menor precision. Podriamos considerarlo como el modelo de entrada a la hora de aplicar regresion lineal. Es util para obtener resultados base o iniciales de un proyecto/investigacion, a partir de estos podremos obtener mejores resultados. Aplicando ridge y lasso regression obtendremos resultados con mayor precision (en general resultados muy similares entre ambos). En todos los modelos aplicados a lo largo del proyecto hemos visto un claro vencedor, el cual es Catboost. El mismo obtuvo los mejores resultados y con amplia ventaja comparandolo con linear regression. Estos mejores resultados obtenidos por Catboost vienen condicionados por la cantidad de parametros a modificar, como tambien por la cantidad de recursos de computo que utiliza. La mayor cantidad de tiempo de procesamiento de cada ejecucion pertenece a los modelos de catboost. 
 
 
-# Conclusiones finales
 
 ## Analisis personal
 En conclusion a la hora de implementar los modelos, el modelo linear regression no presento grandes dificultades mas que aprender como es la sintaxis en el lenguaje de programacion elegido, en este caso en R. Lasso y ridge regression presentaron dificultades a la hora de entender como funcionaban y se implementaban. Por otro lado con respecto a Catboost fue un caso totalmente distinto. Catboost cuenta con gran cantidad de parametros a modificar, y considero que cuenta con poca documentacion y aplicaciones de ejemplo. Hay poco soporte/documentacion de problemas de regresion lineal aplicados con catboost, especificamente en R. Esto fue un buen incentivo para realizar investigacion de posibles soluciones a los problemas que se presentaron a lo largo del proyecto.   
