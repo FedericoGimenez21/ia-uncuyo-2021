@@ -475,15 +475,7 @@ Segunda ejecucion:
 
 - Catboost Regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
 
-![image](https://user-images.githubusercontent.com/88351465/233804374-47fd137d-e960-4b4b-837e-1caa51376048.png)
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233805855-1611f881-dc09-4fba-9a34-dea20cbd0d48.png)
-
-Tercera ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233806306-ae0da62b-70b5-4d43-b0a4-21ab5a464816.png)
+![image](https://user-images.githubusercontent.com/88351465/234012301-e99120f8-70dc-4fc6-9eb8-3c498d2d82ae.png)
 
 
  - Catboost regression, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
@@ -499,15 +491,7 @@ Segunda ejecucion:
 
  - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
 
-![image](https://user-images.githubusercontent.com/88351465/233805840-e6724222-f49d-4f7f-b219-1007f3f45cfc.png)
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233805984-ff138c21-3cef-4587-b81a-f0163f9d0d41.png)
-
-Tercera ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233806278-44a86b81-5ac5-40c2-a4dc-ed6cfd4c8456.png)
+![image](https://user-images.githubusercontent.com/88351465/234012421-5c922c7d-5fde-48b7-abdc-b719e5713a59.png)
 
 
 ### AmsterdamHousing dataset
@@ -580,13 +564,7 @@ Segunda ejecucion:
 
 - Catboost regression utilizando Price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
-Primera ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233859167-bae6ea9c-00fc-4dc8-b668-9b4c423f41bb.png)
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233859592-516f4b9f-24e4-4603-a7ee-324c9cc9b77e.png)
+![image](https://user-images.githubusercontent.com/88351465/234034297-f59d63b5-ac1f-41db-96ea-ae9590758089.png)
 
 
 ### KingCounty Housing
@@ -676,15 +654,12 @@ Tercera ejecucion:
 
 - Catboost regression utilizando price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
-![image](https://user-images.githubusercontent.com/88351465/233860335-2db6ee91-0d90-4237-ab8c-e5a79b9b65d0.png)
+![image](https://user-images.githubusercontent.com/88351465/234034694-80a960b8-ec03-4c64-8a20-1d34c00a3d43.png)
 
-Segunda ejecucion: 
+- Catboost regression utilizando price como variable dependiente y demas variables como independientes (EXCEPTO LAS VARIABLES CON ALTA CORRELACION). CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
-![image](https://user-images.githubusercontent.com/88351465/233860726-b0643a55-aaa1-4238-adb2-54e3cc6e1d6b.png)
+![image](https://user-images.githubusercontent.com/88351465/234034861-a5fa9c92-1640-4cad-a647-5b9f55337f99.png)
 
-Tercera ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233861083-affa9240-8609-4877-a8a9-b002fc6170b1.png)
 
 ## Análisis y discusión de resultados
 
