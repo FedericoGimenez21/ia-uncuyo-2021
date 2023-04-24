@@ -487,7 +487,8 @@ Plot:
 ![image](https://user-images.githubusercontent.com/88351465/233696596-49299717-a0ab-408e-a956-b8eeb120507e.png)
 
 Segunda ejecucion: 
-![image](https://user-images.githubusercontent.com/88351465/233804300-8b885d44-2c2c-4d90-a0ef-3f3584d684f1.png)
+
+![image](https://user-images.githubusercontent.com/88351465/234036897-f49e68f6-b40f-4f8a-85ed-d9f0f45db6c0.png)
 
  - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
 
