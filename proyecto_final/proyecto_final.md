@@ -9,14 +9,6 @@ En las siguientes secciones se explicarán todos aquellos conceptos teóricos ut
 
 # Marco teórico
 
-## Terminos importantes
-
-Bias: Los sesgos son las suposiciones subyacentes que hacen los datos para simplificar la función objetivo. Los sesgos nos ayudan a generalizar mejor los datos y hacen que el modelo sea menos sensible a puntos de datos individuales. También reduce el tiempo de entrenamiento debido a la disminución de la complejidad de la función objetivo Un sesgo elevado sugiere que se asumen más suposiciones sobre la función objetivo. Esto conduce a veces a un ajuste insuficiente del modelo. Algunos ejemplos de algoritmos de sesgo alto son la regresión lineal, la regresión logística, etc.
-
-Variance: En el aprendizaje automático, la varianza es un tipo de error que se produce debido a la sensibilidad de un modelo a pequeñas fluctuaciones en el conjunto de datos. Una varianza elevada haría que un algoritmo modelase los valores atípicos/ruido en el conjunto de entrenamiento. Esto se conoce como sobreajuste. En esta situación, el modelo básicamente aprende cada punto de datos y no ofrece una buena predicción cuando se prueba en un nuevo conjunto de datos. Algunos ejemplos de algoritmos de alta varianza son el árbol de decisión, KNN, etc.
-
-![image](https://user-images.githubusercontent.com/88351465/228051759-5fa20141-391e-40e2-b644-a6cfe10aad01.png)
-![image](https://user-images.githubusercontent.com/88351465/228051810-ceaacd40-0ddf-48b4-af2f-2a2a9695f41e.png)
 
 ## Linear Regression
 La regresión lineal simple hace honor a su nombre: es un método muy sencillo para predecir una respuesta cuantitativa Y a partir de una única variable de predicción X. Asume que existe aproximadamente una relación lineal entre X e Y .
@@ -39,7 +31,13 @@ La regresión lineal puede aplicarse a diversas áreas en los negocios y el estu
 Los modelos de regresión lineal se han convertido en una forma probada de predecir el futuro de forma científica y fiable. Dado que la regresión lineal es un procedimiento estadístico establecido desde hace mucho tiempo, las propiedades de los modelos de regresión lineal se comprenden bien y pueden entrenarse muy rápidamente.
 
 Matemáticamente, podemos escribir esta relación lineal como
-![image](https://user-images.githubusercontent.com/88351465/228034735-21d214a8-09cf-4943-83ee-02c1da9d981f.png)
+
+
+  
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="200" src="https://user-images.githubusercontent.com/88351465/228034735-21d214a8-09cf-4943-83ee-02c1da9d981f.png" alt="Formula de regresion lineal" align="center">
+</p>
+<p align="center" >Figura 1. Formula de regresion lineal</p>
 
 Podemos leer "≈" como "se modela aproximadamente como" 
 
@@ -47,32 +45,50 @@ En conjunto, β0 y β1 se conocen como coeficientes o parámetros del modelo. Un
 datos de entrenamiento para obtener las estimaciones βˆ0 y βˆ1 de los coeficientes del modelo, podemos predecir las ventas futuras en función de un valor concreto de la publicidad televisiva
 calculando
 
-![image](https://user-images.githubusercontent.com/88351465/228034991-73ce2857-6dba-4857-8ce9-b52a4192730f.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="200" src="https://user-images.githubusercontent.com/88351465/228034991-73ce2857-6dba-4857-8ce9-b52a4192730f.png" alt="Formula de prediccion lineal" align="center">
+</p>
+
+<p align="center" >Figura 2. Formula de prediccion</p>
 
 donde ˆy indica una predicción de Y sobre la base de X = x. Aquí utilizamos un símbolo de sombrero, ˆ , para denotar el valor estimado para un parámetro o coeficiente desconocido, o para denotar el valor predicho de la respuesta.
 
 No todos los problemas pueden resolverse con el mismo algoritmo. En este caso, la regresión lineal supone que existe una relación lineal entre la variable de respuesta y las variables explicativas. Esto significa que se puede ajustar una línea entre las dos (o más variables).
 
-![image](https://user-images.githubusercontent.com/88351465/228036888-d6d48b36-231b-4eec-936c-6b7f7aa19b2e.png)
 
-El gráfico anterior presenta la relación lineal entre la variable de salida (y) y las variables predictoras (X).  La línea azul se denomina línea recta de mejor ajuste. A partir de los puntos de datos dados, intentamos trazar una línea que se ajuste lo mejor posible a los puntos.
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400" src="https://user-images.githubusercontent.com/88351465/228036888-d6d48b36-231b-4eec-936c-6b7f7aa19b2e.png" alt="Formula de prediccion lineal" align="center">
+</p>
+<p align="center" >Figura 3. Relacion lineal</p>
+
+
+El gráfico presentado en la Figura 3,  muestra la relación lineal entre la variable de salida (y) y las variables predictoras (X).  La línea azul se denomina línea recta de mejor ajuste. A partir de los puntos de datos dados, intentamos trazar una línea que se ajuste lo mejor posible a los puntos.
 
 Para calcular la recta de mejor ajuste, la regresión lineal utiliza una forma tradicional de pendiente-intersección que se indica a continuación,
 
 Yi = β0 + β1Xi 
 
 donde Yi = Variable dependiente, β0 = Intercepción, β1 = Pendiente, Xi = Variable independiente.
-Este algoritmo explica la relación lineal entre la variable dependiente (output) Y y la variable independiente (predictor) X utilizando una línea recta Y= B0 + B1 X.
+Este algoritmo explica la relación lineal entre la variable dependiente (output) Y y la variable independiente (predictor) X utilizando una línea recta Y= B0 + B1 X. En la imagen siguiente, Figura 4, se observa como se relacionan y actuan los componentes mencionados (intercepcion, variable independiente y dependiente y pendiente). 
 
-![image](https://user-images.githubusercontent.com/88351465/228037271-1e463a58-8ad9-4785-872c-aefc25aa6ba9.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400" src="https://user-images.githubusercontent.com/88351465/228037271-1e463a58-8ad9-4785-872c-aefc25aa6ba9.png" alt="Regresion lineal" align="center">
+</p>
+<p align="center" >Figura 4. Componentes de relacion lineal</p>
+
+
 
 Pero, ¿cómo averigua la regresión lineal cuál es la recta de mejor ajuste?
 El objetivo del algoritmo de regresión lineal es obtener los mejores valores de B0 y B1 para encontrar la recta de mejor ajuste. La línea de mejor ajuste es una línea que tiene el menor error, lo que significa que el error entre los valores predichos y los valores reales debe ser mínimo.
 
 Residuos
-Una buena forma de comprobar la calidad del ajuste del modelo es observar los residuos o las diferencias entre los valores reales y los valores predichos. La línea recta de la imagen siguiente representa los valores previstos. La línea vertical roja que va de la línea recta al valor de los datos observados es el residuo.
+Una buena forma de comprobar la calidad del ajuste del modelo es observar los residuos o las diferencias entre los valores reales y los valores predichos. La línea recta de la Figura 5 representa los valores previstos. En la misma imagen, la línea vertical roja que va de la línea recta al valor de los datos observados es el residuo.
 
-![image](https://user-images.githubusercontent.com/88351465/228037812-0ae63623-167c-4003-80e1-94a6f45f1d70.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400" src="https://user-images.githubusercontent.com/88351465/228037812-0ae63623-167c-4003-80e1-94a6f45f1d70.png" alt="Residuo" align="center">
+</p>
+<p align="center" >Figura 5. Residuo</p>
+
 
 La idea es que la suma de los residuos sea aproximadamente cero o lo más baja posible. En la vida real, la mayoría de los casos no seguirán una línea perfectamente recta, por lo que es de esperar que haya residuos.
 
@@ -81,10 +97,18 @@ En términos sencillos, la línea de mejor ajuste es una línea que se ajusta de
 
 La calidad del ajuste de una regresión lineal suele evaluarse mediante dos magnitudes relacionadas: el error estándar residual (RSE) y el estadístico R2. RSE: En términos generales, es la desviación media de la respuesta con respecto a la línea de regresión real. Se calcula mediante la fórmula:
 
-![image](https://user-images.githubusercontent.com/88351465/228039774-549a2d0a-f6af-4179-bbe9-633ee7abb680.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400" src="https://user-images.githubusercontent.com/88351465/228039774-549a2d0a-f6af-4179-bbe9-633ee7abb680.png" alt="RSE" align="center">
+</p>
+<p align="center" >Figura 6. Formula de RSE</p>
+
 
 Teniendo en cuenta que RSS es: 
-![image](https://user-images.githubusercontent.com/88351465/228039870-d0b43267-aede-4610-8dca-a36912d4ddd4.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/228039870-d0b43267-aede-4610-8dca-a36912d4ddd4.png" alt="RSS" align="center">
+</p>
+<p align="center" >Figura 7. Formula de RSS</p>
 
 El RSE se considera una medida de la falta de ajuste del modelo a los datos. Si las predicciones obtenidas con el modelo se aproximan mucho a los verdaderos valores de los resultados -es decir, si ˆyi ≈ yi para i = 1,...,n-, el RSE será pequeño y podremos concluir que el modelo se ajusta muy bien a los datos. Por otro lado, si ˆyi está muy lejos de yi para una o más observaciones, entonces el RSE puede ser bastante grande, lo que indica que el modelo no se ajusta bien a los datos.
 
@@ -93,7 +117,12 @@ El RSE se considera una medida de la falta de ajuste del modelo a los datos. Si 
 ### Ridge Regression 
 La Ridge regression es muy similar a la de mínimos cuadrados, salvo que los coeficientes de ridge regression se estiman minimizando una cantidad ligeramente diferente. En particular, las estimaciones de los coeficientes de regresión de cresta βˆR son los valores que minimizan
 
-![image](https://user-images.githubusercontent.com/88351465/228047089-f5c18fe4-1cc8-405a-a1f9-85a3928f86e2.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/228047089-f5c18fe4-1cc8-405a-a1f9-85a3928f86e2.png" alt="RSS" align="center">
+</p>
+<p align="center" >Figura 8. Formula de Ridge Regression</p>
+
 
 donde λ ≥ 0 es un parámetro de ajuste, que se determinará por separado. 
 El parámetro de ajuste λ sirve para controlar el impacto relativo de estos dos términos en las estimaciones del coeficiente de regresión. Cuando λ = 0, el término de penalización no tiene efecto, y la regresión ridge producirá las estimaciones por mínimos cuadrados. Sin embargo, a medida que λ → ∞, el impacto de la penalización por contracción crece, y las estimaciones del coeficiente de la regresión ridge se aproximarán a cero. 
@@ -106,7 +135,12 @@ La ventaja de la regresión Ridge sobre los mínimos cuadrados se basa en el equ
 ### Lasso Regression 
 
 Es una alternativa relativamente reciente a Ridge regression. Formula: 
-![image](https://user-images.githubusercontent.com/88351465/228049230-f9f6a8e0-804b-4e0e-88ae-94eae70106b1.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/228049230-f9f6a8e0-804b-4e0e-88ae-94eae70106b1.png" alt="lasso regression" align="center">
+</p>
+<p align="center" >Figura 9. Formula de lasso regression</p>
+
 
 vemos que la regresión lasso y la regresión ridge tienen formulaciones similares.
 
@@ -123,11 +157,7 @@ La regresión Ridge y Lasso utilizan dos funciones de penalización diferentes p
 
 La implementación de la regresión ridge y el lazo requiere un método para seleccionar un valor para el parámetro de ajuste λ. La validación cruzada proporciona una forma sencilla de abordar este problema. Elegimos una cuadrícula de valores de λ y calculamos el error de validación cruzada para cada valor de λ. A continuación, seleccionamos el valor del parámetro de ajuste para el que el error de validación cruzada es menor. Por último, se vuelve a ajustar el modelo utilizando todas las observaciones disponibles y el valor seleccionado del parámetro de ajuste. 
 
-![image](https://user-images.githubusercontent.com/88351465/228054986-c136aeca-847d-4815-af62-5af935a41db7.png)
-
-> Izquierda: MSE de validación cruzada de diez veces para el lazo, aplicado al conjunto de datos simulados dispersos. Derecha: Se muestran las correspondientes estimaciones del coeficiente del lazo. Las dos variables de señal se muestran en color y las variables de ruido en gris. Las líneas verticales discontinuas indican el ajuste del lazo cuyo error de validación cruzada es menor.
-
-## Bosting
+## Boosting
 
 Es un método de aprendizaje conjunto en el que construimos múltiples aprendices débiles (mismos algoritmos) de forma paralela.
 Todos estos aprendices débiles toman la retroalimentación de los modelos anteriores para mejorar su capacidad de predecir con precisión las clases mal clasificadas. Al final, el algoritmo utiliza todos estos aprendices débiles para construir el modelo final.
@@ -322,7 +352,13 @@ Las metricas a utilizar son:
 de la variable dependiente que puede explicar la variable independiente. En otras palabras, r-cuadrado muestra lo bien que se ajustan los datos al modelo de regresión.
 Es la métrica de evaluación más popular para los modelos de regresión. R-cuadrado puede tomar cualquier valor entre 0 y 1.
 Esta medida se define por la proporción de la variabilidad total explicada por el modelo de regresión: 
-![image](https://user-images.githubusercontent.com/88351465/230745972-0bbc0a0a-4844-4325-8aaf-271188d82b63.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400" src="https://user-images.githubusercontent.com/88351465/230745972-0bbc0a0a-4844-4325-8aaf-271188d82b63.png" alt="Formula de Rsquared" align="center">
+</p>
+<p align="center" >Figura 10. Formula de Rsquared</p>
+
+
 
 La interpretación más común de r-cuadrado es lo bien que el modelo de regresión explica los datos observados. 
 Por ejemplo, una r-cuadrado del 60% indica que el modelo de regresión explica el 60% de la variabilidad observada en la variable objetivo. 
@@ -332,7 +368,12 @@ En el presente trabajo se espera que los modelos con r-cuadrado mas alta represe
 - RMSE (Root Mean Squared Error): es la raíz cuadrada de la varianza de los residuos. 
 Especifica el ajuste absoluto del modelo a los datos, es decir, lo cerca que están los puntos de datos observados de los valores predichos.
 Matematicamente puede ser representada:
-![image](https://user-images.githubusercontent.com/88351465/228042735-94668220-b84b-46e0-a3c2-3f915c17430a.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400" src="https://user-images.githubusercontent.com/88351465/228042735-94668220-b84b-46e0-a3c2-3f915c17430a.png" alt="Formula de RMSE" align="center">
+</p>
+<p align="center" >Figura 11. Formula de RMSE</p>
+
 La idea básica es medir lo malas/erróneas que son las predicciones del modelo cuando se comparan con los valores reales observados. 
 Así, un RMSE alto es "malo" y un RMSE bajo es "bueno". En la fórmula, la diferencia entre los valores observados y los predichos se denomina residuo. 
 El error cuadrático medio (MSE) es la media de todos los residuos al cuadrado. 
@@ -369,21 +410,35 @@ Luego procedi a comprobar si el dataset tenia valores faltantes, lo cual habria 
 Satisfactoriamente no se encontro ningun valor faltante. Por lo tanto el siguiente paso fue analizar el dataset.
 Ejecutando summary del dataset obtenemos estadisticas basicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
 
-![image](https://user-images.githubusercontent.com/88351465/230747076-9966a3ad-3dd4-470f-908d-b572a2cb1a32.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="1000" src="https://user-images.githubusercontent.com/88351465/230747076-9966a3ad-3dd4-470f-908d-b572a2cb1a32.png"  align="center">
+</p>
+<p align="center" >Figura 12. Summary de BostonHousing</p>
 
-En la imagen podemos observar que ‘crim’, ‘zn’, ‘rm’ and ‘black’ tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
+En la figura 12 podemos observar que ‘crim’, ‘zn’, ‘rm’ and ‘black’ tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
 
 Realizando boxplots de las variables mencionadas podemos observar que tienen gran cantidad de valores outliers: 
-![image](https://user-images.githubusercontent.com/88351465/230747197-d194e2fb-00c5-44fd-97e2-697c29dadee4.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/230747197-d194e2fb-00c5-44fd-97e2-697c29dadee4.png"  align="center">
+</p>
+<p align="center" >Figura 13. Boxplot de variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ de BostonHousing</p>
+
 
 A continuacion analice el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables. 
 La correlación es una medida estadística que sugiere el nivel de dependencia lineal entre dos variables que se dan en pareja. Su valor oscila entre -1 y +1.
 Si es superior a 0 significa correlación positiva, es decir, X es directamente proporcional a Y.
 Si es inferior a 0, significa correlación negativa, es decir, X es inversamente proporcional a Y.
 Utilizando corrplot es posible obtener el siguiente grafico: 
-![image](https://user-images.githubusercontent.com/88351465/230747298-a2cdf9b5-2b03-4fb7-a873-ac7c0650b199.png)
 
-Analizando el plot podemos observar lo siguiente: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/230747298-a2cdf9b5-2b03-4fb7-a873-ac7c0650b199.png"  align="center">
+</p>
+<p align="center" >Figura 14. Correlation plot de BostonHousing</p>
+
+
+
+Analizando el plot de la figura 14 podemos observar lo siguiente: 
  - Los atributos/variables ‘tax and rad’, ‘nox and tax’, ‘age and indus’ tienen correlacion positiva
  - Los atributos/variables ‘dis and nox’, ‘dis and indus’, ‘age and dis’ tienen correlacion negativa. 
 
