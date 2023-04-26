@@ -468,12 +468,12 @@ A continuación se presentan los resultados de predicción de los modelos implem
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234431881-fdcef957-2231-4f29-8e8f-175bbc06cb0e.png" alt="" align="center">
 </p>
-<p align="center" >Resultados Linear BostonHousing</p>
+<p align="center" >Resultados Linear CV BostonHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234432123-93a025d8-db70-4711-a6e4-24c41c0fce6f.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Linear Rsquared y RMSE</p>
+<p align="center" >Boxplot BostonHousing Linear CV Rsquared y RMSE</p>
 
 "Desviacion estandar de Rsquared"
 0.0966183
@@ -506,12 +506,12 @@ A continuación se presentan los resultados de predicción de los modelos implem
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234432743-50722662-f92a-4648-886f-031e113ef1c0.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Ridge regression BostonHousing</p>
+<p align="center" >Resultados de Ridge CV regression BostonHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234432834-576d8445-c018-44c8-a48b-d445ba9be423.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Ridge Rsquared y RMSE</p>
+<p align="center" >Boxplot BostonHousing Ridge CV Rsquared y RMSE</p>
 
 "Desviacion estandar de Rsquared"
  0.05959355
@@ -544,12 +544,12 @@ A continuación se presentan los resultados de predicción de los modelos implem
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234433555-a5d43091-c10f-4316-b1b6-aafea51ed786.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Lasso regression BostonHousing</p>
+<p align="center" >Resultados de Lasso CV regression BostonHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234433634-cc620986-17a7-4bf1-990e-25d8b528ccfe.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Lasso Rsquared y RMSE</p>
+<p align="center" >Boxplot BostonHousing Lasso CV Rsquared y RMSE</p>
 
 "Desviacion estandar de Rsquared"
 0.061692
@@ -663,64 +663,156 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 A continuación se presentan los resultados de predicción de los modelos implementados: 
 -	Linear Regression, utilizando Price como variable dependiente y demas variables como independientes. 
 
-![image](https://user-images.githubusercontent.com/88351465/233479459-282bd19d-0382-4183-9edc-d53aec4ca590.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233479459-282bd19d-0382-4183-9edc-d53aec4ca590.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Linear AmsterdamHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480190-d0a8ae23-8da4-4e1f-b5f1-2b468fd613a3.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Linear AmsterdamHousing</p>
 
 
-Plot: 
 
-![image](https://user-images.githubusercontent.com/88351465/233480190-d0a8ae23-8da4-4e1f-b5f1-2b468fd613a3.png)
+- Linear Regression Cross validation 10-fold utilizando Price como variable dependiente y demas variables como independientes. 
 
-Segunda ejecucion: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234584961-22d5dcae-b4b4-429a-8ed4-18a8affc6942.png" alt="" align="center">
+</p>
+<p align="center" >Resultados Linear CV AmsterdamHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233859653-df12c574-4ae0-4d91-998f-42e0a84ecbf9.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234585286-c00117c7-79b9-4c62-a256-a57999bf81c7.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot AmsterdamHousing Linear CV Rsquared y RMSE</p>
 
-- Cross validation utilizando Price como variable dependiente y demas variables como independientes. 
+"Desviacion estandar de Rsquared"
+0.1269393
 
-![image](https://user-images.githubusercontent.com/88351465/233479728-d888873b-5edf-46d3-b3be-d6e418d899e9.png)
+"Promedio de Rsquared"
+0.712939
+
+"Desviacion estandar de RMSE"
+78770.66
+
+"Promedio de RMSE"
+276282.8
 
 #### Evaluacion Ridge regression de AmsterdamHousing
 - Ridge Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
-![image](https://user-images.githubusercontent.com/88351465/233479852-a7bf61fb-6632-42cf-9560-f304e9f07a8e.png)
 
-Plot: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233479852-a7bf61fb-6632-42cf-9560-f304e9f07a8e.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Ridge AmsterdamHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233480300-1fe046cc-894d-4413-9442-d91d50fa62eb.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480300-1fe046cc-894d-4413-9442-d91d50fa62eb.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Ridge AmsterdamHousing</p>
 
-Segunda ejecucion: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234586766-a540034b-275b-4f72-b612-c8ace202ad12.png" alt="" align="center">
+</p>
+<p align="center" >Resultados Ridge CV AmsterdamHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233859564-6e66ee26-0311-48db-b041-000efb85d92b.png)
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234586981-177b0691-594b-493c-8a77-78adcdf67270.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot AmsterdamHousing Ridge CV Rsquared y RMSE</p>
+
+"Desviacion estandar de Rsquared"
+ 0.1243906
+ 
+"Promedio de Rsquared"
+ 0.7030398
+ 
+"Desviacion estandar de RMSE"
+ 90002.27
+ 
+ "Promedio de RMSE"
+ 275627
 #### Evaluacion Lasso regression de AmsterdamHousing
 
 - Lasso Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
-![image](https://user-images.githubusercontent.com/88351465/233479949-f55afa48-f732-4519-a8f9-7cf894eb79dc.png)
 
-Plot: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233479949-f55afa48-f732-4519-a8f9-7cf894eb79dc.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Lasso  AmsterdamHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233480369-2828cab7-8f56-463e-8c6e-c416107598f8.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480369-2828cab7-8f56-463e-8c6e-c416107598f8.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Lasso  AmsterdamHousing</p>
 
-Segunda ejecucion: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234587616-af56947b-a538-4dc8-9e43-3b4c0b2edcdf.png" alt="" align="center">
+</p>
+<p align="center" >Resultados Lasso CV AmsterdamHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233859570-93ab4cc7-2e37-414b-a3c5-daac4c7a1363.png)
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234587778-a0c605a7-bc56-4816-9482-af892157bca8.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot AmsterdamHousing Lasso CV Rsquared y RMSE</p>
+
+"Desviacion estandar de Rsquared"
+0.1886495
+
+"Promedio de Rsquared"
+0.6847414
+
+ "Desviacion estandar de RMSE"
+ 84672.76
+ 
+"Promedio de RMSE"
+ 272000.2
+ 
+ 
 #### Evaluacion Catboost regression de AmsterdamHousing
 - Catboost regression utilizando Price como variable dependiente y demas variables como independientes.
 
-![image](https://user-images.githubusercontent.com/88351465/233480016-6b6466f7-0bfa-4850-a6ba-18ac06b20f77.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233480016-6b6466f7-0bfa-4850-a6ba-18ac06b20f77.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Catboost  AmsterdamHousing</p>
 
-Plot: 
-
-![image](https://user-images.githubusercontent.com/88351465/233480401-3cd773ff-2866-4b02-ab9d-0155c753f11d.png)
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233859583-2a7a6bae-eb3a-4a0a-ab65-d3b69497eb7b.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480401-3cd773ff-2866-4b02-ab9d-0155c753f11d.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Catboost  AmsterdamHousing</p>
 
 - Catboost regression utilizando Price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
-![image](https://user-images.githubusercontent.com/88351465/234034297-f59d63b5-ac1f-41db-96ea-ae9590758089.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234588759-208d7145-ddff-4865-9a81-69441581b76a.png" alt="" align="center">
+</p>
+<p align="center" >Resultados Catboost CV AmsterdamHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234588990-234f5b40-bbc5-4393-8abd-37fb84433e91.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE</p>
+
+
+"Desviacion estandar de Rsquared"
+0.0720727
+
+"Promedio de Rsquared"
+0.8231122
+
+"Desviacion estandar de RMSE"
+124742.5
+
+"Promedio de RMSE"
+245764.4
 
 
 ### KingCounty Housing
@@ -880,17 +972,17 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" >Boxplot KingCounty Catboost Rsquared y RMSE</p>
 
 
-[1] "Desviacion estandar de Rsquared"
-[1] 0.01838136
+"Desviacion estandar de Rsquared"
+ 0.01838136
 
-[1] "Promedio de Rsquared"
-[1] 0.8470585
+ "Promedio de Rsquared"
+0.8470585
 
-[1] "Desviacion estandar de RMSE"
-[1] 18944.7
+ "Desviacion estandar de RMSE"
+ 18944.7
 
-[1] "Promedio de RMSE"
-[1] 149384.6
+"Promedio de RMSE"
+149384.6
 
 - Catboost regression utilizando price como variable dependiente y demas variables como independientes (EXCEPTO LAS VARIABLES CON ALTA CORRELACION). CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
@@ -907,17 +999,17 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" >Boxplot KingCounty Catboost without correlated Rsquared y RMSE</p>
 
 
-[1] "Desviacion estandar de Rsquared"
-[1] 0.03394038
+"Desviacion estandar de Rsquared"
+0.03394038
 
-[1] "Promedio de Rsquared"
-[1] 0.7992358
+"Promedio de Rsquared"
+ 0.7992358
 
-[1] "Desviacion estandar de RMSE"
-[1] 15817.42
+ "Desviacion estandar de RMSE"
+15817.42
 
-[1] "Promedio de RMSE"
-[1] 166747.4
+"Promedio de RMSE"
+166747.4
 
 ## Análisis y discusión de resultados
 
