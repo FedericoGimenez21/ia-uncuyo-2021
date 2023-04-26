@@ -387,6 +387,7 @@ El motivo por el cual se decidio trabajar con estas herramientas es que cuentan 
 
 ### BostonHousing dataset
 
+#### Analisis de BostonHousing 
 En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
 Luego se procedio a cargar el dataset "BostonHousing", que incluye datos de vivienda de 506 secciones censales de Boston del censo de 1970.
 Los datos originales son 506 observaciones sobre 14 variables, siendo medv la variable objetivo: 
@@ -444,113 +445,209 @@ Analizando el plot de la figura 14 podemos observar lo siguiente:
 
 Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
 
+
+#### Evaluacion linear regression de BostonHousing
+
 A continuación se presentan los resultados de predicción de los modelos implementados: 
 -	Linear Regression, utilizando medv como variable dependiente y lstat como variable independiente. 
 
- ![image](https://user-images.githubusercontent.com/88351465/230801532-b50bda9d-b03a-421c-95c3-e1118bfb1372.png)
 
-Plot: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801532-b50bda9d-b03a-421c-95c3-e1118bfb1372.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Linear BostonHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/230802502-023d5783-69af-4d9b-9c05-6a92555f2a26.png)
-
-Segunda ejecucion:
-
-![image](https://user-images.githubusercontent.com/88351465/233804163-3dcddc9a-e255-4a26-801c-422e66bb834c.png)
-
-
--	Linear Regression, utilizando medv como variable dependiente y crim + rm + tax + lstat como variables independientes. 
-
- ![image](https://user-images.githubusercontent.com/88351465/230801597-43583cc5-2b82-48f1-abfd-355383eda9a8.png)
-
-Plot: 
-
-![image](https://user-images.githubusercontent.com/88351465/230802547-71588e5a-17c2-470e-8ac4-a0ed32e9fc3a.png)
-
-Segunda ejecucion:
-
-![image](https://user-images.githubusercontent.com/88351465/233804174-d7098fe5-d17b-41af-b966-4b8607569323.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802502-023d5783-69af-4d9b-9c05-6a92555f2a26.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Linear BostonHousing</p>
 
 
--	Linear Regression, utilizando medv como variable dependiente y utilizando todas las variables excepto aquellas variables que son altamente correlacionadas ("indus" "nox"   "tax"   "dis"  ). 
+-	Linear Regression utilizando medv como variable dependiente y  demás variables como independientes, con 10-fold cross validation. 
 
- ![image](https://user-images.githubusercontent.com/88351465/230801607-3fef6248-b1c7-4172-bd5b-ef9d40cf8438.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234431881-fdcef957-2231-4f29-8e8f-175bbc06cb0e.png" alt="" align="center">
+</p>
+<p align="center" >Resultados Linear BostonHousing</p>
 
-Segunda ejecucion:
-![image](https://user-images.githubusercontent.com/88351465/233804204-520d65a0-1587-4101-910a-5c04a5fd3b8e.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234432123-93a025d8-db70-4711-a6e4-24c41c0fce6f.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot BostonHousing Linear Rsquared y RMSE</p>
+
+"Desviacion estandar de Rsquared"
+0.0966183
+
+ "Promedio de Rsquared"
+0.7410739
+
+"Desviacion estandar de RMSE"
+ 0.5564602
+
+"Promedio de RMSE"
+4.820555
 
 
--	Linear Regression utilizando medv como variable dependiente y  las demás variables como independientes, con 10-fold cross validation. 
-
- ![image](https://user-images.githubusercontent.com/88351465/230801647-4a136e4e-86fc-4be3-82d9-5a77c8f8f8ac.png)
-
-Plot: 
-
-![image](https://user-images.githubusercontent.com/88351465/230802560-7a4fa001-99ef-4df4-91b8-b845910f8edc.png)
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233804227-ecc453d5-55d0-4d2a-8965-02bb93b3f71a.png)
-
+#### Evaluacion Ridge regression de BostonHousing
 -	 Ridge Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
- ![image](https://user-images.githubusercontent.com/88351465/230801672-31d43a75-6115-4249-8fcd-5ce6d3bf5ca6.png)
 
-Plot: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801672-31d43a75-6115-4249-8fcd-5ce6d3bf5ca6.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Ridge BostonHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/230802606-1a35c80c-9e11-4245-a042-42f7f39d18da.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802606-1a35c80c-9e11-4245-a042-42f7f39d18da.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Ridge BostonHousing</p>
 
-Segunda ejecucion: 
 
-![image](https://user-images.githubusercontent.com/88351465/233804253-b446beb7-e1f6-41df-b593-91bcbccd0385.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234432743-50722662-f92a-4648-886f-031e113ef1c0.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Ridge regression BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234432834-576d8445-c018-44c8-a48b-d445ba9be423.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot BostonHousing Ridge Rsquared y RMSE</p>
+
+"Desviacion estandar de Rsquared"
+ 0.05959355
+ 
+"Promedio de Rsquared"
+ 0.7550372
+ 
+"Desviacion estandar de RMSE"
+ 0.8642813
+ 
+"Promedio de RMSE"
+4.751065
+
+#### Evaluacion Lasso regression de BostonHousing
 
 -	Lasso Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
- ![image](https://user-images.githubusercontent.com/88351465/230801684-88ae8ca7-95aa-497b-8f3a-4fa9295f26c3.png)
 
-Plot:
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801684-88ae8ca7-95aa-497b-8f3a-4fa9295f26c3.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Lasso BostonHousing</p>
 
-![image](https://user-images.githubusercontent.com/88351465/230802576-62f3aca3-d589-4f4a-b28c-747cbe618eaa.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802576-62f3aca3-d589-4f4a-b28c-747cbe618eaa.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Lasso BostonHousing</p>
 
-Segunda ejecucion: 
 
-![image](https://user-images.githubusercontent.com/88351465/233804260-1e22a3de-1e03-4025-984b-73c9167d4870.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234433555-a5d43091-c10f-4316-b1b6-aafea51ed786.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Lasso regression BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234433634-cc620986-17a7-4bf1-990e-25d8b528ccfe.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot BostonHousing Lasso Rsquared y RMSE</p>
+
+"Desviacion estandar de Rsquared"
+0.061692
+
+"Promedio de Rsquared"
+0.732074
+
+"Desviacion estandar de RMSE"
+0.4530894
+
+"Promedio de RMSE"
+4.796933
 
 
+
+#### Evaluacion Catboost regression de BostonHousing
 -	Catboost Regression SIN CROSS VALIDATION, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
 
- ![image](https://user-images.githubusercontent.com/88351465/230801705-15763d94-3bf5-4d7a-b152-d53fbfd8b12d.png)
- 
- Plot:
- 
- ![image](https://user-images.githubusercontent.com/88351465/230802620-93c17efa-1e5e-4c22-b763-eb2aea9cb5e6.png)
- 
-Segunda ejecucion: 
 
-![image](https://user-images.githubusercontent.com/88351465/233804290-95385c6c-233f-4f18-8319-543545bfb09a.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801705-15763d94-3bf5-4d7a-b152-d53fbfd8b12d.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Catboost BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802620-93c17efa-1e5e-4c22-b763-eb2aea9cb5e6.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Catboost BostonHousing</p>
+
 
 - Catboost Regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
 
-![image](https://user-images.githubusercontent.com/88351465/234012301-e99120f8-70dc-4fc6-9eb8-3c498d2d82ae.png)
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234434153-289c7c94-f978-49c1-a626-09229a3c9364.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Catboost regression BostonHousing</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234434472-f896ea57-0db6-4107-853f-a0db64e3df72.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot BostonHousing Catboost Rsquared y RMSE</p>
+
+
+
+"Desviacion estandar de Rsquared"
+0.06975748
+
+"Promedio de Rsquared"
+0.8483829
+
+"Desviacion estandar de RMSE"
+1.170531
+
+"Promedio de RMSE"
+3.813926
 
  - Catboost regression, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
  
- ![image](https://user-images.githubusercontent.com/88351465/233696539-78e0de63-20b0-405d-ad27-fdc5c8f1f699.png)
+ <p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233696539-78e0de63-20b0-405d-ad27-fdc5c8f1f699.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Catboost BostonHousing sin "tax"</p>
 
-Plot: 
-
-![image](https://user-images.githubusercontent.com/88351465/233696596-49299717-a0ab-408e-a956-b8eeb120507e.png)
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/234036897-f49e68f6-b40f-4f8a-85ed-d9f0f45db6c0.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233696596-49299717-a0ab-408e-a956-b8eeb120507e.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Catboost BostonHousing sin "tax"</p>
+ 
 
  - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
 
-![image](https://user-images.githubusercontent.com/88351465/234012421-5c922c7d-5fde-48b7-abdc-b719e5713a59.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234434916-d7164d69-eaaf-4bcd-8fbe-bb2198d1f7b5.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Catboost CV w/o correlated variables regression BostonHousing</p>
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234435039-ee06bb32-7853-4c45-b97c-d6c80097df52.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE</p>
+
+"Desviacion estandar de Rsquared"
+0.07061951
+
+"Promedio de Rsquared"
+ 0.8953902
+ 
+"Desviacion estandar de RMSE"
+1.445495
+
+"Promedio de RMSE"
+3.529282
 
 ### AmsterdamHousing dataset
+
+#### Analisis de AmsterdamHousing
 
 En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
 Luego se procedio a cargar el dataset AmsterdamHousing
@@ -562,6 +659,7 @@ A continuacion analice el Correlation plots, lo cual es un una buena manera de e
 Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
 
 
+#### Evaluacion linear regression de AmsterdamHousing
 A continuación se presentan los resultados de predicción de los modelos implementados: 
 -	Linear Regression, utilizando Price como variable dependiente y demas variables como independientes. 
 
@@ -580,7 +678,7 @@ Segunda ejecucion:
 
 ![image](https://user-images.githubusercontent.com/88351465/233479728-d888873b-5edf-46d3-b3be-d6e418d899e9.png)
 
-
+#### Evaluacion Ridge regression de AmsterdamHousing
 - Ridge Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 ![image](https://user-images.githubusercontent.com/88351465/233479852-a7bf61fb-6632-42cf-9560-f304e9f07a8e.png)
@@ -592,6 +690,8 @@ Plot:
 Segunda ejecucion: 
 
 ![image](https://user-images.githubusercontent.com/88351465/233859564-6e66ee26-0311-48db-b041-000efb85d92b.png)
+
+#### Evaluacion Lasso regression de AmsterdamHousing
 
 - Lasso Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
@@ -605,7 +705,7 @@ Segunda ejecucion:
 
 ![image](https://user-images.githubusercontent.com/88351465/233859570-93ab4cc7-2e37-414b-a3c5-daac4c7a1363.png)
 
-
+#### Evaluacion Catboost regression de AmsterdamHousing
 - Catboost regression utilizando Price como variable dependiente y demas variables como independientes.
 
 ![image](https://user-images.githubusercontent.com/88351465/233480016-6b6466f7-0bfa-4850-a6ba-18ac06b20f77.png)
@@ -625,6 +725,8 @@ Segunda ejecucion:
 
 ### KingCounty Housing
 
+#### Analisis de KingCounty
+
 En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
 Luego se procedio a cargar el dataset KingCounty
 
@@ -634,88 +736,188 @@ A continuacion analice el Correlation plots, lo cual es un una buena manera de e
 
 Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
 
+#### Evaluacion linear regression de KingCounty
+
 -	Linear Regression, utilizando Price como variable dependiente y demas variables como independientes. 
 
-![image](https://user-images.githubusercontent.com/88351465/233667344-a585ee88-7488-4bd1-8988-e77605860a07.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667344-a585ee88-7488-4bd1-8988-e77605860a07.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Linear KingCounty</p>
 
-Plot: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233667448-daad70d0-b051-4041-99f2-bfbc2e45d35d.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Linear KingCounty</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233667448-daad70d0-b051-4041-99f2-bfbc2e45d35d.png)
+- Linear regression cross validation (10-fold) utilizando Price como variable dependiente y demas variables como independientes. 
 
-Segunda ejecucion: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234430191-35050710-1ac6-49db-bbad-828562259c93.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Linear CV regression KingCounty</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233860712-20f7ec52-3b9a-4fd6-b2ea-2969d5f95c3b.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234430334-13afabe1-0ddd-4a04-ac58-8d6e5e703f1b.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot KingCounty Ridge Rsquared y RMSE</p>
 
+"Desviacion estandar de Rsquared"
+ 0.02154011
+ 
+"Promedio de Rsquared"
+0.6500709
 
-- Cross validation utilizando Price como variable dependiente y demas variables como independientes. 
+"Desviacion estandar de RMSE"
+14612.25
 
-![image](https://user-images.githubusercontent.com/88351465/233667583-f8656290-9170-4e84-b7ec-25bfbde7e797.png)
+"Promedio de RMSE"
+214599.9
 
-Plot: 
-
-![image](https://user-images.githubusercontent.com/88351465/233667628-69da359d-a71d-4490-b214-82ec0042f702.png)
-
+#### Evaluacion Ridge regression de KingCounty
 - Ridge Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
-![image](https://user-images.githubusercontent.com/88351465/233667703-a817d050-c963-4688-9a3f-1a83e318a937.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667703-a817d050-c963-4688-9a3f-1a83e318a937.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Ridge KingCounty</p>
 
-Plot:
-
-![image](https://user-images.githubusercontent.com/88351465/233667736-9f5f363a-74d3-43e1-97d3-25da4572c8c9.png)
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233860671-fdee5c5b-582a-43d6-bea9-2b728b9f24b3.png)
-
-Tercera ejecucion:
-
-![image](https://user-images.githubusercontent.com/88351465/233861135-a670e90e-0eab-4411-8caf-5b17d004963f.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233667736-9f5f363a-74d3-43e1-97d3-25da4572c8c9.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Ridge KingCounty</p>
 
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234429499-6bcdafc5-5be5-4644-8798-169ee3d6476b.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Ridge regression KingCounty</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234429917-bbe79ffb-9a3c-46d4-80fe-f19bbf1b439b.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot KingCounty Ridge Rsquared y RMSE</p>
+
+"Desviacion estandar de Rsquared"
+ 0.01500145
+ 
+"Promedio de Rsquared"
+ 0.6463276
+ 
+"Desviacion estandar de RMSE"
+ 14463
+ 
+"Promedio de RMSE"
+215917
+
+#### Evaluacion Lasso regression de KingCounty
 - Lasso Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
-![image](https://user-images.githubusercontent.com/88351465/233667823-e8cbc3cd-f979-4556-8072-2894a2b78f9b.png)
 
-Plot:
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667823-e8cbc3cd-f979-4556-8072-2894a2b78f9b.png" alt="" align="center">
+</p>
+<p align="center" >Resultado prediccion de Lasso KingCounty</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233667879-5429d85b-5cab-4737-84d6-b6df018145f7.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233667879-5429d85b-5cab-4737-84d6-b6df018145f7.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Catboost KingCounty</p>
 
-Segunda ejecucion: 
 
-![image](https://user-images.githubusercontent.com/88351465/233860662-504ea1c9-0cbc-4256-8f7b-8b09f99889ee.png)
 
-Tercera ejecucion: 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234428706-f4091122-918d-49ca-8cb1-eb7a0c7ce8d3.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Lasso regression KingCounty</p>
 
-![image](https://user-images.githubusercontent.com/88351465/233861123-9467d02b-e9e0-48df-a1e9-fdc9bb74c7a1.png)
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234428937-723b3685-8c78-4942-a948-2dc070c89498.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot KingCounty Lasso Rsquared y RMSE</p>
+
+
+"Desviacion estandar de Rsquared"
+ 0.01868493
+ 
+"Promedio de Rsquared"
+0.6495735
+
+"Desviacion estandar de RMSE"
+7841.999
+
+"Promedio de RMSE"
+214933.1
+#### Evaluacion Catboost regression de KingCounty
 
 - Catboost regression utilizando Price como variable dependiente y demas variables como independientes.
 
-![image](https://user-images.githubusercontent.com/88351465/233667974-59e6bfca-feb9-48b9-94b2-7332bb541fa7.png)
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667974-59e6bfca-feb9-48b9-94b2-7332bb541fa7.png" alt="" align="center">
+</p>
+<p align="center" >Resultados prediccion de Catboost KingCounty</p>
 
 
-Plot:
-
-![image](https://user-images.githubusercontent.com/88351465/233668001-b4a9b330-89bf-411b-ada9-e9635c4efb7e.png)
-
-
-Segunda ejecucion: 
-
-![image](https://user-images.githubusercontent.com/88351465/233860639-97791f22-a91e-48fd-aaa4-1084b9a50331.png)
-
-Tercera ejecucion:
-
-![image](https://user-images.githubusercontent.com/88351465/233861100-c18dc12a-399e-400b-8a1d-084b01d886af.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233668001-b4a9b330-89bf-411b-ada9-e9635c4efb7e.png" alt="" align="center">
+</p>
+<p align="center" >Plot prediccion de Catboost KingCounty</p>
 
 
 - Catboost regression utilizando price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
-![image](https://user-images.githubusercontent.com/88351465/234034694-80a960b8-ec03-4c64-8a20-1d34c00a3d43.png)
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234427752-d781ce13-f07e-449d-b907-6a73210679c4.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Catboost KingCounty</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234427969-ea35bbb4-78db-406f-9825-dbcdd7bb3df0.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot KingCounty Catboost Rsquared y RMSE</p>
+
+
+[1] "Desviacion estandar de Rsquared"
+[1] 0.01838136
+
+[1] "Promedio de Rsquared"
+[1] 0.8470585
+
+[1] "Desviacion estandar de RMSE"
+[1] 18944.7
+
+[1] "Promedio de RMSE"
+[1] 149384.6
 
 - Catboost regression utilizando price como variable dependiente y demas variables como independientes (EXCEPTO LAS VARIABLES CON ALTA CORRELACION). CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
-![image](https://user-images.githubusercontent.com/88351465/234034861-a5fa9c92-1640-4cad-a647-5b9f55337f99.png)
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234426720-f8a8b888-c10b-4574-b58c-98e62161d583.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de Catboost without correlated variables KingCounty</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234428117-af929cee-1e34-46a8-9c04-3450df893f49.png" alt="" align="center">
+</p>
+<p align="center" >Boxplot KingCounty Catboost without correlated Rsquared y RMSE</p>
+
+
+[1] "Desviacion estandar de Rsquared"
+[1] 0.03394038
+
+[1] "Promedio de Rsquared"
+[1] 0.7992358
+
+[1] "Desviacion estandar de RMSE"
+[1] 15817.42
+
+[1] "Promedio de RMSE"
+[1] 166747.4
 
 ## Análisis y discusión de resultados
 
