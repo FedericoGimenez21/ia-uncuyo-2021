@@ -382,6 +382,8 @@ Entonces, el RMSE simplemente toma la raíz cuadrada de eso, lo que devuelve la 
 El lenguaje de programacion utilizado para la implementacion del presente trabajo es R. Implementando el proyecto en RStudio.
 El motivo por el cual se decidio trabajar con estas herramientas es que cuentan con gran variedad de librerias utiles para implementar el presente trabajo.
 
+## Forma de evaluacion de los modelos
+Recordando que el objetivo del proyecto es poder comprobar el funcionamiento de los algoritmos y comparar resultados, la forma de evaluacion de los modelos sera la misma para todos. La cual sera aplicar split en train/test a cada dataset, luego realizar los modelos ya sea linear regression, lasso, ridge o catboost, aplicando cross validation con 10-fold y presentar los resultados de Rsquared y RMSE. Tambien se realizaran boxplot de los resultados y se presentaran metricas como media y desviacion estandar.
 
 ## Detalle y justificacion
 
@@ -392,20 +394,20 @@ En primer lugar, el proyecto incluye una seccion de instalacion e importacion de
 Luego se procedio a cargar el dataset "BostonHousing", que incluye datos de vivienda de 506 secciones censales de Boston del censo de 1970.
 Los datos originales son 506 observaciones sobre 14 variables, siendo medv la variable objetivo: 
 
-crim:	per capita crime rate by town
-zn:	proportion of residential land zoned for lots over 25,000 sq.ft
-indus:	proportion of non-retail business acres per town
-chas:	Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
-nox:	nitric oxides concentration (parts per 10 million)
-rm:	average number of rooms per dwelling
-age:	proportion of owner-occupied units built prior to 1940
-dis:	weighted distances to five Boston employment centres
-rad:	index of accessibility to radial highways
-tax:	full-value property-tax rate per USD 10,000
-ptratio:	pupil-teacher ratio by town
-b:	1000(B - 0.63)^2 where B is the proportion of blacks by town
-lstat:	percentage of lower status of the population
-medv:	median value of owner-occupied homes in USD 1000's
+- crim:	per capita crime rate by town
+- zn:	proportion of residential land zoned for lots over 25,000 sq.ft
+- indus:	proportion of non-retail business acres per town
+- chas:	Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
+- nox:	nitric oxides concentration (parts per 10 million)
+- rm:	average number of rooms per dwelling
+- age:	proportion of owner-occupied units built prior to 1940
+- dis:	weighted distances to five Boston employment centres
+- rad:	index of accessibility to radial highways
+- tax:	full-value property-tax rate per USD 10,000
+- ptratio:	pupil-teacher ratio by town
+- b:	1000(B - 0.63)^2 where B is the proportion of blacks by town
+- lstat:	percentage of lower status of the population
+- medv:	median value of owner-occupied homes in USD 1000's
 
 Luego procedi a comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. 
 Satisfactoriamente no se encontro ningun valor faltante. Por lo tanto el siguiente paso fue analizar el dataset.
@@ -448,27 +450,19 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 
 #### Evaluacion linear regression de BostonHousing
 
-A continuación se presentan los resultados de predicción de los modelos implementados: 
--	Linear Regression, utilizando medv como variable dependiente y lstat como variable independiente. 
-
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801532-b50bda9d-b03a-421c-95c3-e1118bfb1372.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Linear BostonHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802502-023d5783-69af-4d9b-9c05-6a92555f2a26.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Linear BostonHousing</p>
-
-
 -	Linear Regression utilizando medv como variable dependiente y  demás variables como independientes, con 10-fold cross validation. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234431881-fdcef957-2231-4f29-8e8f-175bbc06cb0e.png" alt="" align="center">
 </p>
 <p align="center" >Resultados Linear CV BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234611632-2250af0b-5c51-413a-94d0-9ddcf940f971.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Linear BostonHousing</p>
+
+
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234432123-93a025d8-db70-4711-a6e4-24c41c0fce6f.png" alt="" align="center">
@@ -492,21 +486,20 @@ A continuación se presentan los resultados de predicción de los modelos implem
 -	 Ridge Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801672-31d43a75-6115-4249-8fcd-5ce6d3bf5ca6.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Ridge BostonHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802606-1a35c80c-9e11-4245-a042-42f7f39d18da.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Ridge BostonHousing</p>
-
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234432743-50722662-f92a-4648-886f-031e113ef1c0.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Ridge CV regression BostonHousing</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234613338-f291d0bc-5c5d-415e-bc13-5d8db58101db.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Ridge BostonHousing</p>
+
+
+
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234432834-576d8445-c018-44c8-a48b-d445ba9be423.png" alt="" align="center">
@@ -530,21 +523,18 @@ A continuación se presentan los resultados de predicción de los modelos implem
 -	Lasso Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801684-88ae8ca7-95aa-497b-8f3a-4fa9295f26c3.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Lasso BostonHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802576-62f3aca3-d589-4f4a-b28c-747cbe618eaa.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Lasso BostonHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234433555-a5d43091-c10f-4316-b1b6-aafea51ed786.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Lasso CV regression BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234614524-e4eb4a64-be20-44c8-b98e-d76e6e77ccbb.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Lasso BostonHousing</p>
+
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234433634-cc620986-17a7-4bf1-990e-25d8b528ccfe.png" alt="" align="center">
@@ -566,19 +556,6 @@ A continuación se presentan los resultados de predicción de los modelos implem
 
 
 #### Evaluacion Catboost regression de BostonHousing
--	Catboost Regression SIN CROSS VALIDATION, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
-
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/230801705-15763d94-3bf5-4d7a-b152-d53fbfd8b12d.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Catboost BostonHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/230802620-93c17efa-1e5e-4c22-b763-eb2aea9cb5e6.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Catboost BostonHousing</p>
-
 
 - Catboost Regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
 
@@ -587,6 +564,12 @@ A continuación se presentan los resultados de predicción de los modelos implem
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234434153-289c7c94-f978-49c1-a626-09229a3c9364.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Catboost regression BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234616682-02d3b233-8056-43e9-96b5-5c6ec6440e8f.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Catboost BostonHousing</p>
+
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -608,18 +591,6 @@ A continuación se presentan los resultados de predicción de los modelos implem
 "Promedio de RMSE"
 3.813926
 
- - Catboost regression, utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
- 
- <p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233696539-78e0de63-20b0-405d-ad27-fdc5c8f1f699.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Catboost BostonHousing sin "tax"</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233696596-49299717-a0ab-408e-a956-b8eeb120507e.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Catboost BostonHousing sin "tax"</p>
- 
 
  - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
 
@@ -627,6 +598,13 @@ A continuación se presentan los resultados de predicción de los modelos implem
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234434916-d7164d69-eaaf-4bcd-8fbe-bb2198d1f7b5.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Catboost CV w/o correlated variables regression BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234619611-34453c8f-c4b5-4e53-8aa5-3d3c2cbc459e.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Catboost w/o corr variables BostonHousing</p>
+
+
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234435039-ee06bb32-7853-4c45-b97c-d6c80097df52.png" alt="" align="center">
@@ -650,13 +628,41 @@ A continuación se presentan los resultados de predicción de los modelos implem
 #### Analisis de AmsterdamHousing
 
 En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
-Luego se procedio a cargar el dataset AmsterdamHousing
+Luego se procedio a cargar el dataset "AmsterdamHousing", que incluye datos de viviendas de Amsterdam. Los datos originales son 924 observaciones sobre 8 variables, siendo Price la variable objetivo. Las variables son: 
 
-El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. Se encontraron 4 NA y se eliminaron esos registros. Elimine las columnas de id, Zip y address ya que no fueron consideradas relevantes para el proyecto. 
+- X1: numero de fila
+- Address: direccion
+- Zip: codigo postal
+- Price: precio
+- Area: Superficie residencial en metros cuadrados.
+- Room: Cantidad de habitaciones    
+- Lon
+- Lat
 
-A continuacion analice el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables. Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "Area". 
+El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. Se encontraron 4 NA y se eliminaron esos registros. Se eliminaron las columnas de id, Zip y address ya que no fueron consideradas relevantes para el proyecto. 
 
-Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
+
+Luego se realizo boxplot de las variables con el fin de encontrar valores outliers. 
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="400" src="https://user-images.githubusercontent.com/88351465/234599076-8c4c5cc2-4421-478f-a87a-586b21ccaad2.png"  align="center">
+</p>
+<p align="center" >Boxplot de variables de AmsterdamHousing</p>
+
+
+A continuacion se procedio a analizar el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables.Utilizando corrplot es posible obtener el siguiente grafico: 
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234595450-977ebe04-5b04-4b14-b1c2-12cbbf20bf43.png"  align="center">
+</p>
+<p align="center" >Correlation plot de AmsterdamHousing</p>
+
+Analizando el corrplot de AmsterdamHousing se observa que todas las variables representan correlacion positiva. 
+
+
+Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "Area". 
+
+A continuacion se dividio el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estabamos en condiciones de implementar los modelos
 
 
 #### Evaluacion linear regression de AmsterdamHousing
