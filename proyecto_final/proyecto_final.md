@@ -667,20 +667,6 @@ A continuacion se dividio el dataset en train y test, y teniendo en cuenta el an
 
 #### Evaluacion linear regression de AmsterdamHousing
 A continuación se presentan los resultados de predicción de los modelos implementados: 
--	Linear Regression, utilizando Price como variable dependiente y demas variables como independientes. 
-
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233479459-282bd19d-0382-4183-9edc-d53aec4ca590.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Linear AmsterdamHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480190-d0a8ae23-8da4-4e1f-b5f1-2b468fd613a3.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Linear AmsterdamHousing</p>
-
-
 
 - Linear Regression Cross validation 10-fold utilizando Price como variable dependiente y demas variables como independientes. 
 
@@ -688,6 +674,12 @@ A continuación se presentan los resultados de predicción de los modelos implem
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234584961-22d5dcae-b4b4-429a-8ed4-18a8affc6942.png" alt="" align="center">
 </p>
 <p align="center" >Resultados Linear CV AmsterdamHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480190-d0a8ae23-8da4-4e1f-b5f1-2b468fd613a3.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Linear AmsterdamHousing</p>
+
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234585286-c00117c7-79b9-4c62-a256-a57999bf81c7.png" alt="" align="center">
@@ -710,20 +702,16 @@ A continuación se presentan los resultados de predicción de los modelos implem
 - Ridge Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233479852-a7bf61fb-6632-42cf-9560-f304e9f07a8e.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Ridge AmsterdamHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480300-1fe046cc-894d-4413-9442-d91d50fa62eb.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Ridge AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234586766-a540034b-275b-4f72-b612-c8ace202ad12.png" alt="" align="center">
 </p>
 <p align="center" >Resultados Ridge CV AmsterdamHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480300-1fe046cc-894d-4413-9442-d91d50fa62eb.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Ridge AmsterdamHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -747,21 +735,16 @@ A continuación se presentan los resultados de predicción de los modelos implem
 - Lasso Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233479949-f55afa48-f732-4519-a8f9-7cf894eb79dc.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Lasso  AmsterdamHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480369-2828cab7-8f56-463e-8c6e-c416107598f8.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Lasso  AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234587616-af56947b-a538-4dc8-9e43-3b4c0b2edcdf.png" alt="" align="center">
 </p>
 <p align="center" >Resultados Lasso CV AmsterdamHousing</p>
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480369-2828cab7-8f56-463e-8c6e-c416107598f8.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Lasso  AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234587778-a0c605a7-bc56-4816-9482-af892157bca8.png" alt="" align="center">
@@ -782,17 +765,6 @@ A continuación se presentan los resultados de predicción de los modelos implem
  
  
 #### Evaluacion Catboost regression de AmsterdamHousing
-- Catboost regression utilizando Price como variable dependiente y demas variables como independientes.
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233480016-6b6466f7-0bfa-4850-a6ba-18ac06b20f77.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Catboost  AmsterdamHousing</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480401-3cd773ff-2866-4b02-ab9d-0155c753f11d.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Catboost  AmsterdamHousing</p>
 
 - Catboost regression utilizando Price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
@@ -801,6 +773,11 @@ A continuación se presentan los resultados de predicción de los modelos implem
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234588759-208d7145-ddff-4865-9a81-69441581b76a.png" alt="" align="center">
 </p>
 <p align="center" >Resultados Catboost CV AmsterdamHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233480401-3cd773ff-2866-4b02-ab9d-0155c753f11d.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Catboost  AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234588990-234f5b40-bbc5-4393-8abd-37fb84433e91.png" alt="" align="center">
@@ -826,27 +803,73 @@ A continuación se presentan los resultados de predicción de los modelos implem
 #### Analisis de KingCounty
 
 En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
-Luego se procedio a cargar el dataset KingCounty
+Luego se procedio a cargar el dataset KingCounty, que incluye 21613 datos de viviendas de King County. 
 
-El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. En este caso no se encontraron valores faltantes. Elimine las columnas de id y date ya que no fueron consideradas relevantes para el proyecto. Transforme las variables "waterfront", "view", "condition" que tenian formato de num a factor. Y generar una variable age (antiguedad). 
+- id : A notation for a house
 
-A continuacion analice el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables. Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "sqft_living". 
+- date: Date house was sold
 
-Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
+- price: Price is prediction target
+
+- bedrooms: Number of bedrooms
+
+- bathrooms: Number of bathrooms
+
+- sqft_living: Square footage of the home (Metros cuadrados de la vivienda)
+
+- sqft_lot: Square footage of the lot (Metros cuadrados de la parcela)
+
+- floors :Total floors (levels) in house
+
+- waterfront :House which has a view to a waterfront
+
+- view: Has been viewed
+
+- condition :How good the condition is overall
+
+- grade: overall grade given to the housing unit, based on King County grading system
+
+- sqft_above : Square footage of house apart from basement (Metros cuadrados de la casa aparte del sótano)
+
+- sqft_basement: Square footage of the basement (Metros cuadrados del sótano)
+
+- yr_built : Built Year
+
+- yr_renovated : Year when house was renovated
+
+- zipcode: Zip code
+
+- lat: Latitude coordinate
+
+- long: Longitude coordinate
+
+- sqft_living15 : Living room area in 2015(implies-- some renovations) This might or might not have affected the lotsize area
+
+- sqft_lot15 : LotSize area in 2015(implies-- some renovations)
+
+Ejecutando summary del dataset obtenemos estadisticas basicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="1000" src="https://user-images.githubusercontent.com/88351465/234643261-2fd74b4b-8dae-4f0b-a752-6f9e512432ee.png"  align="center">
+</p>
+<p align="center" >Summary de KingCounty</p>
+
+
+El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. En este caso no se encontraron valores faltantes. Se eliminaron las columnas de id y date ya que no fueron consideradas relevantes para el proyecto. Se transformo las variables "waterfront", "view", "condition" que tenian formato de num a factor. Y generamos una variable age (antiguedad). 
+
+A continuacion se presenta el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables.
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234642279-e4fc9049-d6f4-43cb-96b9-f05b271acda9.png"  align="center">
+</p>
+<p align="center" >Correlation plot de KingCounty</p>
+
+
+Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "sqft_living". 
+
+Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estabamos en condiciones de implementar los modelos
 
 #### Evaluacion linear regression de KingCounty
 
--	Linear Regression, utilizando Price como variable dependiente y demas variables como independientes. 
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667344-a585ee88-7488-4bd1-8988-e77605860a07.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Linear KingCounty</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233667448-daad70d0-b051-4041-99f2-bfbc2e45d35d.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Linear KingCounty</p>
 
 - Linear regression cross validation (10-fold) utilizando Price como variable dependiente y demas variables como independientes. 
 
@@ -854,6 +877,12 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234430191-35050710-1ac6-49db-bbad-828562259c93.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Linear CV regression KingCounty</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233667448-daad70d0-b051-4041-99f2-bfbc2e45d35d.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Linear KingCounty</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234430334-13afabe1-0ddd-4a04-ac58-8d6e5e703f1b.png" alt="" align="center">
@@ -875,21 +904,17 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 #### Evaluacion Ridge regression de KingCounty
 - Ridge Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667703-a817d050-c963-4688-9a3f-1a83e318a937.png" alt="" align="center">
-</p>
-<p align="center" >Resultado prediccion de Ridge KingCounty</p>
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233667736-9f5f363a-74d3-43e1-97d3-25da4572c8c9.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Ridge KingCounty</p>
-
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234429499-6bcdafc5-5be5-4644-8798-169ee3d6476b.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Ridge regression KingCounty</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233667736-9f5f363a-74d3-43e1-97d3-25da4572c8c9.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Ridge KingCounty</p>
+
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234429917-bbe79ffb-9a3c-46d4-80fe-f19bbf1b439b.png" alt="" align="center">
@@ -913,21 +938,14 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 
 
 <p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667823-e8cbc3cd-f979-4556-8072-2894a2b78f9b.png" alt="" align="center">
+  <img width="300" src="https://user-images.githubusercontent.com/88351465/234428706-f4091122-918d-49ca-8cb1-eb7a0c7ce8d3.png" alt="" align="center">
 </p>
-<p align="center" >Resultado prediccion de Lasso KingCounty</p>
+<p align="center" >Resultados de Lasso regression KingCounty</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233667879-5429d85b-5cab-4737-84d6-b6df018145f7.png" alt="" align="center">
 </p>
-<p align="center" >Plot prediccion de Catboost KingCounty</p>
-
-
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/234428706-f4091122-918d-49ca-8cb1-eb7a0c7ce8d3.png" alt="" align="center">
-</p>
-<p align="center" >Resultados de Lasso regression KingCounty</p>
+<p align="center" >Plot mejor prediccion de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -949,20 +967,6 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 214933.1
 #### Evaluacion Catboost regression de KingCounty
 
-- Catboost regression utilizando Price como variable dependiente y demas variables como independientes.
-
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="300" src="https://user-images.githubusercontent.com/88351465/233667974-59e6bfca-feb9-48b9-94b2-7332bb541fa7.png" alt="" align="center">
-</p>
-<p align="center" >Resultados prediccion de Catboost KingCounty</p>
-
-
-<p align="center" style="margin-bottom: 0px !important;">
-  <img width="500" src="https://user-images.githubusercontent.com/88351465/233668001-b4a9b330-89bf-411b-ada9-e9635c4efb7e.png" alt="" align="center">
-</p>
-<p align="center" >Plot prediccion de Catboost KingCounty</p>
-
 
 - Catboost regression utilizando price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
@@ -970,6 +974,12 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234427752-d781ce13-f07e-449d-b907-6a73210679c4.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Catboost KingCounty</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/233668001-b4a9b330-89bf-411b-ada9-e9635c4efb7e.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -997,6 +1007,13 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234426720-f8a8b888-c10b-4574-b58c-98e62161d583.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de Catboost without correlated variables KingCounty</p>
+
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/234664718-8705c047-0f04-477c-aef6-d5a70de596e6.png" alt="" align="center">
+</p>
+<p align="center" >Plot mejor prediccion de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
