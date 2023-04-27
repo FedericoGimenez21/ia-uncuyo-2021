@@ -383,7 +383,7 @@ El lenguaje de programacion utilizado para la implementacion del presente trabaj
 El motivo por el cual se decidio trabajar con estas herramientas es que cuentan con gran variedad de librerias utiles para implementar el presente trabajo.
 
 ## Forma de evaluacion de los modelos
-Recordando que el objetivo del proyecto es poder comprobar el funcionamiento de los algoritmos y comparar resultados, la forma de evaluacion de los modelos sera la misma para todos. La cual sera aplicar split en train/test a cada dataset, luego realizar los modelos ya sea linear regression, lasso, ridge o catboost, aplicando cross validation con 10-fold y presentar los resultados de Rsquared y RMSE. Tambien se realizaran boxplot de los resultados y se presentaran metricas como media y desviacion estandar.
+Recordando que el objetivo del proyecto es poder comprobar el funcionamiento de los algoritmos y comparar resultados, la forma de evaluacion de los modelos sera la misma para todos. La cual sera aplicar split en train/test a cada dataset, luego realizar los modelos ya sea linear regression, lasso, ridge o catboost, aplicando cross validation con 10-fold y presentar los resultados de Rsquared y RMSE. Tambien se realizaran boxplot de los resultados y se presentaran metricas como media y desviacion estandar. Por lo tanto sera importante recordar qué es y qué representa la desviacion estandar a continuacion: La desviación estándar mide la dispersión de una distribución de datos. Entre más dispersa está una distribución de datos, más grande es su desviación estándar. Es interesante que la desviación estándar no puede ser negativa. Una desviación estándar cercana a 0 indica que los datos tienden a estar más cerca a la media. Entre más lejos estén los datos de la media, más grande es la desviación estándar.
 
 ## Detalle y justificacion
 
@@ -623,6 +623,7 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 "Promedio de RMSE"
 3.529282
 
+
 ### AmsterdamHousing dataset
 
 #### Analisis de AmsterdamHousing
@@ -798,6 +799,9 @@ A continuación se presentan los resultados de predicción de los modelos implem
 245764.4
 
 
+
+
+
 ### KingCounty Housing
 
 #### Analisis de KingCounty
@@ -887,7 +891,7 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234430334-13afabe1-0ddd-4a04-ac58-8d6e5e703f1b.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot KingCounty Ridge Rsquared y RMSE</p>
+<p align="center" >Boxplot KingCounty LinearCV Rsquared y RMSE</p>
 
 "Desviacion estandar de Rsquared"
  0.02154011
@@ -1034,29 +1038,69 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 "Promedio de RMSE"
 166747.4
 
+
+
+
 ## Análisis y discusión de resultados
 
 ### BostonHousing
-Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, podemos observar lo siguiente: 
-El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Linear Regression. Aunque podemos ver que al aplicar cross validation obtenemos resultados muy similares a Lasso y Ridge regression (con cv). 
-Por otro lado, el vencedor de los modelos es Catboost Regression con una notable mejora con un RMSE menor y un Rsquared mucho mayor (0.8808 aprox) frente al primer Rsquared obtenido por Linear regression (0.5945 aprox). Analizando los plots claramente el vencedor tambien es catboost. La prediccion refleja una curva que representa gran cantidad de los datos. 
 
-Aun podemos mejorar mas la performance de catboost. Aplicando el modelo a medv como variable dependiente y demas variables como independientes (excepto "tax") claramente observamos una mejora muy alta. RMSE menor (2.0271471) y Rsquared de 0.9711059. 
+**Presentacion de resultados BostonHousing**
 
-Analizando todos los resultados observamos que el modelo de mejor performance es Catboost. Realizando 3 ejecuciones con cross validation, podemos ver que obtenemos mejores resultados con el modelo de Catboost con cross validation y sin la variable "tax", donde obtenemos valores de Rsquared maximos  y valores de RMSE minimos entre todos los resultados. 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234873927-c0e1a1c8-2f10-41d9-b239-27104fd47658.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de metricas de BostonHousing</p>
+
+**Analisis**
+
+Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, podemos comparar las metricas obtenidas analizando la figura anterior  *Resultados de metricas de BostonHousing* :
+
+Comparando la metrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 4.820555. A continuacion le seguiria Lasso CV con valor promedio de 4.796933 y destacable que obtuvo el menor valor de desviacion estandar, lo cual indica que es el modelo que obtuvo mas datos cercanos al promedio. Analizando su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE*, podemos ver que su mediana se situa aproximadamente en el centro, lo cual indicaria que su mediana y media coinciden aproximadamente. Por otro lado Ridge CV presenta promedio de RMSE menor (4.751065) pero una desviacion estandar mayor 0.8642813, lo cual indicaria que la distribucion de los datos no se encuentran cercanos a la media. Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* presenta una mediana baja, lo cual indicaria que hay una cantidad favorable de datos que se situan en los valores inferiores. Finalmente los ultimos valores presentados son de Catboost, donde el modelo de mejor performance fue Catboost CV w/o correlated variables, el cual obtuvo menor promedio de RMSE 3.529282. Nuevamente analizando su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana es baja, es decir, representa una distribución ‘asimétrica positiva’ lo cual indica que la mayoria de sus valores son bajos.
+
+Comparando la metrica Rsquared, el modelo de menor performance es aquel que otbuvo menor valor de promedio, es decir LassoCV con promedio de 0.732074. A continuacion le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7410739) y Ridge CV (promedio 0.7550372). Importante mencionar que el grafico de cajas *Boxplot BostonHousing Linear CV Rsquared y RMSE* presenta una distribucion 'asimetrica negativa', es decir la mayoria de valores son superiores, lo cual podria deberse a un valor atipico inferior.
+Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV w/o correlated variables con promedio de 0.8953902 y desviacion estandar baja, lo cual indica que gran mayoria de valores son representados por la media. En su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana presenta una distribucion 'asimetrica negativa' con algun valor atipico. 
+
 
 ### AmsterdamHousing
-El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Linear Regression. Vemos una mejora al aplicar ridge y lasso regression. Y observando los resultados de catboost claramente obtenemos mejor performance, RMSE (323909) y Rsquared (0.7841589). Al aplicar cross validation a catboost obtenemos variedad de resultados, en los cuales encontramos los mayores valores de Rsquared y minimos valores de RMSE comparando todos los resultados.      
+
+**Presentacion de resultados AmsterdamHousing** 
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234874257-0c4a058d-7d82-4a4c-a16b-be9de7d89403.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de metricas de AmsterdamHousing</p>
+
+**Analisis**
+
+Comparando la metrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 276282.8. A continuacion le sigue RidgeCV con valor promedio de 275627. Por otro lado Lasso CV presenta promedio de RMSE menor (272000.2). Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* es similar al de Linear CV y Catboost CV, los cuales presentan una mediana baja (distribución ‘asimétrica positiva’), lo cual indicaría que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, que presenta mejor performance con menor promedio de RMSE 245764.4. 
+
+Comparando la metrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir LassoCV con promedio de 0.6847414 y mayor valor de desviación estándar 0.1886495. A continuación le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7030398) y Ridge CV (promedio 0.712939). 
+Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquared, con promedio de 0.8231122 y desviación estándar baja 0.0720727, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE* podemos ver que su mediana se situa aproximadamente en el centro, lo cual indicaría que su mediana y media son aproximadamente similares. 
+
 
 ### KingCountyHousing
 
-El modelo que obtuvo menor performance, comparando las métricas de RMSE y Rsquared es Linear Regression. Vemos una mejora al aplicar ridge y lasso regression. Nuevamente, observando los resultados de catboost obtenemos mejor performance, RMSE (146067.4) y Rsquared (0.8526002). Al aplicar cross validation a catboost observamos que los valores obtenidos por ejemplo de Rsquared varian entre 79% y 87% aproximadamente. Es decir, catboost realiza modelos mas precisos que lasso, ridge y linear regression.
+**Presentacion de resultados KingCountyHousing**
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/234874797-434dd9f0-de10-4195-a097-078be6b937ed.png" alt="" align="center">
+</p>
+<p align="center" >Resultados de metricas de KingCountyHousing</p>
+
+**Analisis**
+
+
+Comparando la metrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Ridge CV con promedio de 215917. A continuacion le sigue LassoCV con valor promedio de 214933.1, Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* muestra una amplia distribución de valores de RMSE con una mediana situada aproximadamente en el centro. Por otro lado Linear CV presenta promedio de RMSE menor (214599.9). Finalmente los últimos valores presentados son de Catboost, por un lado Catboost CV w/o correlated variables presenta valor promedio de RMSE de 166747.4 y Catboost CV promedio de 149384.6. Claramente comparando todos los modelos con respecto a la métrica RMSE, podemos ver que el de mejor performance es Catboost CV. 
+
+Comparando la metrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir Ridge CV con promedio de 0.6463276 aunque presenta el menor valor de desviación estándar 0.01500145. A continuación le siguen aproximadamente cerca los modelos Lasso CV (promedio 0.6495735) y Linear CV (promedio 0.6500709). 
+Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV con promedio de 0.8470585 y desviación estándar de 0.01838136, lo cual indica que gran mayoría de valores son representados por la media. 
 
 
 # Conclusiones finales
 
 ## Analisis general 
-Comparando los resultados obtenidos, observamos que linear regression es el modelo de menor precision. Podriamos considerarlo como el modelo de entrada a la hora de aplicar regresion lineal. Es util para obtener resultados base o iniciales de un proyecto/investigacion, a partir de estos podremos obtener mejores resultados. Aplicando ridge y lasso regression obtendremos resultados con mayor precision (en general resultados muy similares entre ambos). En todos los modelos aplicados a lo largo del proyecto hemos visto un claro vencedor, el cual es Catboost. El mismo obtuvo los mejores resultados y con amplia ventaja comparandolo con linear regression. Estos mejores resultados obtenidos por Catboost vienen condicionados por la cantidad de parametros a modificar, como tambien por la cantidad de recursos de computo que utiliza. La mayor cantidad de tiempo de procesamiento de cada ejecucion pertenece a los modelos de catboost. 
+Comparando los resultados obtenidos, observamos que linear regression es generalmente el modelo de menor precision. Podriamos considerarlo como el modelo de entrada a la hora de aplicar regresion lineal. Es util para obtener resultados base o iniciales de un proyecto/investigacion, a partir de estos podremos obtener mejores resultados. Aplicando ridge y lasso regression obtendremos resultados con mayor precision (en general resultados muy similares entre ambos). En todos los modelos aplicados a lo largo del proyecto hemos visto un claro vencedor, el cual es Catboost. El mismo obtuvo los mejores resultados y con amplia ventaja comparandolo con linear regression. Estos mejores resultados obtenidos por Catboost vienen condicionados por la cantidad de parametros a modificar, como tambien por la cantidad de recursos de computo que utiliza. La mayor cantidad de tiempo de procesamiento de cada ejecucion pertenece a los modelos de catboost. 
 
 
 
