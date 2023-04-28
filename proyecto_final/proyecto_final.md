@@ -30,7 +30,7 @@ Los modelos de regresión lineal son relativamente sencillos y proporcionan una 
 La regresión lineal puede aplicarse a diversas áreas en los negocios y el estudio académico. Se utiliza en todos los campos, desde las ciencias biológicas, del comportamiento, medioambientales y sociales hasta los negocios. 
 Los modelos de regresión lineal se han convertido en una forma probada de predecir el futuro de forma científica y fiable. Dado que la regresión lineal es un procedimiento estadístico establecido desde hace mucho tiempo, las propiedades de los modelos de regresión lineal se comprenden bien y pueden entrenarse muy rápidamente.
 
-Matemáticamente, podemos escribir esta relación lineal como
+Matemáticamente, podemos escribir esta relación lineal como la formula presentada en la figura 1 *Formula de regresion lineal*: 
 
 
   
@@ -42,8 +42,7 @@ Matemáticamente, podemos escribir esta relación lineal como
 Podemos leer "≈" como "se modela aproximadamente como" 
 
 En conjunto, β0 y β1 se conocen como coeficientes o parámetros del modelo. Una vez que hemos utilizado nuestros
-datos de entrenamiento para obtener las estimaciones βˆ0 y βˆ1 de los coeficientes del modelo, podemos predecir las ventas futuras en función de un valor concreto de la publicidad televisiva
-calculando
+datos de entrenamiento para obtener las estimaciones βˆ0 y βˆ1 de los coeficientes del modelo, podemos predecir las ventas futuras en función de un valor concreto de la publicidad televisiva calculando la formula de prediccion presentada en la figura 2. *Formula de prediccion*: 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="200" src="https://user-images.githubusercontent.com/88351465/228034991-73ce2857-6dba-4857-8ce9-b52a4192730f.png" alt="Formula de prediccion lineal" align="center">
@@ -115,7 +114,7 @@ El RSE se considera una medida de la falta de ajuste del modelo a los datos. Si 
 ## GLMNET (Ridge Regression y Lasso Regression)
 
 ### Ridge Regression 
-Ridge regression es muy similar a la de mínimos cuadrados, salvo que los coeficientes de ridge regression se estiman minimizando una cantidad ligeramente diferente. En particular, las estimaciones de los coeficientes de regresión de cresta βˆR son los valores que minimizan
+Ridge regression es muy similar a la de mínimos cuadrados, salvo que los coeficientes de ridge regression se estiman minimizando una cantidad ligeramente diferente. En particular, las estimaciones de los coeficientes de regresión de cresta βˆR son los valores que minimizan. Su formula se presenta en la figura 8 *Formula de Ridge Regression*: 
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -134,7 +133,7 @@ La ventaja de la regresión Ridge sobre los mínimos cuadrados se basa en el equ
 
 ### Lasso Regression 
 
-Es una alternativa relativamente reciente a Ridge regression. Formula: 
+Es una alternativa relativamente reciente a Ridge regression. Formula presentada en figura 9 *Formula de lasso regression*: 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/228049230-f9f6a8e0-804b-4e0e-88ae-94eae70106b1.png" alt="lasso regression" align="center">
