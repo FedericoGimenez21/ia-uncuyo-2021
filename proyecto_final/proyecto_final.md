@@ -115,7 +115,7 @@ El RSE se considera una medida de la falta de ajuste del modelo a los datos. Si 
 ## GLMNET (Ridge Regression y Lasso Regression)
 
 ### Ridge Regression 
-La Ridge regression es muy similar a la de mínimos cuadrados, salvo que los coeficientes de ridge regression se estiman minimizando una cantidad ligeramente diferente. En particular, las estimaciones de los coeficientes de regresión de cresta βˆR son los valores que minimizan
+Ridge regression es muy similar a la de mínimos cuadrados, salvo que los coeficientes de ridge regression se estiman minimizando una cantidad ligeramente diferente. En particular, las estimaciones de los coeficientes de regresión de cresta βˆR son los valores que minimizan
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -142,10 +142,9 @@ Es una alternativa relativamente reciente a Ridge regression. Formula:
 <p align="center" >Figura 9. Formula de lasso regression</p>
 
 
-vemos que la regresión lasso y la regresión ridge tienen formulaciones similares.
+Es observable que la regresión lasso y la regresión ridge tienen formulas similares.
 
-La única diferencia es que el término βj^2 en la regresión ridge
-ha sido sustituido por |βj| en la penalización del lazo.
+La única diferencia es que el término βj^2 en la regresión ridge ha sido sustituido por |βj| en la penalización del lazo.
 Al igual que en la regresión ridge, lasso reduce las estimaciones de los coeficientes hacia cero.
 
 Lasso produce modelos más sencillos e interpretables en los que sólo interviene un subconjunto de predictores.
@@ -345,11 +344,10 @@ Regresión Lasso - glmnet parámetro alpha=1 para regresión Lasso glmnet(x, y, 
 # Diseño experimental 
 
 
-## Metricas
-Se recuerda que en el presente trabajo se aplicaron varios algoritmos, motivo por el cual debemos de contar con metricas para comparar el funcionamiento  y eficiencia de cada implementacion. De manera de poder decidir cual implementacion es mejor.  
-Las metricas a utilizar son:
-- (R-squared) metric: R-cuadrado (R² o coeficiente de determinación) es una medida estadística de un modelo de regresión que determina la proporción de varianza
-de la variable dependiente que puede explicar la variable independiente. En otras palabras, r-cuadrado muestra lo bien que se ajustan los datos al modelo de regresión.
+## Métricas
+Se recuerda que en el presente trabajo se aplicaron varios algoritmos, motivo por el cual debemos de contar con métricas para comparar el funcionamiento  y eficiencia de cada implementación. De manera de poder decidir cuál implementación es mejor.  
+Las métricas a utilizar son:
+- (R-squared) metric: R-cuadrado (R² o coeficiente de determinación) es una medida estadística de un modelo de regresión que determina la proporción de varianza de la variable dependiente que puede explicar la variable independiente. En otras palabras, r-cuadrado muestra lo bien que se ajustan los datos al modelo de regresión.
 Es la métrica de evaluación más popular para los modelos de regresión. R-cuadrado puede tomar cualquier valor entre 0 y 1.
 Esta medida se define por la proporción de la variabilidad total explicada por el modelo de regresión: 
 
@@ -363,11 +361,11 @@ Esta medida se define por la proporción de la variabilidad total explicada por 
 La interpretación más común de r-cuadrado es lo bien que el modelo de regresión explica los datos observados. 
 Por ejemplo, una r-cuadrado del 60% indica que el modelo de regresión explica el 60% de la variabilidad observada en la variable objetivo. 
 En general, una r-cuadrado más alta indica que el modelo explica más variabilidad.
-En el presente trabajo se espera que los modelos con r-cuadrado mas alta representaran mejor los datos observados. 
+En el presente trabajo se espera que los modelos con r-cuadrado más alta representaran mejor los datos observados. 
 
 - RMSE (Root Mean Squared Error): es la raíz cuadrada de la varianza de los residuos. 
 Especifica el ajuste absoluto del modelo a los datos, es decir, lo cerca que están los puntos de datos observados de los valores predichos.
-Matematicamente puede ser representada:
+Matemáticamente puede ser representada:
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="400" src="https://user-images.githubusercontent.com/88351465/228042735-94668220-b84b-46e0-a3c2-3f915c17430a.png" alt="Formula de RMSE" align="center">
@@ -379,19 +377,20 @@ Así, un RMSE alto es "malo" y un RMSE bajo es "bueno". En la fórmula, la difer
 El error cuadrático medio (MSE) es la media de todos los residuos al cuadrado. 
 Entonces, el RMSE simplemente toma la raíz cuadrada de eso, lo que devuelve la métrica a la escala de la variable de respuesta.
 ## Herramientas utilizadas
-El lenguaje de programacion utilizado para la implementacion del presente trabajo es R. Implementando el proyecto en RStudio.
-El motivo por el cual se decidio trabajar con estas herramientas es que cuentan con gran variedad de librerias utiles para implementar el presente trabajo.
+El lenguaje de programación utilizado para la implementación del presente trabajo es R. Implementando el proyecto en RStudio.
+El motivo por el cual se decidió trabajar con estas herramientas es que cuentan con gran variedad de librerías útiles para implementar el presente trabajo.
 
-## Forma de evaluacion de los modelos
-Recordando que el objetivo del proyecto es poder comprobar el funcionamiento de los algoritmos y comparar resultados, la forma de evaluacion de los modelos sera la misma para todos. La cual sera aplicar split en train/test a cada dataset, luego realizar los modelos ya sea linear regression, lasso, ridge o catboost, aplicando cross validation con 10-fold y presentar los resultados de Rsquared y RMSE. Tambien se realizaran boxplot de los resultados y se presentaran metricas como media y desviacion estandar. Por lo tanto sera importante recordar qué es y qué representa la desviacion estandar a continuacion: La desviación estándar mide la dispersión de una distribución de datos. Entre más dispersa está una distribución de datos, más grande es su desviación estándar. Es interesante que la desviación estándar no puede ser negativa. Una desviación estándar cercana a 0 indica que los datos tienden a estar más cerca a la media. Entre más lejos estén los datos de la media, más grande es la desviación estándar.
+## Forma de evaluación de los modelos
+Recordando que el objetivo del proyecto es poder comprobar el funcionamiento de los algoritmos y comparar resultados, la forma de evaluación de los modelos será la misma para todos. La cual será aplicar split en train/test a cada dataset, luego realizar los modelos ya sea linear regression, lasso, ridge o catboost, aplicando cross validation con 10-fold y presentar los resultados de Rsquared y RMSE. También se realizaran boxplot de los resultados y se presentaran métricas como media y desviación estándar, las cuales serán consideradas con gran énfasis al momento de comparar los algoritmos. 
+Por lo tanto será importante recordar qué es y qué representa la desviación estándar a continuación: La desviación estándar mide la dispersión de una distribución de datos. Entre más dispersa está una distribución de datos, más grande es su desviación estándar. Es interesante que la desviación estándar no puede ser negativa. Una desviación estándar cercana a 0 indica que los datos tienden a estar más cerca a la media. Entre más lejos estén los datos de la media, más grande es la desviación estándar.
 
 ## Detalle y justificacion
 
 ### BostonHousing dataset
 
 #### Analisis de BostonHousing 
-En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
-Luego se procedio a cargar el dataset "BostonHousing", que incluye datos de vivienda de 506 secciones censales de Boston del censo de 1970.
+En primer lugar, el proyecto incluye una sección de instalación e importación de las librerías a utilizar. 
+Luego se procedió a cargar el dataset "BostonHousing", que incluye datos de vivienda de 506 secciones censales de Boston del censo de 1970.
 Los datos originales son 506 observaciones sobre 14 variables, siendo medv la variable objetivo: 
 
 - crim:	per capita crime rate by town
@@ -409,16 +408,16 @@ Los datos originales son 506 observaciones sobre 14 variables, siendo medv la va
 - lstat:	percentage of lower status of the population
 - medv:	median value of owner-occupied homes in USD 1000's
 
-Luego procedi a comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. 
-Satisfactoriamente no se encontro ningun valor faltante. Por lo tanto el siguiente paso fue analizar el dataset.
-Ejecutando summary del dataset obtenemos estadisticas basicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
+A continuación se comprobó si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. 
+Satisfactoriamente no se encontró ningún valor faltante. Por lo tanto el siguiente paso fue analizar el dataset.
+Ejecutando summary del dataset se obtienen estadísticas básicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="1000" src="https://user-images.githubusercontent.com/88351465/230747076-9966a3ad-3dd4-470f-908d-b572a2cb1a32.png"  align="center">
 </p>
 <p align="center" >Figura 12. Summary de BostonHousing</p>
 
-En la figura 12 podemos observar que ‘crim’, ‘zn’, ‘rm’ and ‘black’ tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
+En la figura 12 * Summary de BostonHousing * las variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
 
 Realizando boxplots de las variables mencionadas podemos observar que tienen gran cantidad de valores outliers: 
 
@@ -428,11 +427,11 @@ Realizando boxplots de las variables mencionadas podemos observar que tienen gra
 <p align="center" >Figura 13. Boxplot de variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ de BostonHousing</p>
 
 
-A continuacion analice el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables. 
+A continuación se analizó el Correlation plots, el cual es un una buena manera de explorar los datos y examinar el nivel de interacción entre las variables. 
 La correlación es una medida estadística que sugiere el nivel de dependencia lineal entre dos variables que se dan en pareja. Su valor oscila entre -1 y +1.
 Si es superior a 0 significa correlación positiva, es decir, X es directamente proporcional a Y.
 Si es inferior a 0, significa correlación negativa, es decir, X es inversamente proporcional a Y.
-Utilizando corrplot es posible obtener el siguiente grafico: 
+Utilizando corrplot es posible obtener el siguiente gráfico: 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/230747298-a2cdf9b5-2b03-4fb7-a873-ac7c0650b199.png"  align="center">
@@ -441,14 +440,14 @@ Utilizando corrplot es posible obtener el siguiente grafico:
 
 
 
-Analizando el plot de la figura 14 podemos observar lo siguiente: 
- - Los atributos/variables ‘tax and rad’, ‘nox and tax’, ‘age and indus’ tienen correlacion positiva
- - Los atributos/variables ‘dis and nox’, ‘dis and indus’, ‘age and dis’ tienen correlacion negativa. 
+Analizando el plot de la figura 14 * Correlation plot de BostonHousing*  es posible observar lo siguiente: 
+ - Los atributos/variables ‘tax and rad’, ‘nox and tax’, ‘age and indus’ tienen correlación positiva
+ - Los atributos/variables ‘dis and nox’, ‘dis and indus’, ‘age and dis’ tienen correlación negativa. 
 
-Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estaba en condiciones de implementar los modelos
+Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el análisis general realizado,  se comenzó a implementar los modelos. 
 
 
-#### Evaluacion linear regression de BostonHousing
+#### Evaluación linear regression de BostonHousing
 
 -	Linear Regression utilizando medv como variable dependiente y  demás variables como independientes, con 10-fold cross validation. 
 
@@ -469,20 +468,20 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 </p>
 <p align="center" >Boxplot BostonHousing Linear CV Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
 0.0966183
 
  "Promedio de Rsquared"
 0.7410739
 
-"Desviacion estandar de RMSE"
+"Desviación estándar de RMSE"
  0.5564602
 
 "Promedio de RMSE"
 4.820555
 
 
-#### Evaluacion Ridge regression de BostonHousing
+#### Evaluación Ridge regression de BostonHousing
 -	 Ridge Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
@@ -506,19 +505,19 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 </p>
 <p align="center" >Boxplot BostonHousing Ridge CV Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
  0.05959355
  
 "Promedio de Rsquared"
  0.7550372
  
-"Desviacion estandar de RMSE"
+"Desviación estándar de RMSE"
  0.8642813
  
 "Promedio de RMSE"
 4.751065
 
-#### Evaluacion Lasso regression de BostonHousing
+#### Evaluación Lasso regression de BostonHousing
 
 -	Lasso Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
@@ -541,13 +540,13 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 </p>
 <p align="center" >Boxplot BostonHousing Lasso CV Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
 0.061692
 
 "Promedio de Rsquared"
 0.732074
 
-"Desviacion estandar de RMSE"
+"Desviación estándar de RMSE"
 0.4530894
 
 "Promedio de RMSE"
@@ -555,7 +554,7 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 
 
 
-#### Evaluacion Catboost regression de BostonHousing
+#### Evaluación Catboost regression de BostonHousing
 
 - Catboost Regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). 
 
@@ -579,20 +578,20 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 
 
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
 0.06975748
 
 "Promedio de Rsquared"
 0.8483829
 
-"Desviacion estandar de RMSE"
+"Desviación estándar de RMSE"
 1.170531
 
 "Promedio de RMSE"
 3.813926
 
 
- - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demas variables como independientes (excepto "tax"). 
+ - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demás variables como independientes (excepto "tax"). 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234434916-d7164d69-eaaf-4bcd-8fbe-bb2198d1f7b5.png" alt="" align="center">
@@ -611,13 +610,13 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 </p>
 <p align="center" >Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
 0.07061951
 
 "Promedio de Rsquared"
  0.8953902
  
-"Desviacion estandar de RMSE"
+"Desviación estándar de RMSE"
 1.445495
 
 "Promedio de RMSE"
@@ -626,10 +625,10 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 
 ### AmsterdamHousing dataset
 
-#### Analisis de AmsterdamHousing
+#### Análisis de AmsterdamHousing
 
-En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
-Luego se procedio a cargar el dataset "AmsterdamHousing", que incluye datos de viviendas de Amsterdam. Los datos originales son 924 observaciones sobre 8 variables, siendo Price la variable objetivo. Las variables son: 
+En primer lugar, el proyecto incluye una sección de instalación e importación de las librerías a utilizar. 
+A continuación se procedió a cargar el dataset "AmsterdamHousing", que incluye datos de viviendas de Amsterdam. Los datos originales son 924 observaciones sobre 8 variables, siendo Price la variable objetivo. Las variables son: 
 
 - X1: numero de fila
 - Address: direccion
@@ -640,10 +639,10 @@ Luego se procedio a cargar el dataset "AmsterdamHousing", que incluye datos de v
 - Lon
 - Lat
 
-El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. Se encontraron 4 NA y se eliminaron esos registros. Se eliminaron las columnas de id, Zip y address ya que no fueron consideradas relevantes para el proyecto. 
+El siguiente paso fue comprobar si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. Se encontraron 4 NA y se eliminaron esos registros. Se eliminaron las columnas de id, Zip y address ya que no fueron consideradas relevantes para el proyecto. 
 
 
-Luego se realizo boxplot de las variables con el fin de encontrar valores outliers. 
+Luego se realizó boxplot de las variables con el fin de encontrar valores outliers. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="400" src="https://user-images.githubusercontent.com/88351465/234599076-8c4c5cc2-4421-478f-a87a-586b21ccaad2.png"  align="center">
@@ -651,25 +650,23 @@ Luego se realizo boxplot de las variables con el fin de encontrar valores outlie
 <p align="center" >Boxplot de variables de AmsterdamHousing</p>
 
 
-A continuacion se procedio a analizar el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables.Utilizando corrplot es posible obtener el siguiente grafico: 
+Luego se procedió a analizar el Correlation plots, el cual es un una buena manera de explorar los datos y examinar el nivel de interacción entre las variables. Utilizando corrplot es posible obtener el siguiente gráfico: 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234595450-977ebe04-5b04-4b14-b1c2-12cbbf20bf43.png"  align="center">
 </p>
 <p align="center" >Correlation plot de AmsterdamHousing</p>
 
-Analizando el corrplot de AmsterdamHousing se observa que todas las variables representan correlacion positiva. 
+Analizando * Correlation plot de AmsterdamHousing* se observa que todas las variables representan correlación positiva. 
+
+También fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna "Area". 
+
+A continuación se dividió el dataset en train y test, y teniendo en cuenta el análisis general realizado,  se comenzó con la implementación de los modelos. 
 
 
-Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "Area". 
+#### Evaluación linear regression de AmsterdamHousing
 
-A continuacion se dividio el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estabamos en condiciones de implementar los modelos
-
-
-#### Evaluacion linear regression de AmsterdamHousing
-A continuación se presentan los resultados de predicción de los modelos implementados: 
-
-- Linear Regression Cross validation 10-fold utilizando Price como variable dependiente y demas variables como independientes. 
+- Linear Regression Cross validation 10-fold utilizando Price como variable dependiente y demás variables como independientes. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234584961-22d5dcae-b4b4-429a-8ed4-18a8affc6942.png" alt="" align="center">
@@ -679,7 +676,7 @@ A continuación se presentan los resultados de predicción de los modelos implem
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233480190-d0a8ae23-8da4-4e1f-b5f1-2b468fd613a3.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Linear AmsterdamHousing</p>
+<p align="center" >Plot mejor predicción de Linear AmsterdamHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -687,19 +684,19 @@ A continuación se presentan los resultados de predicción de los modelos implem
 </p>
 <p align="center" >Boxplot AmsterdamHousing Linear CV Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
 0.1269393
 
 "Promedio de Rsquared"
 0.712939
 
-"Desviacion estandar de RMSE"
+"Desviación estándar de RMSE"
 78770.66
 
 "Promedio de RMSE"
 276282.8
 
-#### Evaluacion Ridge regression de AmsterdamHousing
+#### Evaluación Ridge regression de AmsterdamHousing
 - Ridge Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
@@ -712,7 +709,7 @@ A continuación se presentan los resultados de predicción de los modelos implem
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233480300-1fe046cc-894d-4413-9442-d91d50fa62eb.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Ridge AmsterdamHousing</p>
+<p align="center" >Plot mejor predicción de Ridge AmsterdamHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -720,7 +717,7 @@ A continuación se presentan los resultados de predicción de los modelos implem
 </p>
 <p align="center" >Boxplot AmsterdamHousing Ridge CV Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
  0.1243906
  
 "Promedio de Rsquared"
@@ -731,7 +728,7 @@ A continuación se presentan los resultados de predicción de los modelos implem
  
  "Promedio de RMSE"
  275627
-#### Evaluacion Lasso regression de AmsterdamHousing
+#### Evaluación Lasso regression de AmsterdamHousing
 
 - Lasso Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
@@ -752,22 +749,22 @@ A continuación se presentan los resultados de predicción de los modelos implem
 </p>
 <p align="center" >Boxplot AmsterdamHousing Lasso CV Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
 0.1886495
 
 "Promedio de Rsquared"
 0.6847414
 
- "Desviacion estandar de RMSE"
+ "Desviación estándar de RMSE"
  84672.76
  
 "Promedio de RMSE"
  272000.2
  
  
-#### Evaluacion Catboost regression de AmsterdamHousing
+#### Evaluación Catboost regression de AmsterdamHousing
 
-- Catboost regression utilizando Price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
+- Catboost regression utilizando Price como variable dependiente y demás variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -778,7 +775,7 @@ A continuación se presentan los resultados de predicción de los modelos implem
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233480401-3cd773ff-2866-4b02-ab9d-0155c753f11d.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Catboost  AmsterdamHousing</p>
+<p align="center" >Plot mejor predicción de Catboost  AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234588990-234f5b40-bbc5-4393-8abd-37fb84433e91.png" alt="" align="center">
@@ -786,13 +783,13 @@ A continuación se presentan los resultados de predicción de los modelos implem
 <p align="center" >Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE</p>
 
 
-"Desviacion estandar de Rsquared"
+"Desviación estándar de Rsquared"
 0.0720727
 
 "Promedio de Rsquared"
 0.8231122
 
-"Desviacion estandar de RMSE"
+"Desviación estándar de RMSE"
 124742.5
 
 "Promedio de RMSE"
@@ -804,10 +801,10 @@ A continuación se presentan los resultados de predicción de los modelos implem
 
 ### KingCounty Housing
 
-#### Analisis de KingCounty
+#### Análisis de KingCounty
 
-En primer lugar, el proyecto incluye una seccion de instalacion e importacion de las librerias a utilizar. 
-Luego se procedio a cargar el dataset KingCounty, que incluye 21613 datos de viviendas de King County. 
+En primer lugar, el proyecto incluye una sección de instalación e importación de las librerías a utilizar. 
+Luego se procedió a cargar el dataset KingCounty, que incluye 21613 datos de viviendas de King County. Las variables que incluye son:  
 
 - id : A notation for a house
 
@@ -851,7 +848,7 @@ Luego se procedio a cargar el dataset KingCounty, que incluye 21613 datos de viv
 
 - sqft_lot15 : LotSize area in 2015(implies-- some renovations)
 
-Ejecutando summary del dataset obtenemos estadisticas basicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
+Ejecutando summary del dataset obtenemos estadísticas básicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="1000" src="https://user-images.githubusercontent.com/88351465/234643261-2fd74b4b-8dae-4f0b-a752-6f9e512432ee.png"  align="center">
@@ -859,23 +856,23 @@ Ejecutando summary del dataset obtenemos estadisticas basicas del mismo, por eje
 <p align="center" >Summary de KingCounty</p>
 
 
-El siguiente paso fue comprobar si el dataset tenia valores faltantes, lo cual habria modificado los resultados finales. En este caso no se encontraron valores faltantes. Se eliminaron las columnas de id y date ya que no fueron consideradas relevantes para el proyecto. Se transformo las variables "waterfront", "view", "condition" que tenian formato de num a factor. Y generamos una variable age (antiguedad). 
+El siguiente paso fue comprobar si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. En este caso no se encontraron valores faltantes. Se eliminaron las columnas de id y date ya que no fueron consideradas relevantes para el proyecto. Y generamos una variable age (antiguedad). 
 
-A continuacion se presenta el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables.
+A continuación se presenta el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables.
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234642279-e4fc9049-d6f4-43cb-96b9-f05b271acda9.png"  align="center">
 </p>
 <p align="center" >Correlation plot de KingCounty</p>
 
 
-Tambien fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendacion fue eliminar la columna "sqft_living". 
+También fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna "sqft_living". 
 
-Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis general realizado,  estabamos en condiciones de implementar los modelos
+Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el análisis general realizado,  se comenzó con la implementación de los modelos. 
 
-#### Evaluacion linear regression de KingCounty
+#### Evaluación linear regression de KingCounty
 
 
-- Linear regression cross validation (10-fold) utilizando Price como variable dependiente y demas variables como independientes. 
+- Linear regression cross validation (10-fold) utilizando Price como variable dependiente y demás variables como independientes. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234430191-35050710-1ac6-49db-bbad-828562259c93.png" alt="" align="center">
@@ -886,26 +883,26 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233667448-daad70d0-b051-4041-99f2-bfbc2e45d35d.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Linear KingCounty</p>
+<p align="center" >Plot mejor predicción de Linear KingCounty</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234430334-13afabe1-0ddd-4a04-ac58-8d6e5e703f1b.png" alt="" align="center">
 </p>
 <p align="center" >Boxplot KingCounty LinearCV Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"desviación estándar de Rsquared"
  0.02154011
  
 "Promedio de Rsquared"
 0.6500709
 
-"Desviacion estandar de RMSE"
+"desviación estándar de RMSE"
 14612.25
 
 "Promedio de RMSE"
 214599.9
 
-#### Evaluacion Ridge regression de KingCounty
+#### Evaluación Ridge regression de KingCounty
 - Ridge Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
@@ -917,7 +914,7 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233667736-9f5f363a-74d3-43e1-97d3-25da4572c8c9.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Ridge KingCounty</p>
+<p align="center" >Plot mejor predicción de Ridge KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -925,19 +922,19 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 </p>
 <p align="center" >Boxplot KingCounty Ridge Rsquared y RMSE</p>
 
-"Desviacion estandar de Rsquared"
+"desviación estándar de Rsquared"
  0.01500145
  
 "Promedio de Rsquared"
  0.6463276
  
-"Desviacion estandar de RMSE"
+"desviación estándar de RMSE"
  14463
  
 "Promedio de RMSE"
 215917
 
-#### Evaluacion Lasso regression de KingCounty
+#### Evaluación Lasso regression de KingCounty
 - Lasso Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
@@ -949,7 +946,7 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233667879-5429d85b-5cab-4737-84d6-b6df018145f7.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Catboost KingCounty</p>
+<p align="center" >Plot mejor predicción de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -958,21 +955,21 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" >Boxplot KingCounty Lasso Rsquared y RMSE</p>
 
 
-"Desviacion estandar de Rsquared"
+"desviación estándar de Rsquared"
  0.01868493
  
 "Promedio de Rsquared"
 0.6495735
 
-"Desviacion estandar de RMSE"
+"desviación estándar de RMSE"
 7841.999
 
 "Promedio de RMSE"
 214933.1
-#### Evaluacion Catboost regression de KingCounty
+#### Evaluación Catboost regression de KingCounty
 
 
-- Catboost regression utilizando price como variable dependiente y demas variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
+- Catboost regression utilizando price como variable dependiente y demás variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234427752-d781ce13-f07e-449d-b907-6a73210679c4.png" alt="" align="center">
@@ -983,7 +980,7 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233668001-b4a9b330-89bf-411b-ada9-e9635c4efb7e.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Catboost KingCounty</p>
+<p align="center" >Plot mejor predicción de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -992,13 +989,13 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" >Boxplot KingCounty Catboost Rsquared y RMSE</p>
 
 
-"Desviacion estandar de Rsquared"
+"desviación estándar de Rsquared"
  0.01838136
 
  "Promedio de Rsquared"
 0.8470585
 
- "Desviacion estandar de RMSE"
+ "desviación estándar de RMSE"
  18944.7
 
 "Promedio de RMSE"
@@ -1017,7 +1014,7 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234664718-8705c047-0f04-477c-aef6-d5a70de596e6.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Catboost KingCounty</p>
+<p align="center" >Plot mejor predicción de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -1026,13 +1023,13 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 <p align="center" >Boxplot KingCounty Catboost without correlated Rsquared y RMSE</p>
 
 
-"Desviacion estandar de Rsquared"
+"desviación estándar de Rsquared"
 0.03394038
 
 "Promedio de Rsquared"
  0.7992358
 
- "Desviacion estandar de RMSE"
+ "desviación estándar de RMSE"
 15817.42
 
 "Promedio de RMSE"
@@ -1045,64 +1042,64 @@ Procedi a dividir el dataset en train y test, y teniendo en cuenta el analisis g
 
 ### BostonHousing
 
-**Presentacion de resultados BostonHousing**
+**Presentación de resultados BostonHousing**
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234873927-c0e1a1c8-2f10-41d9-b239-27104fd47658.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de metricas de BostonHousing</p>
+<p align="center" >Resultados de métricas de BostonHousing</p>
 
-**Analisis**
+**Análisis**
 
-Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, podemos comparar las metricas obtenidas analizando la figura anterior  *Resultados de metricas de BostonHousing* :
+Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, podemos comparar las métricas obtenidas analizando la figura anterior  *Resultados de métricas de BostonHousing*:
 
-Comparando la metrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 4.820555. A continuacion le seguiria Lasso CV con valor promedio de 4.796933 y destacable que obtuvo el menor valor de desviacion estandar, lo cual indica que es el modelo que obtuvo mas datos cercanos al promedio. Analizando su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE*, podemos ver que su mediana se situa aproximadamente en el centro, lo cual indicaria que su mediana y media coinciden aproximadamente. Por otro lado Ridge CV presenta promedio de RMSE menor (4.751065) pero una desviacion estandar mayor 0.8642813, lo cual indicaria que la distribucion de los datos no se encuentran cercanos a la media. Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* presenta una mediana baja, lo cual indicaria que hay una cantidad favorable de datos que se situan en los valores inferiores. Finalmente los ultimos valores presentados son de Catboost, donde el modelo de mejor performance fue Catboost CV w/o correlated variables, el cual obtuvo menor promedio de RMSE 3.529282. Nuevamente analizando su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana es baja, es decir, representa una distribución ‘asimétrica positiva’ lo cual indica que la mayoria de sus valores son bajos.
+Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 4.820555. A continuación le sigue Lasso CV con valor promedio de 4.796933 y destacable que obtuvo el menor valor de desviación estándar, lo cual indica que es el modelo que obtuvo mas datos cercanos al promedio. Analizando su gráfico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE*, podemos ver que su mediana se sitúa aproximadamente en el centro, lo cual indicaría que su mediana y media coinciden aproximadamente. Por otro lado Ridge CV presenta promedio de RMSE menor (4.751065) pero una desviación estándar mayor 0.8642813, lo cual indica que la distribución de los datos no se encuentran cercanos a la media. Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* presenta una mediana baja, lo cual indica que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, donde el modelo de mejor performance fue Catboost CV w/o correlated variables, el cual obtuvo menor promedio de RMSE 3.529282. Nuevamente analizando su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana es baja, es decir, representa una distribución ‘asimétrica positiva’ lo cual indica que la mayoría de sus valores son bajos.
 
-Comparando la metrica Rsquared, el modelo de menor performance es aquel que otbuvo menor valor de promedio, es decir LassoCV con promedio de 0.732074. A continuacion le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7410739) y Ridge CV (promedio 0.7550372). Importante mencionar que el grafico de cajas *Boxplot BostonHousing Linear CV Rsquared y RMSE* presenta una distribucion 'asimetrica negativa', es decir la mayoria de valores son superiores, lo cual podria deberse a un valor atipico inferior.
-Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV w/o correlated variables con promedio de 0.8953902 y desviacion estandar baja, lo cual indica que gran mayoria de valores son representados por la media. En su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana presenta una distribucion 'asimetrica negativa' con algun valor atipico. 
+Comparando la métrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir LassoCV con promedio de 0.732074. A continuación le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7410739) y Ridge CV (promedio 0.7550372). Importante mencionar que el grafico de cajas *Boxplot BostonHousing Linear CV Rsquared y RMSE* presenta una distribución 'asimétrica negativa', es decir la mayoría de valores son superiores, lo cual podría deberse a un valor atípico inferior.
+Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV w/o correlated variables con promedio de 0.8953902 y desviación estándar baja, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana presenta una distribución 'asimétrica negativa' con algún valor atípico. 
 
 
 ### AmsterdamHousing
 
-**Presentacion de resultados AmsterdamHousing** 
+**Presentación de resultados AmsterdamHousing** 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234874257-0c4a058d-7d82-4a4c-a16b-be9de7d89403.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de metricas de AmsterdamHousing</p>
+<p align="center" >Resultados de métricas de AmsterdamHousing</p>
 
-**Analisis**
+**Análisis**
 
-Comparando la metrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 276282.8. A continuacion le sigue RidgeCV con valor promedio de 275627. Por otro lado Lasso CV presenta promedio de RMSE menor (272000.2). Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* es similar al de Linear CV y Catboost CV, los cuales presentan una mediana baja (distribución ‘asimétrica positiva’), lo cual indicaría que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, que presenta mejor performance con menor promedio de RMSE 245764.4. 
+Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 276282.8. A continuación le sigue RidgeCV con valor promedio de 275627. Por otro lado Lasso CV presenta promedio de RMSE menor (272000.2). Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* es similar al de Linear CV y Catboost CV, los cuales presentan una mediana baja (distribución ‘asimétrica positiva’), lo cual indicaría que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, que presenta mejor performance con menor promedio de RMSE 245764.4. 
 
-Comparando la metrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir LassoCV con promedio de 0.6847414 y mayor valor de desviación estándar 0.1886495. A continuación le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7030398) y Ridge CV (promedio 0.712939). 
-Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquared, con promedio de 0.8231122 y desviación estándar baja 0.0720727, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE* podemos ver que su mediana se situa aproximadamente en el centro, lo cual indicaría que su mediana y media son aproximadamente similares. 
+Comparando la métrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir LassoCV con promedio de 0.6847414 y mayor valor de desviación estándar 0.1886495. A continuación le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7030398) y Ridge CV (promedio 0.712939). 
+Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquared, con promedio de 0.8231122 y desviación estándar baja 0.0720727, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE* podemos ver que su mediana se sitúa aproximadamente en el centro, lo cual indicaría que su mediana y media son aproximadamente similares. 
 
 
 ### KingCountyHousing
 
-**Presentacion de resultados KingCountyHousing**
+**Presentación de resultados KingCountyHousing**
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234874797-434dd9f0-de10-4195-a097-078be6b937ed.png" alt="" align="center">
 </p>
 <p align="center" >Resultados de metricas de KingCountyHousing</p>
 
-**Analisis**
+**Análisis**
 
 
-Comparando la metrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Ridge CV con promedio de 215917. A continuacion le sigue LassoCV con valor promedio de 214933.1, Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* muestra una amplia distribución de valores de RMSE con una mediana situada aproximadamente en el centro. Por otro lado Linear CV presenta promedio de RMSE menor (214599.9). Finalmente los últimos valores presentados son de Catboost, por un lado Catboost CV w/o correlated variables presenta valor promedio de RMSE de 166747.4 y Catboost CV promedio de 149384.6. Claramente comparando todos los modelos con respecto a la métrica RMSE, podemos ver que el de mejor performance es Catboost CV. 
+Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Ridge CV con promedio de 215917. A continuación le sigue LassoCV con valor promedio de 214933.1, su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* muestra una amplia distribución de valores de RMSE con una mediana situada aproximadamente en el centro. Por otro lado Linear CV presenta promedio de RMSE menor (214599.9). Finalmente los últimos valores presentados son de Catboost, por un lado Catboost CV w/o correlated variables presenta valor promedio de RMSE de 166747.4 y Catboost CV promedio de 149384.6. Claramente comparando todos los modelos con respecto a la métrica RMSE, podemos ver que el de mejor performance es Catboost CV. 
 
-Comparando la metrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir Ridge CV con promedio de 0.6463276 aunque presenta el menor valor de desviación estándar 0.01500145. A continuación le siguen aproximadamente cerca los modelos Lasso CV (promedio 0.6495735) y Linear CV (promedio 0.6500709). 
+Comparando la métrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir Ridge CV con promedio de 0.6463276 aunque presenta el menor valor de desviación estándar 0.01500145. A continuación le siguen aproximadamente cerca los modelos Lasso CV (promedio 0.6495735) y Linear CV (promedio 0.6500709). 
 Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV con promedio de 0.8470585 y desviación estándar de 0.01838136, lo cual indica que gran mayoría de valores son representados por la media. 
 
 
 # Conclusiones finales
 
-## Analisis general 
-Comparando los resultados obtenidos, observamos que linear regression es generalmente el modelo de menor precision. Podriamos considerarlo como el modelo de entrada a la hora de aplicar regresion lineal. Es util para obtener resultados base o iniciales de un proyecto/investigacion, a partir de estos podremos obtener mejores resultados. Aplicando ridge y lasso regression obtendremos resultados con mayor precision (en general resultados muy similares entre ambos). En todos los modelos aplicados a lo largo del proyecto hemos visto un claro vencedor, el cual es Catboost. El mismo obtuvo los mejores resultados y con amplia ventaja comparandolo con linear regression. Estos mejores resultados obtenidos por Catboost vienen condicionados por la cantidad de parametros a modificar, como tambien por la cantidad de recursos de computo que utiliza. La mayor cantidad de tiempo de procesamiento de cada ejecucion pertenece a los modelos de catboost. 
+## Análisis general 
+Comparando los resultados obtenidos, se observa que linear regression es generalmente el modelo de menor precisión. Podría considerarse como el modelo de entrada a la hora de aplicar regresión lineal. Es útil para obtener resultados base o iniciales de un proyecto/investigación, a partir de estos podremos obtener mejores resultados. Aplicando ridge y lasso regression se obtendrían resultados con mayor precisión (en general resultados muy similares entre ambos). En todos los modelos aplicados a lo largo del proyecto, el mejor modelo con mayor precisión (considerando Rsquared) fue Catboost. El mismo obtuvo los mejores resultados y con amplia ventaja comparándolo con linear regression. Estos mejores resultados obtenidos por Catboost vienen condicionados por la cantidad de parámetros a modificar, como también por la cantidad de recursos de cómputo que utiliza. La mayor cantidad de tiempo de procesamiento pertenece a los modelos de catboost. 
 
 
 
-## Analisis personal
-En conclusion a la hora de implementar los modelos, el modelo linear regression no presento grandes dificultades mas que aprender como es la sintaxis en el lenguaje de programacion elegido, en este caso en R. Lasso y ridge regression presentaron dificultades a la hora de entender como funcionaban y se implementaban. Por otro lado con respecto a Catboost fue un caso totalmente distinto. Catboost cuenta con gran cantidad de parametros a modificar, y considero que cuenta con poca documentacion y aplicaciones de ejemplo. Hay poco soporte/documentacion de problemas de regresion lineal aplicados con catboost, especificamente en R. Esto fue un buen incentivo para realizar investigacion de posibles soluciones a los problemas que se presentaron a lo largo del proyecto.   
+## Análisis personal
+En conclusión a la hora de implementar los modelos, el modelo linear regresión no presento grandes dificultades más que aprender cómo es la sintaxis en el lenguaje de programación elegido, en este caso en R. Lasso y ridge regression presentaron dificultades a la hora de entender cómo funcionaban y se implementaban. Por otro lado con respecto a Catboost fue un caso totalmente distinto. Catboost cuenta con gran cantidad de parámetros a modificar, y considero que cuenta con poca documentación y aplicaciones de ejemplo. Hay poco soporte/documentación de problemas de regresión lineal aplicados con catboost, específicamente en R. Esto fue un buen incentivo para realizar investigación de posibles soluciones a los problemas que se presentaron a lo largo del proyecto.   
