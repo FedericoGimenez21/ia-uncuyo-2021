@@ -417,7 +417,7 @@ Ejecutando summary del dataset se obtienen estadísticas básicas del mismo, por
 </p>
 <p align="center" >Figura 12. Summary de BostonHousing</p>
 
-En la figura 12 * Summary de BostonHousing * las variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
+En la figura 12 *Summary de BostonHousing* las variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
 
 Realizando boxplots de las variables mencionadas podemos observar que tienen gran cantidad de valores outliers: 
 
@@ -440,7 +440,7 @@ Utilizando corrplot es posible obtener el siguiente gráfico:
 
 
 
-Analizando el plot de la figura 14 * Correlation plot de BostonHousing*  es posible observar lo siguiente: 
+Analizando el plot de la figura 14 *Correlation plot de BostonHousing*  es posible observar lo siguiente: 
  - Los atributos/variables ‘tax and rad’, ‘nox and tax’, ‘age and indus’ tienen correlación positiva
  - Los atributos/variables ‘dis and nox’, ‘dis and indus’, ‘age and dis’ tienen correlación negativa. 
 
@@ -1051,12 +1051,12 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 
 **Análisis**
 
-Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, podemos comparar las métricas obtenidas analizando la figura anterior  *Resultados de métricas de BostonHousing*:
+Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, es posible comparar las métricas obtenidas analizando la figura anterior  *Resultados de métricas de BostonHousing*:
 
-Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 4.820555. A continuación le sigue Lasso CV con valor promedio de 4.796933 y destacable que obtuvo el menor valor de desviación estándar, lo cual indica que es el modelo que obtuvo mas datos cercanos al promedio. Analizando su gráfico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE*, podemos ver que su mediana se sitúa aproximadamente en el centro, lo cual indicaría que su mediana y media coinciden aproximadamente. Por otro lado Ridge CV presenta promedio de RMSE menor (4.751065) pero una desviación estándar mayor 0.8642813, lo cual indica que la distribución de los datos no se encuentran cercanos a la media. Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* presenta una mediana baja, lo cual indica que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, donde el modelo de mejor performance fue Catboost CV w/o correlated variables, el cual obtuvo menor promedio de RMSE 3.529282. Nuevamente analizando su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana es baja, es decir, representa una distribución ‘asimétrica positiva’ lo cual indica que la mayoría de sus valores son bajos.
+Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 4.820555. A continuación le sigue Lasso CV con valor promedio de 4.796933 y destacable que obtuvo el menor valor de desviación estándar, lo cual indica que es el modelo que obtuvo más datos cercanos al promedio. Analizando su gráfico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE*, podemos ver que su mediana se sitúa aproximadamente en el centro, lo cual indicaría que su mediana y media coinciden aproximadamente. Por otro lado Ridge CV presenta promedio de RMSE menor (4.751065) pero una desviación estándar mayor 0.8642813, es decir que la distribución de los datos no se encuentran cercanos a la media. Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* presenta una mediana baja, lo cual indica que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, donde el modelo de mejor performance fue Catboost CV w/o correlated variables, el cual obtuvo menor promedio de RMSE 3.529282. Nuevamente analizando su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* se observa que su mediana es baja, es decir, representa una distribución ‘asimétrica positiva’ lo cual indica que la mayoría de sus valores son bajos. 
 
 Comparando la métrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir LassoCV con promedio de 0.732074. A continuación le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7410739) y Ridge CV (promedio 0.7550372). Importante mencionar que el grafico de cajas *Boxplot BostonHousing Linear CV Rsquared y RMSE* presenta una distribución 'asimétrica negativa', es decir la mayoría de valores son superiores, lo cual podría deberse a un valor atípico inferior.
-Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV w/o correlated variables con promedio de 0.8953902 y desviación estándar baja, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* podemos ver que su mediana presenta una distribución 'asimétrica negativa' con algún valor atípico. 
+Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV w/o correlated variables con promedio de 0.8953902 y desviación estándar baja, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* es observable que su mediana presenta una distribución 'asimétrica negativa' con algún valor atípico.
 
 
 ### AmsterdamHousing
@@ -1073,7 +1073,7 @@ Finalmente los modelos de Catboost presentan la mejor performance comparando Rsq
 Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 276282.8. A continuación le sigue RidgeCV con valor promedio de 275627. Por otro lado Lasso CV presenta promedio de RMSE menor (272000.2). Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* es similar al de Linear CV y Catboost CV, los cuales presentan una mediana baja (distribución ‘asimétrica positiva’), lo cual indicaría que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, que presenta mejor performance con menor promedio de RMSE 245764.4. 
 
 Comparando la métrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir LassoCV con promedio de 0.6847414 y mayor valor de desviación estándar 0.1886495. A continuación le siguen aproximadamente cerca los modelos Linear CV (promedio 0.7030398) y Ridge CV (promedio 0.712939). 
-Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquared, con promedio de 0.8231122 y desviación estándar baja 0.0720727, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE* podemos ver que su mediana se sitúa aproximadamente en el centro, lo cual indicaría que su mediana y media son aproximadamente similares. 
+Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquared, con promedio de 0.8231122 y desviación estándar baja 0.0720727, lo cual indica que gran mayoría de valores son representados por la media. En su grafico de cajas *Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE* es observable ver que su mediana se sitúa aproximadamente en el centro, lo cual indicaría que su mediana y media son aproximadamente similares.
 
 
 ### KingCountyHousing
@@ -1088,11 +1088,10 @@ Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquar
 **Análisis**
 
 
-Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Ridge CV con promedio de 215917. A continuación le sigue LassoCV con valor promedio de 214933.1, su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* muestra una amplia distribución de valores de RMSE con una mediana situada aproximadamente en el centro. Por otro lado Linear CV presenta promedio de RMSE menor (214599.9). Finalmente los últimos valores presentados son de Catboost, por un lado Catboost CV w/o correlated variables presenta valor promedio de RMSE de 166747.4 y Catboost CV promedio de 149384.6. Claramente comparando todos los modelos con respecto a la métrica RMSE, podemos ver que el de mejor performance es Catboost CV. 
+Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Ridge CV con promedio de 215917. A continuación le sigue LassoCV con valor promedio de 214933.1, su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* muestra una amplia distribución de valores de RMSE con una mediana situada aproximadamente en el centro. Por otro lado Linear CV presenta promedio de RMSE menor (214599.9). Finalmente los últimos valores presentados son de Catboost, por un lado Catboost CV w/o correlated variables presenta valor promedio de RMSE de 166747.4 y Catboost CV promedio de 149384.6. Comparando todos los modelos con respecto a la métrica RMSE, es observable ver que el de mejor performance es Catboost CV. 
 
 Comparando la métrica Rsquared, el modelo de menor performance es aquel que obtuvo menor valor de promedio, es decir Ridge CV con promedio de 0.6463276 aunque presenta el menor valor de desviación estándar 0.01500145. A continuación le siguen aproximadamente cerca los modelos Lasso CV (promedio 0.6495735) y Linear CV (promedio 0.6500709). 
 Finalmente los modelos de Catboost presentan la mejor performance comparando Rsquared, donde el mejor modelo comparando todos fue Catboost CV con promedio de 0.8470585 y desviación estándar de 0.01838136, lo cual indica que gran mayoría de valores son representados por la media. 
-
 
 # Conclusiones finales
 
