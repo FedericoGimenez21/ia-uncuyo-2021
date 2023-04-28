@@ -632,7 +632,7 @@ Luego se procedió a analizar el Correlation plots, el cual es un una buena mane
 </p>
 <p align="center" >Figura 36. Correlation plot de AmsterdamHousing</p>
 
-Analizando * Correlation plot de AmsterdamHousing* se observa que todas las variables representan correlación positiva. 
+Analizando la figura 36 *Correlation plot de AmsterdamHousing* se observa que todas las variables representan correlación positiva. 
 
 También fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna "Area". 
 
