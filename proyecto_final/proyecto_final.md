@@ -454,31 +454,28 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234431881-fdcef957-2231-4f29-8e8f-175bbc06cb0e.png" alt="" align="center">
 </p>
-<p align="center" >Resultados Linear CV BostonHousing</p>
+<p align="center" >Figura 15. Resultados Linear CV BostonHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234611632-2250af0b-5c51-413a-94d0-9ddcf940f971.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Linear BostonHousing</p>
+<p align="center" >Figura 16. Plot mejor prediccion de Linear BostonHousing</p>
 
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234432123-93a025d8-db70-4711-a6e4-24c41c0fce6f.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Linear CV Rsquared y RMSE</p>
+<p align="center" >Figura 17. Boxplot BostonHousing Linear CV Rsquared y RMSE</p>
 
-"Desviación estándar de Rsquared"
-0.0966183
 
- "Promedio de Rsquared"
-0.7410739
 
-"Desviación estándar de RMSE"
- 0.5564602
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268207-68ccbbb5-e1e3-43ff-bdd8-9306e98baa4d.png" alt="" align="center">
+</p>
+<p align="center" >Figura 18. Metricas de Linear CV obtenidas de BostonHousing</p>
 
-"Promedio de RMSE"
-4.820555
+
 
 
 #### Evaluación Ridge regression de BostonHousing
@@ -489,13 +486,13 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234432743-50722662-f92a-4648-886f-031e113ef1c0.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Ridge CV regression BostonHousing</p>
+<p align="center" >Figura 19. Resultados de Ridge CV regression BostonHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234613338-f291d0bc-5c5d-415e-bc13-5d8db58101db.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Ridge BostonHousing</p>
+<p align="center" >Figura 20. Plot mejor prediccion de Ridge BostonHousing</p>
 
 
 
@@ -503,19 +500,13 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234432834-576d8445-c018-44c8-a48b-d445ba9be423.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Ridge CV Rsquared y RMSE</p>
+<p align="center" >Figura 21. Boxplot BostonHousing Ridge CV Rsquared y RMSE</p>
 
-"Desviación estándar de Rsquared"
- 0.05959355
- 
-"Promedio de Rsquared"
- 0.7550372
- 
-"Desviación estándar de RMSE"
- 0.8642813
- 
-"Promedio de RMSE"
-4.751065
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268251-26640dc3-c67c-48ca-a2ea-5c5cd6daa1b7.png" alt="" align="center">
+</p>
+<p align="center" >Figura 22. Metricas de Ridge CV obtenidas de BostonHousing</p>
+
 
 #### Evaluación Lasso regression de BostonHousing
 
@@ -527,30 +518,25 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234433555-a5d43091-c10f-4316-b1b6-aafea51ed786.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Lasso CV regression BostonHousing</p>
+<p align="center" >Figura 23. Resultados de Lasso CV regression BostonHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234614524-e4eb4a64-be20-44c8-b98e-d76e6e77ccbb.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Lasso BostonHousing</p>
+<p align="center" >Figura 24. Plot mejor prediccion de Lasso BostonHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234433634-cc620986-17a7-4bf1-990e-25d8b528ccfe.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Lasso CV Rsquared y RMSE</p>
+<p align="center" >Figura 25. Boxplot BostonHousing Lasso CV Rsquared y RMSE</p>
 
-"Desviación estándar de Rsquared"
-0.061692
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268315-e2bda4d3-0e13-4262-b83f-f8a8e24112cb.png" alt="" align="center">
+</p>
+<p align="center" >Figura 26. Metricas de Lasso CV obtenidas de BostonHousing</p>
 
-"Promedio de Rsquared"
-0.732074
 
-"Desviación estándar de RMSE"
-0.4530894
-
-"Promedio de RMSE"
-4.796933
 
 
 
@@ -562,33 +548,28 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234434153-289c7c94-f978-49c1-a626-09229a3c9364.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Catboost regression BostonHousing</p>
+<p align="center" >Figura 27. Resultados de Catboost regression BostonHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234616682-02d3b233-8056-43e9-96b5-5c6ec6440e8f.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Catboost BostonHousing</p>
+<p align="center" >Figura 28. Plot mejor prediccion de Catboost BostonHousing</p>
 
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234434472-f896ea57-0db6-4107-853f-a0db64e3df72.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Catboost Rsquared y RMSE</p>
+<p align="center" >Figura 29. Boxplot BostonHousing Catboost Rsquared y RMSE</p>
 
 
 
-"Desviación estándar de Rsquared"
-0.06975748
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268379-9d0fe3f6-cb53-4ef8-9426-6c834a1541b2.png" alt="" align="center">
+</p>
+<p align="center" >Figura 30. Metricas de Catboost CV obtenidas de BostonHousing</p>
 
-"Promedio de Rsquared"
-0.8483829
 
-"Desviación estándar de RMSE"
-1.170531
-
-"Promedio de RMSE"
-3.813926
 
 
  - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demás variables como independientes (excepto "tax"). 
@@ -596,31 +577,25 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234434916-d7164d69-eaaf-4bcd-8fbe-bb2198d1f7b5.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Catboost CV w/o correlated variables regression BostonHousing</p>
+<p align="center" >Figura 31. Resultados de Catboost CV w/o correlated variables regression BostonHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234619611-34453c8f-c4b5-4e53-8aa5-3d3c2cbc459e.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Catboost w/o corr variables BostonHousing</p>
+<p align="center" >Figura 32. Plot mejor prediccion de Catboost w/o corr variables BostonHousing</p>
 
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234435039-ee06bb32-7853-4c45-b97c-d6c80097df52.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE</p>
+<p align="center" >Figura 33. Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE</p>
 
-"Desviación estándar de Rsquared"
-0.07061951
 
-"Promedio de Rsquared"
- 0.8953902
- 
-"Desviación estándar de RMSE"
-1.445495
-
-"Promedio de RMSE"
-3.529282
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268426-d64f2927-abc0-49b3-83b0-b922f9993ead.png" alt="" align="center">
+</p>
+<p align="center" >Figura 34. Metricas de Catboost CV w/o correlated variables obtenidas de BostonHousing</p>
 
 
 ### AmsterdamHousing dataset
@@ -647,7 +622,7 @@ Luego se realizó boxplot de las variables con el fin de encontrar valores outli
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="400" src="https://user-images.githubusercontent.com/88351465/234599076-8c4c5cc2-4421-478f-a87a-586b21ccaad2.png"  align="center">
 </p>
-<p align="center" >Boxplot de variables de AmsterdamHousing</p>
+<p align="center" >Figura 35. Boxplot de variables de AmsterdamHousing</p>
 
 
 Luego se procedió a analizar el Correlation plots, el cual es un una buena manera de explorar los datos y examinar el nivel de interacción entre las variables. Utilizando corrplot es posible obtener el siguiente gráfico: 
@@ -655,7 +630,7 @@ Luego se procedió a analizar el Correlation plots, el cual es un una buena mane
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234595450-977ebe04-5b04-4b14-b1c2-12cbbf20bf43.png"  align="center">
 </p>
-<p align="center" >Correlation plot de AmsterdamHousing</p>
+<p align="center" >Figura 36. Correlation plot de AmsterdamHousing</p>
 
 Analizando * Correlation plot de AmsterdamHousing* se observa que todas las variables representan correlación positiva. 
 
@@ -671,30 +646,23 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234584961-22d5dcae-b4b4-429a-8ed4-18a8affc6942.png" alt="" align="center">
 </p>
-<p align="center" >Resultados Linear CV AmsterdamHousing</p>
+<p align="center" >Figura 37. Resultados Linear CV AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233480190-d0a8ae23-8da4-4e1f-b5f1-2b468fd613a3.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Linear AmsterdamHousing</p>
+<p align="center" >Figura 38. Plot mejor predicción de Linear AmsterdamHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234585286-c00117c7-79b9-4c62-a256-a57999bf81c7.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot AmsterdamHousing Linear CV Rsquared y RMSE</p>
+<p align="center" >Figura 39. Boxplot AmsterdamHousing Linear CV Rsquared y RMSE</p>
 
-"Desviación estándar de Rsquared"
-0.1269393
-
-"Promedio de Rsquared"
-0.712939
-
-"Desviación estándar de RMSE"
-78770.66
-
-"Promedio de RMSE"
-276282.8
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268800-1fd1585e-38ec-4ad8-ad50-f0797ce1df56.png" alt="" align="center">
+</p>
+<p align="center" >Figura 40. Metricas de Linear CV obtenidas de AmsterdamHousing</p>
 
 #### Evaluación Ridge regression de AmsterdamHousing
 - Ridge Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
@@ -704,30 +672,25 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234586766-a540034b-275b-4f72-b612-c8ace202ad12.png" alt="" align="center">
 </p>
-<p align="center" >Resultados Ridge CV AmsterdamHousing</p>
+<p align="center" >Figura 41. Resultados Ridge CV AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233480300-1fe046cc-894d-4413-9442-d91d50fa62eb.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Ridge AmsterdamHousing</p>
+<p align="center" >Figura 42. Plot mejor predicción de Ridge AmsterdamHousing</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234586981-177b0691-594b-493c-8a77-78adcdf67270.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot AmsterdamHousing Ridge CV Rsquared y RMSE</p>
+<p align="center" >Figura 43. Boxplot AmsterdamHousing Ridge CV Rsquared y RMSE</p>
 
-"Desviación estándar de Rsquared"
- 0.1243906
- 
-"Promedio de Rsquared"
- 0.7030398
- 
-"Desviacion estandar de RMSE"
- 90002.27
- 
- "Promedio de RMSE"
- 275627
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268893-afc11751-fd17-4a14-9d22-3e8ec3fcaae7.png" alt="" align="center">
+</p>
+<p align="center" >Figura 44. Metricas de Ridge CV obtenidas de AmsterdamHousing</p>
+
+
 #### Evaluación Lasso regression de AmsterdamHousing
 
 - Lasso Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
@@ -737,31 +700,23 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234587616-af56947b-a538-4dc8-9e43-3b4c0b2edcdf.png" alt="" align="center">
 </p>
-<p align="center" >Resultados Lasso CV AmsterdamHousing</p>
+<p align="center" >Figura 45. Resultados Lasso CV AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233480369-2828cab7-8f56-463e-8c6e-c416107598f8.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor prediccion de Lasso  AmsterdamHousing</p>
+<p align="center" >Figura 46. Plot mejor prediccion de Lasso  AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234587778-a0c605a7-bc56-4816-9482-af892157bca8.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot AmsterdamHousing Lasso CV Rsquared y RMSE</p>
+<p align="center" >Figura 47. Boxplot AmsterdamHousing Lasso CV Rsquared y RMSE</p>
 
-"Desviación estándar de Rsquared"
-0.1886495
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235268968-7e9a15f6-d529-437e-8478-f338c7637afe.png" alt="" align="center">
+</p>
+<p align="center" >Figura 48. Metricas de Lasso CV obtenidas de AmsterdamHousing</p>
 
-"Promedio de Rsquared"
-0.6847414
-
- "Desviación estándar de RMSE"
- 84672.76
- 
-"Promedio de RMSE"
- 272000.2
- 
- 
 #### Evaluación Catboost regression de AmsterdamHousing
 
 - Catboost regression utilizando Price como variable dependiente y demás variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
@@ -770,32 +725,23 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234588759-208d7145-ddff-4865-9a81-69441581b76a.png" alt="" align="center">
 </p>
-<p align="center" >Resultados Catboost CV AmsterdamHousing</p>
+<p align="center" >Figura 49. Resultados Catboost CV AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233480401-3cd773ff-2866-4b02-ab9d-0155c753f11d.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Catboost  AmsterdamHousing</p>
+<p align="center" >Figura 50. Plot mejor predicción de Catboost  AmsterdamHousing</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234588990-234f5b40-bbc5-4393-8abd-37fb84433e91.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE</p>
+<p align="center" >Figura 51. Boxplot AmsterdamHousing Catboost CV Rsquared y RMSE</p>
 
 
-"Desviación estándar de Rsquared"
-0.0720727
-
-"Promedio de Rsquared"
-0.8231122
-
-"Desviación estándar de RMSE"
-124742.5
-
-"Promedio de RMSE"
-245764.4
-
-
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235269009-c6191545-00c7-4a4a-b612-f20ccb6d1778.png" alt="" align="center">
+</p>
+<p align="center" >Figura 52. Metricas de Catboost CV obtenidas de AmsterdamHousing</p>
 
 
 
@@ -853,7 +799,7 @@ Ejecutando summary del dataset obtenemos estadísticas básicas del mismo, por e
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="1000" src="https://user-images.githubusercontent.com/88351465/234643261-2fd74b4b-8dae-4f0b-a752-6f9e512432ee.png"  align="center">
 </p>
-<p align="center" >Summary de KingCounty</p>
+<p align="center" >Figura 53. Summary de KingCounty</p>
 
 
 El siguiente paso fue comprobar si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. En este caso no se encontraron valores faltantes. Se eliminaron las columnas de id y date ya que no fueron consideradas relevantes para el proyecto. Y generamos una variable age (antiguedad). 
@@ -862,7 +808,7 @@ A continuación se presenta el Correlation plots, lo cual es un una buena manera
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234642279-e4fc9049-d6f4-43cb-96b9-f05b271acda9.png"  align="center">
 </p>
-<p align="center" >Correlation plot de KingCounty</p>
+<p align="center" >Figura 54. Correlation plot de KingCounty</p>
 
 
 También fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna "sqft_living". 
@@ -877,30 +823,25 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234430191-35050710-1ac6-49db-bbad-828562259c93.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Linear CV regression KingCounty</p>
+<p align="center" >Figura 55. Resultados de Linear CV regression KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233667448-daad70d0-b051-4041-99f2-bfbc2e45d35d.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Linear KingCounty</p>
+<p align="center" >Figura 56. Plot mejor predicción de Linear KingCounty</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234430334-13afabe1-0ddd-4a04-ac58-8d6e5e703f1b.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot KingCounty LinearCV Rsquared y RMSE</p>
+<p align="center" >Figura 57. Boxplot KingCounty LinearCV Rsquared y RMSE</p>
 
-"desviación estándar de Rsquared"
- 0.02154011
- 
-"Promedio de Rsquared"
-0.6500709
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235269058-0de59612-30fa-40ed-b083-15896bc33022.png" alt="" align="center">
+</p>
+<p align="center" >Figura 58. Metricas de Linear CV obtenidas de KingCounty</p>
 
-"desviación estándar de RMSE"
-14612.25
 
-"Promedio de RMSE"
-214599.9
 
 #### Evaluación Ridge regression de KingCounty
 - Ridge Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
@@ -909,30 +850,24 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234429499-6bcdafc5-5be5-4644-8798-169ee3d6476b.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Ridge regression KingCounty</p>
+<p align="center" >Figura 59. Resultados de Ridge regression KingCounty</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233667736-9f5f363a-74d3-43e1-97d3-25da4572c8c9.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Ridge KingCounty</p>
+<p align="center" >Figura 60. Plot mejor predicción de Ridge KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234429917-bbe79ffb-9a3c-46d4-80fe-f19bbf1b439b.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot KingCounty Ridge Rsquared y RMSE</p>
+<p align="center" >Figura 61. Boxplot KingCounty Ridge Rsquared y RMSE</p>
 
-"desviación estándar de Rsquared"
- 0.01500145
- 
-"Promedio de Rsquared"
- 0.6463276
- 
-"desviación estándar de RMSE"
- 14463
- 
-"Promedio de RMSE"
-215917
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235269093-cc8859b3-23d9-4a49-aa42-6d9331192a62.png" alt="" align="center">
+</p>
+<p align="center" >Figura 62. Metricas de Ridge CV obtenidas de KingCounty</p>
+
 
 #### Evaluación Lasso regression de KingCounty
 - Lasso Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
@@ -941,31 +876,26 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234428706-f4091122-918d-49ca-8cb1-eb7a0c7ce8d3.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Lasso regression KingCounty</p>
+<p align="center" >Figura 63. Resultados de Lasso regression KingCounty</p>
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233667879-5429d85b-5cab-4737-84d6-b6df018145f7.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Catboost KingCounty</p>
+<p align="center" >Figura 64. Plot mejor predicción de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234428937-723b3685-8c78-4942-a948-2dc070c89498.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot KingCounty Lasso Rsquared y RMSE</p>
+<p align="center" >Figura 65. Boxplot KingCounty Lasso Rsquared y RMSE</p>
 
 
-"desviación estándar de Rsquared"
- 0.01868493
- 
-"Promedio de Rsquared"
-0.6495735
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235269139-cd7ddc4a-5f1e-4e98-8db9-a8c871a8fda2.png" alt="" align="center">
+</p>
+<p align="center" >Figura 66. Metricas de Lasso CV obtenidas de KingCounty</p>
 
-"desviación estándar de RMSE"
-7841.999
 
-"Promedio de RMSE"
-214933.1
 #### Evaluación Catboost regression de KingCounty
 
 
@@ -974,32 +904,26 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234427752-d781ce13-f07e-449d-b907-6a73210679c4.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Catboost KingCounty</p>
+<p align="center" >Figura 67. Resultados de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/233668001-b4a9b330-89bf-411b-ada9-e9635c4efb7e.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Catboost KingCounty</p>
+<p align="center" >Figura 68. Plot mejor predicción de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234427969-ea35bbb4-78db-406f-9825-dbcdd7bb3df0.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot KingCounty Catboost Rsquared y RMSE</p>
+<p align="center" >Figura 69. Boxplot KingCounty Catboost Rsquared y RMSE</p>
 
 
-"desviación estándar de Rsquared"
- 0.01838136
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235269175-fbfe606a-75a0-4eac-8db8-554e7832da53.png" alt="" align="center">
+</p>
+<p align="center" >Figura 70. Metricas de Catboost CV obtenidas de KingCounty</p>
 
- "Promedio de Rsquared"
-0.8470585
-
- "desviación estándar de RMSE"
- 18944.7
-
-"Promedio de RMSE"
-149384.6
 
 - Catboost regression utilizando price como variable dependiente y demas variables como independientes (EXCEPTO LAS VARIABLES CON ALTA CORRELACION). CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
@@ -1007,35 +931,26 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234426720-f8a8b888-c10b-4574-b58c-98e62161d583.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de Catboost without correlated variables KingCounty</p>
+<p align="center" >Figura 71. Resultados de Catboost without correlated variables KingCounty</p>
 
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234664718-8705c047-0f04-477c-aef6-d5a70de596e6.png" alt="" align="center">
 </p>
-<p align="center" >Plot mejor predicción de Catboost KingCounty</p>
+<p align="center" >Figura 72. Plot mejor predicción de Catboost KingCounty</p>
 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234428117-af929cee-1e34-46a8-9c04-3450df893f49.png" alt="" align="center">
 </p>
-<p align="center" >Boxplot KingCounty Catboost without correlated Rsquared y RMSE</p>
+<p align="center" >Figura 73. Boxplot KingCounty Catboost without correlated Rsquared y RMSE</p>
 
 
-"desviación estándar de Rsquared"
-0.03394038
-
-"Promedio de Rsquared"
- 0.7992358
-
- "desviación estándar de RMSE"
-15817.42
-
-"Promedio de RMSE"
-166747.4
-
-
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="500" src="https://user-images.githubusercontent.com/88351465/235269223-9975aa7b-6a19-45be-a7bc-796673f1a05a.png" alt="" align="center">
+</p>
+<p align="center" >Figura 74. Metricas de Catboost w/o correlated variables CV obtenidas de KingCounty</p>
 
 
 ## Análisis y discusión de resultados
@@ -1047,11 +962,11 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234873927-c0e1a1c8-2f10-41d9-b239-27104fd47658.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de métricas de BostonHousing</p>
+<p align="center" >Figura 75. Resultados de métricas de BostonHousing</p>
 
 **Análisis**
 
-Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, es posible comparar las métricas obtenidas analizando la figura anterior  *Resultados de métricas de BostonHousing*:
+Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, es posible comparar las métricas obtenidas analizando la figura 75 *Resultados de métricas de BostonHousing*:
 
 Comparando la métrica de RMSE, el modelo de menor performance es aquel que obtuvo mayor valor de promedio, es decir, Linear CV con promedio de 4.820555. A continuación le sigue Lasso CV con valor promedio de 4.796933 y destacable que obtuvo el menor valor de desviación estándar, lo cual indica que es el modelo que obtuvo más datos cercanos al promedio. Analizando su gráfico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE*, podemos ver que su mediana se sitúa aproximadamente en el centro, lo cual indicaría que su mediana y media coinciden aproximadamente. Por otro lado Ridge CV presenta promedio de RMSE menor (4.751065) pero una desviación estándar mayor 0.8642813, es decir que la distribución de los datos no se encuentran cercanos a la media. Su grafico de caja *Boxplot BostonHousing Lasso CV Rsquared y RMSE* presenta una mediana baja, lo cual indica que hay una cantidad favorable de datos que se sitúan en los valores inferiores. Finalmente los últimos valores presentados son de Catboost, donde el modelo de mejor performance fue Catboost CV w/o correlated variables, el cual obtuvo menor promedio de RMSE 3.529282. Nuevamente analizando su grafico de cajas *Boxplot BostonHousing Catboost CV w/o correlated variables Rsquared y RMSE* se observa que su mediana es baja, es decir, representa una distribución ‘asimétrica positiva’ lo cual indica que la mayoría de sus valores son bajos. 
 
@@ -1066,7 +981,7 @@ Finalmente los modelos de Catboost presentan la mejor performance comparando Rsq
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234874257-0c4a058d-7d82-4a4c-a16b-be9de7d89403.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de métricas de AmsterdamHousing</p>
+<p align="center" >Figura 76. Resultados de métricas de AmsterdamHousing</p>
 
 **Análisis**
 
@@ -1083,7 +998,7 @@ Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquar
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234874797-434dd9f0-de10-4195-a097-078be6b937ed.png" alt="" align="center">
 </p>
-<p align="center" >Resultados de metricas de KingCountyHousing</p>
+<p align="center" >Figura 77. Resultados de metricas de KingCountyHousing</p>
 
 **Análisis**
 
