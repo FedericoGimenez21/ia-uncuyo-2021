@@ -963,6 +963,12 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 </p>
 <p align="center" >Figura 75. Resultados de métricas de BostonHousing</p>
 
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/235277338-1878cb12-5b29-4a50-9e7b-0cd889b95ee2.png" alt="" align="center">
+</p>
+<p align="center" >Figura 76. Boxplot Rsquared y RMSE analizando todos los resultados obtenidos del dataset Boston</p>
+
 **Análisis**
 
 Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, es posible comparar las métricas obtenidas analizando la figura 75 *Resultados de métricas de BostonHousing*:
@@ -980,7 +986,13 @@ Finalmente los modelos de Catboost presentan la mejor performance comparando Rsq
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234874257-0c4a058d-7d82-4a4c-a16b-be9de7d89403.png" alt="" align="center">
 </p>
-<p align="center" >Figura 76. Resultados de métricas de AmsterdamHousing</p>
+<p align="center" >Figura 77. Resultados de métricas de AmsterdamHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/235277623-bd86aafe-e426-4e36-a22e-ffefed07c78b.png" alt="" align="center">
+</p>
+<p align="center" >Figura 78. Boxplot Rsquared y RMSE analizando todos los resultados obtenidos del dataset AmsterdamHousing</p>
+
 
 **Análisis**
 
@@ -997,7 +1009,14 @@ Finalmente el modelo de Catboost presenta la mejor performance comparando Rsquar
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234874797-434dd9f0-de10-4195-a097-078be6b937ed.png" alt="" align="center">
 </p>
-<p align="center" >Figura 77. Resultados de metricas de KingCountyHousing</p>
+<p align="center" >Figura 79. Resultados de metricas de KingCountyHousing</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/235277834-70fe3715-3065-4a82-994c-8ff396a406e1.png" alt="" align="center">
+</p>
+<p align="center" >Figura 80.  Boxplot Rsquared y RMSE analizando todos los resultados obtenidos del dataset KingCountyHousing</p>
+
 
 **Análisis**
 
