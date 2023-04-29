@@ -328,15 +328,15 @@ Hasta ahora, la molestia por la que muchos no consideran usar CatBoost es por la
 ### Algoritmo de regresión lineal (lm en R)
 Se puede calcular una regresión lineal en R con el comando lm. El comando lm toma las variables en el formato
 
-lmData= lm([objetivo] ~ [predictor / características], datos = [fuente de datos])
+`lmData= lm([objetivo] ~ [predictor / características]`, datos = [fuente de datos])
 
-Con el comando summary(lmData) se puede ver información detallada sobre el rendimiento y los coeficientes del modelo.
+Con el comando `summary(lmData)` se puede ver información detallada sobre el rendimiento y los coeficientes del modelo.
 
 ### Glmnet en R (regresión lasso y ridge)
 Glmnet en R (regresión lasso y ridge)
 Regresión Ridge - glmnet parámetro alpha=0 para la regresión ridge. Para predicción numérica elija familia - gaussiana, para clasificación familia = binomial, glmnet por defaut elige 100 valores lambda que dependen de los datos
 
-l_ridge <- glmnet(x, y, family="gaussian", alpha=0)
+`l_ridge <- glmnet(x, y, family="gaussian", alpha=0)`
 
 Regresión Lasso - glmnet parámetro alpha=1 para regresión Lasso glmnet(x, y, alpha = 1)
 
