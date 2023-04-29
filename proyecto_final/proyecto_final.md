@@ -392,45 +392,45 @@ En primer lugar, el proyecto incluye una sección de instalación e importación
 Luego se procedió a cargar el dataset "BostonHousing", que incluye datos de vivienda de 506 secciones censales de Boston del censo de 1970.
 Los datos originales son 506 observaciones sobre 14 variables, siendo medv la variable objetivo: 
 
-- crim:	per capita crime rate by town
-- zn:	proportion of residential land zoned for lots over 25,000 sq.ft
-- indus:	proportion of non-retail business acres per town
-- chas:	Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
-- nox:	nitric oxides concentration (parts per 10 million)
-- rm:	average number of rooms per dwelling
-- age:	proportion of owner-occupied units built prior to 1940
-- dis:	weighted distances to five Boston employment centres
-- rad:	index of accessibility to radial highways
-- tax:	full-value property-tax rate per USD 10,000
-- ptratio:	pupil-teacher ratio by town
-- b:	1000(B - 0.63)^2 where B is the proportion of blacks by town
-- lstat:	percentage of lower status of the population
-- medv:	median value of owner-occupied homes in USD 1000's
+- `crim`:	per capita crime rate by town
+- `zn`:	proportion of residential land zoned for lots over 25,000 sq.ft
+- `indus`:	proportion of non-retail business acres per town
+- `chas`:	Charles River dummy variable (= 1 if tract bounds river; 0 otherwise)
+- `nox`:	nitric oxides concentration (parts per 10 million)
+- `rm`:	average number of rooms per dwelling
+- `age`:	proportion of owner-occupied units built prior to 1940
+- `dis`:	weighted distances to five Boston employment centres
+- `rad`:	index of accessibility to radial highways
+- `tax`:	full-value property-tax rate per USD 10,000
+- `ptratio`:	pupil-teacher ratio by town
+- `b`:	1000(B - 0.63)^2 where B is the proportion of blacks by town
+- `lstat`:	percentage of lower status of the population
+- `medv`:	median value of owner-occupied homes in USD 1000's
 
 A continuación se comprobó si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. 
 Satisfactoriamente no se encontró ningún valor faltante. Por lo tanto el siguiente paso fue analizar el dataset.
-Ejecutando summary del dataset se obtienen estadísticas básicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
+Ejecutando `summary` del dataset se obtienen estadísticas básicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="1000" src="https://user-images.githubusercontent.com/88351465/230747076-9966a3ad-3dd4-470f-908d-b572a2cb1a32.png"  align="center">
 </p>
-<p align="center" >Figura 12. Summary de BostonHousing</p>
+<p align="center" >Figura 12. `Summary` de BostonHousing</p>
 
-En la figura 12 *Summary de BostonHousing* las variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
+En la figura 12 *Summary de BostonHousing* las variables `crim`, `zn`, `rm` and `black` tienen gran diferencia entre su mediana y media, lo cual indica que es posible que tengan valores "outliers" valores atípicos. 
 
 Realizando boxplots de las variables mencionadas podemos observar que tienen gran cantidad de valores outliers: 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/230747197-d194e2fb-00c5-44fd-97e2-697c29dadee4.png"  align="center">
 </p>
-<p align="center" >Figura 13. Boxplot de variables ‘crim’, ‘zn’, ‘rm’ and ‘black’ de BostonHousing</p>
+<p align="center" >Figura 13. Boxplot de variables `crim`, `zn`, `rm` and `black` de BostonHousing</p>
 
 
 A continuación se analizó el Correlation plots, el cual es un una buena manera de explorar los datos y examinar el nivel de interacción entre las variables. 
 La correlación es una medida estadística que sugiere el nivel de dependencia lineal entre dos variables que se dan en pareja. Su valor oscila entre -1 y +1.
 Si es superior a 0 significa correlación positiva, es decir, X es directamente proporcional a Y.
 Si es inferior a 0, significa correlación negativa, es decir, X es inversamente proporcional a Y.
-Utilizando corrplot es posible obtener el siguiente gráfico: 
+Utilizando corrplot es posible obtener el grafico presentado en la imagen 14 *Correlation plot de BostonHousing*: 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/230747298-a2cdf9b5-2b03-4fb7-a873-ac7c0650b199.png"  align="center">
@@ -440,15 +440,15 @@ Utilizando corrplot es posible obtener el siguiente gráfico:
 
 
 Analizando el plot de la figura 14 *Correlation plot de BostonHousing*  es posible observar lo siguiente: 
- - Los atributos/variables ‘tax and rad’, ‘nox and tax’, ‘age and indus’ tienen correlación positiva
- - Los atributos/variables ‘dis and nox’, ‘dis and indus’, ‘age and dis’ tienen correlación negativa. 
+ - Los atributos/variables `tax and rad`, `nox and tax`, `age and indus` tienen correlación positiva
+ - Los atributos/variables `dis and nox`, `dis and indus`, `age and dis` tienen correlación negativa. 
 
 Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el análisis general realizado,  se comenzó a implementar los modelos. 
 
 
 #### Evaluación linear regression de BostonHousing
 
--	Linear Regression utilizando medv como variable dependiente y  demás variables como independientes, con 10-fold cross validation. 
+-	Linear Regression utilizando `medv` como variable dependiente y  demás variables como independientes, con 10-fold cross validation. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234431881-fdcef957-2231-4f29-8e8f-175bbc06cb0e.png" alt="" align="center">
@@ -478,7 +478,7 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 
 
 #### Evaluación Ridge regression de BostonHousing
--	 Ridge Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
+-	 Ridge Regression utilizando `medv` como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
 
@@ -509,7 +509,7 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 
 #### Evaluación Lasso regression de BostonHousing
 
--	Lasso Regression utilizando medv como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
+-	Lasso Regression utilizando `medv` como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
 
@@ -571,7 +571,7 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 
 
 
- - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). Medv como variable dependiente y demás variables como independientes (excepto "tax"). 
+ - Catboost regression CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar). `Medv` como variable dependiente y demás variables como independientes (excepto `tax`). 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234434916-d7164d69-eaaf-4bcd-8fbe-bb2198d1f7b5.png" alt="" align="center">
@@ -604,14 +604,14 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 En primer lugar, el proyecto incluye una sección de instalación e importación de las librerías a utilizar. 
 A continuación se procedió a cargar el dataset "AmsterdamHousing", que incluye datos de viviendas de Amsterdam. Los datos originales son 924 observaciones sobre 8 variables, siendo Price la variable objetivo. Las variables son: 
 
-- X1: numero de fila
-- Address: direccion
-- Zip: codigo postal
-- Price: precio
-- Area: Superficie residencial en metros cuadrados.
-- Room: Cantidad de habitaciones    
-- Lon
-- Lat
+- `X1`: numero de fila
+- `Address`: direccion
+- `Zip`: codigo postal
+- `Price`: precio
+- `Area`: Superficie residencial en metros cuadrados.
+- `Room`: Cantidad de habitaciones    
+- `Lon`
+- `Lat`
 
 El siguiente paso fue comprobar si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. Se encontraron 4 NA y se eliminaron esos registros. Se eliminaron las columnas de id, Zip y address ya que no fueron consideradas relevantes para el proyecto. 
 
@@ -624,7 +624,7 @@ Luego se realizó boxplot de las variables con el fin de encontrar valores outli
 <p align="center" >Figura 35. Boxplot de variables de AmsterdamHousing</p>
 
 
-Luego se procedió a analizar el Correlation plots, el cual es un una buena manera de explorar los datos y examinar el nivel de interacción entre las variables. Utilizando corrplot es posible obtener el siguiente gráfico: 
+Luego se procedió a analizar el Correlation plots, el cual es un una buena manera de explorar los datos y examinar el nivel de interacción entre las variables. Utilizando corrplot es posible obtener el gráfico presentado en la imagen 36 *Correlation plot de AmsterdamHousing* : 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="500" src="https://user-images.githubusercontent.com/88351465/234595450-977ebe04-5b04-4b14-b1c2-12cbbf20bf43.png"  align="center">
@@ -633,14 +633,14 @@ Luego se procedió a analizar el Correlation plots, el cual es un una buena mane
 
 Analizando la figura 36 *Correlation plot de AmsterdamHousing* se observa que todas las variables representan correlación positiva. 
 
-También fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna "Area". 
+También fue importante el uso de la funcion `findCorrelation` de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna `Area`. 
 
 A continuación se dividió el dataset en train y test, y teniendo en cuenta el análisis general realizado,  se comenzó con la implementación de los modelos. 
 
 
 #### Evaluación linear regression de AmsterdamHousing
 
-- Linear Regression Cross validation 10-fold utilizando Price como variable dependiente y demás variables como independientes. 
+- Linear Regression Cross validation 10-fold utilizando `Price` como variable dependiente y demás variables como independientes. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234584961-22d5dcae-b4b4-429a-8ed4-18a8affc6942.png" alt="" align="center">
@@ -664,7 +664,7 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 <p align="center" >Figura 40. Metricas de Linear CV obtenidas de AmsterdamHousing</p>
 
 #### Evaluación Ridge regression de AmsterdamHousing
-- Ridge Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
+- Ridge Regression utilizando `Price` como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
 
@@ -692,7 +692,7 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 
 #### Evaluación Lasso regression de AmsterdamHousing
 
-- Lasso Regression utilizando Price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
+- Lasso Regression utilizando `Price` como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
 
@@ -718,7 +718,7 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 
 #### Evaluación Catboost regression de AmsterdamHousing
 
-- Catboost regression utilizando Price como variable dependiente y demás variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
+- Catboost regression utilizando `Price` como variable dependiente y demás variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -751,57 +751,57 @@ A continuación se dividió el dataset en train y test, y teniendo en cuenta el 
 En primer lugar, el proyecto incluye una sección de instalación e importación de las librerías a utilizar. 
 Luego se procedió a cargar el dataset KingCounty, que incluye 21613 datos de viviendas de King County. Las variables que incluye son:  
 
-- id : A notation for a house
+- `id` : A notation for a house
 
-- date: Date house was sold
+- `date`: Date house was sold
 
-- price: Price is prediction target
+- `price`: Price is prediction target
 
-- bedrooms: Number of bedrooms
+- `bedrooms`: Number of bedrooms
 
-- bathrooms: Number of bathrooms
+- `bathrooms`: Number of bathrooms
 
-- sqft_living: Square footage of the home (Metros cuadrados de la vivienda)
+- `sqft_living`: Square footage of the home (Metros cuadrados de la vivienda)
 
-- sqft_lot: Square footage of the lot (Metros cuadrados de la parcela)
+- `sqft_lot`: Square footage of the lot (Metros cuadrados de la parcela)
 
-- floors :Total floors (levels) in house
+- `floors` :Total floors (levels) in house
 
-- waterfront :House which has a view to a waterfront
+- `waterfront` :House which has a view to a waterfront
 
-- view: Has been viewed
+- `view`: Has been viewed
 
-- condition :How good the condition is overall
+- `condition` :How good the condition is overall
 
-- grade: overall grade given to the housing unit, based on King County grading system
+- `grade`: overall grade given to the housing unit, based on King County grading system
 
-- sqft_above : Square footage of house apart from basement (Metros cuadrados de la casa aparte del sótano)
+- `sqft_above `: Square footage of house apart from basement (Metros cuadrados de la casa aparte del sótano)
 
-- sqft_basement: Square footage of the basement (Metros cuadrados del sótano)
+- `sqft_basement`: Square footage of the basement (Metros cuadrados del sótano)
 
-- yr_built : Built Year
+- `yr_built` : Built Year
 
-- yr_renovated : Year when house was renovated
+- `yr_renovated`: Year when house was renovated
 
-- zipcode: Zip code
+- `zipcode`: Zip code
 
-- lat: Latitude coordinate
+- `lat`: Latitude coordinate
 
-- long: Longitude coordinate
+- `long`: Longitude coordinate
 
-- sqft_living15 : Living room area in 2015(implies-- some renovations) This might or might not have affected the lotsize area
+- `sqft_living15` : Living room area in 2015(implies-- some renovations) This might or might not have affected the lotsize area
 
-- sqft_lot15 : LotSize area in 2015(implies-- some renovations)
+- `sqft_lot15` : LotSize area in 2015(implies-- some renovations)
 
-Ejecutando summary del dataset obtenemos estadísticas básicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
+Ejecutando `summary` del dataset obtenemos estadísticas básicas del mismo, por ejemplo la media, promedio, 1st quartile, etc.
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="1000" src="https://user-images.githubusercontent.com/88351465/234643261-2fd74b4b-8dae-4f0b-a752-6f9e512432ee.png"  align="center">
 </p>
-<p align="center" >Figura 53. Summary de KingCounty</p>
+<p align="center" >Figura 53. `Summary` de KingCounty</p>
 
 
-El siguiente paso fue comprobar si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. En este caso no se encontraron valores faltantes. Se eliminaron las columnas de id y date ya que no fueron consideradas relevantes para el proyecto. Y generamos una variable age (antiguedad). 
+El siguiente paso fue comprobar si el dataset tenía valores faltantes, lo cual habría modificado los resultados finales. En este caso no se encontraron valores faltantes. Se eliminaron las columnas de `id` y `date` ya que no fueron consideradas relevantes para el proyecto. Y generamos una variable `age` (antiguedad). 
 
 A continuación se presenta el Correlation plots, lo cual es un una buena manera de explorar los datos y examinar el nivel de interaccion entre las variables.
 <p align="center" style="margin-bottom: 0px !important;">
@@ -810,14 +810,14 @@ A continuación se presenta el Correlation plots, lo cual es un una buena manera
 <p align="center" >Figura 54. Correlation plot de KingCounty</p>
 
 
-También fue importante el uso de la funcion findCorrelation de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna "sqft_living". 
+También fue importante el uso de la funcion `findCorrelation` de Caret  que evalúa las correlaciones entre pares de todas las variables, marcando las variables que están muy correlacionadas. De los pares identificados, la función recomienda la eliminación de la variable con la correlación absoluta media más alta en todo el conjunto de datos. La recomendación fue eliminar la columna `sqft_living`. 
 
 Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el análisis general realizado,  se comenzó con la implementación de los modelos. 
 
 #### Evaluación linear regression de KingCounty
 
 
-- Linear regression cross validation (10-fold) utilizando Price como variable dependiente y demás variables como independientes. 
+- Linear regression cross validation (10-fold) utilizando `price` como variable dependiente y demás variables como independientes. 
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234430191-35050710-1ac6-49db-bbad-828562259c93.png" alt="" align="center">
@@ -843,7 +843,7 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 
 
 #### Evaluación Ridge regression de KingCounty
-- Ridge Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
+- Ridge Regression utilizando `price` como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -869,7 +869,7 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 
 
 #### Evaluación Lasso regression de KingCounty
-- Lasso Regression utilizando price como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
+- Lasso Regression utilizando `price` como variable dependiente y demás variables como independientes, con 10-fold cross validation. Con 50 valores de lambda tomando valores desde 0.0001 hasta 1. 
 
 
 <p align="center" style="margin-bottom: 0px !important;">
@@ -898,7 +898,7 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 #### Evaluación Catboost regression de KingCounty
 
 
-- Catboost regression utilizando price como variable dependiente y demás variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
+- Catboost regression utilizando `price` como variable dependiente y demás variables como independientes. CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="300" src="https://user-images.githubusercontent.com/88351465/234427752-d781ce13-f07e-449d-b907-6a73210679c4.png" alt="" align="center">
@@ -924,7 +924,7 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 <p align="center" >Figura 70. Metricas de Catboost CV obtenidas de KingCounty</p>
 
 
-- Catboost regression utilizando price como variable dependiente y demas variables como independientes (EXCEPTO LAS VARIABLES CON ALTA CORRELACION). CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
+- Catboost regression utilizando `price` como variable dependiente y demas variables como independientes (EXCEPTO LAS VARIABLES CON ALTA CORRELACION). CON CROSS VALIDATION (10-FOLD), utilizando learning_rate=0.01(La tasa de aprendizaje, se utiliza para reducir el paso de gradiente.), iterations=500 (Número máximo de árboles que se pueden construir al resolver problemas de aprendizaje automático), depth=10 (profundidad del árbol), loss_function=”RMSE” (la métrica a utilizar).
 
 
 <p align="center" style="margin-bottom: 0px !important;">
