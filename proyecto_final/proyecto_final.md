@@ -963,6 +963,17 @@ Luego se procedió a dividir el dataset en train y test, y teniendo en cuenta el
 </p>
 <p align="center" >Figura 75. Resultados de métricas de BostonHousing</p>
 
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/235272614-7c6dcce5-aee2-4131-98b8-38a79310387a.png" alt="" align="center">
+</p>
+<p align="center" >Figura 76. Boxplot resultados finales Rsquared de BostonHousing</p>
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/235272710-3099099b-5c9e-46ba-bbe8-6c02c386e134.png" alt="" align="center">
+</p>
+<p align="center" >Figura 77. Boxplot resultados finales RMSE de BostonHousing</p>
+
+
 **Análisis**
 
 Recordando del marco teórico, un RMSE bajo presenta mejor performance frente a un RMSE alto. Por otro lado un R2 mayor presenta mejor performance frente a un R2 menor. Teniendo en cuenta lo mencionado, es posible comparar las métricas obtenidas analizando la figura 75 *Resultados de métricas de BostonHousing*:
@@ -980,7 +991,20 @@ Finalmente los modelos de Catboost presentan la mejor performance comparando Rsq
 <p align="center" style="margin-bottom: 0px !important;">
   <img width="600" src="https://user-images.githubusercontent.com/88351465/234874257-0c4a058d-7d82-4a4c-a16b-be9de7d89403.png" alt="" align="center">
 </p>
-<p align="center" >Figura 76. Resultados de métricas de AmsterdamHousing</p>
+<p align="center" >Figura 78. Resultados de métricas de AmsterdamHousing</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/235273025-caf0a361-1acc-48ca-9729-c690996e19b5.png" alt="" align="center">
+</p>
+<p align="center" >Figura 79. Boxplot resultados finales Rsquared de AmsterdamHousing</p>
+
+
+<p align="center" style="margin-bottom: 0px !important;">
+  <img width="600" src="https://user-images.githubusercontent.com/88351465/235272876-681a2607-e224-45ee-a02c-bd5e4df0bbcd.png" alt="" align="center">
+</p>
+<p align="center" >Figura 80. Boxplot resultados finales RMSE de AmsterdamHousing</p>
+
 
 **Análisis**
 
