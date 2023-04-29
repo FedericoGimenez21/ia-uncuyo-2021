@@ -390,7 +390,7 @@ Por lo tanto será importante recordar qué es y qué representa la desviación 
 #### Analisis de BostonHousing 
 En primer lugar, el proyecto incluye una sección de instalación e importación de las librerías a utilizar. 
 Luego se procedió a cargar el dataset "BostonHousing", que incluye datos de vivienda de 506 secciones censales de Boston del censo de 1970.
-Los datos originales son 506 observaciones sobre 14 variables, siendo medv la variable objetivo: 
+Los datos originales son 506 observaciones sobre 14 variables, siendo `medv` la variable objetivo: 
 
 - `crim`:	per capita crime rate by town
 - `zn`:	proportion of residential land zoned for lots over 25,000 sq.ft
